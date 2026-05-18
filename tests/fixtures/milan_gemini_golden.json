@@ -1,0 +1,2692 @@
+{
+  "research_question": "Which Gemini-first, evidence-grounded AI agent workflow should SYNAPSE build for the Milan AI Week hackathon? Focus on Gemini API or ADK function calling, grounding, multimodal inputs, evaluation, and demo feasibility.",
+  "planner_precontext": {
+    "original_query": "Which Gemini-first, evidence-grounded AI agent workflow should SYNAPSE build for the Milan AI Week hackathon? Focus on Gemini API or ADK function calling, grounding, multimodal inputs, evaluation, and demo feasibility.",
+    "query_type": "technical",
+    "query_interpretation": "The user is asking for recommendations on a specific agent workflow that leverages Gemini's strengths, is grounded in evidence (e.g., via function calling or grounding), and is feasible to demo at a hackathon. The focus is on using Gemini API or ADK with multimodal inputs and evaluation.",
+    "precontext_claims": [
+      {
+        "claim": "Gemini 3 Pro Preview is designed for agentic workflows and integrates with open-source frameworks.",
+        "source_id": "ddg_436396_1",
+        "url": "https://developers.googleblog.com/building-ai-agents-with-google-gemini-3-and-open-source-frameworks/",
+        "support_level": "weak"
+      },
+      {
+        "claim": "Google provides agents overview documentation for the Gemini API.",
+        "source_id": "ddg_9295602_2",
+        "url": "https://ai.google.dev/gemini-api/docs/agents",
+        "support_level": "weak"
+      },
+      {
+        "claim": "Function calling is supported in the Gemini API via function declarations.",
+        "source_id": "ddg_8462135_2",
+        "url": "https://ai.google.dev/gemini-api/docs/function-calling",
+        "support_level": "weak"
+      },
+      {
+        "claim": "A tutorial demonstrates building a multimodal document agent with Google ADK and Gemini 2.5 Flash for hackathons.",
+        "source_id": "ddg_2200036_1",
+        "url": "https://lablab.ai/ai-tutorials/gemini-multimodal-document-agent-vultr-for-ai-hackathons",
+        "support_level": "weak"
+      }
+    ],
+    "planning_risks": [],
+    "research_jobs": [
+      {
+        "job_id": "job_a",
+        "job_name": "Official Gemini Agent Workflows & API Capabilities",
+        "objective": "Compile official documentation and best practices for building agent workflows using Gemini API, including function calling, grounding, and multimodal inputs.",
+        "search_queries": [
+          "Gemini API agent workflow function calling grounding",
+          "Google ADK function calling Gemini",
+          "Gemini multimodal agent tutorial official"
+        ],
+        "source_priorities": [
+          "official",
+          "paper"
+        ],
+        "must_answer": [
+          "What are the recommended patterns for Gemini-first agent workflows?",
+          "How to implement function calling and grounding with Gemini API?",
+          "What are examples of multimodal input handling in Gemini agents?"
+        ],
+        "avoid": [],
+        "evidence_requirements": {
+          "min_sources": 5,
+          "require_quotes": true,
+          "allow_snippet_only": false
+        }
+      },
+      {
+        "job_id": "job_b",
+        "job_name": "Hackathon-Relevant Evidence-Grounded Workflows & Evaluation",
+        "objective": "Identify practical, demo-feasible agent workflows that emphasize evidence grounding, multimodal inputs, and evaluation strategies suitable for a hackathon setting.",
+        "search_queries": [
+          "evidence-grounded AI agent hackathon Gemini",
+          "Gemini agent evaluation metrics",
+          "multimodal document agent hackathon",
+          "Gemini ADK demo feasibility"
+        ],
+        "source_priorities": [
+          "tutorial",
+          "blog",
+          "official"
+        ],
+        "must_answer": [
+          "What existing hackathon projects have used Gemini for evidence-grounded agents?",
+          "How to evaluate agent performance in a hackathon context?",
+          "What are quick win demos for multimodal agents?"
+        ],
+        "avoid": [],
+        "evidence_requirements": {
+          "min_sources": 5,
+          "require_quotes": true,
+          "allow_snippet_only": false
+        }
+      }
+    ],
+    "coverage_checklist": [
+      "Function calling capabilities and patterns",
+      "Grounding techniques (e.g., via Google Search or custom tools)",
+      "Multimodal input support (text, images, audio, video)",
+      "Evaluation methods for agent accuracy and reliability",
+      "Demo feasibility considerations (limited time, APIs, hardware)",
+      "Hackathon-specific tips (time constraints, presentability)"
+    ],
+    "planner_confidence": 0.7
+  },
+  "search_headers": [
+    {
+      "result_id": "res_job_a_007",
+      "job_id": "job_a",
+      "query": "Google ADK function calling Gemini",
+      "title": "Introduction to ADK Gemini Live API Toolkit - Google Codelabs",
+      "url": "https://codelabs.developers.google.com/intro-to-adk-live",
+      "snippet": "27 Mar 2026 · In this lab, we will learn the ADK Gemini Live API Toolkit, a framework for building real-time voice AI applications.",
+      "rank": 2,
+      "provider": "duckduckgo",
+      "source_type_guess": "official",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_a_013",
+      "job_id": "job_a",
+      "query": "Gemini multimodal agent tutorial official",
+      "title": "Building a Multimodal Agent with the ADK, Azure ACI, and Gemini ...",
+      "url": "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+      "snippet": "The strategy for starting multimodal real time agent development is a incremental step by step approach. First, the basic development environment is setup with the required system variables, and a working Gemini CLI configuration. Then, a minimal ADK Agent is built and tested locally.",
+      "rank": 3,
+      "provider": "duckduckgo",
+      "source_type_guess": "unknown",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_a_014",
+      "job_id": "job_a",
+      "query": "Gemini multimodal agent tutorial official",
+      "title": "GitHub - google- gemini /cookbook: Examples and guides for using the...",
+      "url": "https://github.com/google-gemini/cookbook",
+      "snippet": "Gemini CLI: Open-source AI agent that brings the power of Gemini directly into your terminal.Google AI Studio Starter Applets: A collection of small apps that demonstrate how Gemini can be used to create interactive experiences. Official SDKs. The Gemini API is a REST API.",
+      "rank": 4,
+      "provider": "duckduckgo",
+      "source_type_guess": "unknown",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_b_002",
+      "job_id": "job_b",
+      "query": "evidence-grounded AI agent hackathon Gemini",
+      "title": "Gemini Live Agent Challenge: Redefining Interaction: From",
+      "url": "https://geminiliveagentchallenge.devpost.com/",
+      "snippet": "... AI , we’re challenging you to build the next generation of agents that can help you see 🙈, hear 🙉, speak 🙊, and create in the Gemini Live ...",
+      "rank": 2,
+      "provider": "duckduckgo",
+      "source_type_guess": "unknown",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_b_006",
+      "job_id": "job_b",
+      "query": "Gemini agent evaluation metrics",
+      "title": "Gemini 3 — Google DeepMind",
+      "url": "https://deepmind.google/models/gemini/",
+      "snippet": "Gemini 3’s agentic capabilities can build more helpful and intelligent personal AI assistants. Gemini 1 introduced native multimodality and long context to help AI understand the world. Gemini 2 added thinking, reasoning and tool use to create a foundation for agents .",
+      "rank": 1,
+      "provider": "duckduckgo",
+      "source_type_guess": "unknown",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_b_011",
+      "job_id": "job_b",
+      "query": "multimodal document agent hackathon",
+      "title": "Hacking with AgentQL at Multimodal AI Agents Hackathon ... | AgentQL",
+      "url": "https://www.agentql.com/blog/2025-multimodal-agents-hackathon",
+      "snippet": "Four teams reimagined how we interact with the web at the Multimodal AI Agents Hackathon . From voice-powered browsing to AI-generated cover letters, see how they used AgentQL to bring their ideas to life. Rachel-Lee Nabors.",
+      "rank": 1,
+      "provider": "duckduckgo",
+      "source_type_guess": "blog",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_b_016",
+      "job_id": "job_b",
+      "query": "Gemini ADK demo feasibility",
+      "title": "Accelerate software development with Gemini - Cloud Solutions",
+      "url": "https://googlecloudplatform.github.io/cloud-solutions/build-with-gemini-demo/",
+      "snippet": "Prototype ADK Agents with Gemini CLI This demonstration guide walks through the process of rapidly prototyping an ADK (Agent Development Kit) agent using the Gemini CLI. You will leverage the Gemini CLI's planning and implementation capabilities to quickly scaffold and refine a functional customer support agent.",
+      "rank": 1,
+      "provider": "duckduckgo",
+      "source_type_guess": "unknown",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_b_018",
+      "job_id": "job_b",
+      "query": "Gemini ADK demo feasibility",
+      "title": "Agent Development Kit | Gemini Enterprise Agent Platform | Google Cloud ...",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "snippet": "Agent Development Kit ( ADK ) is an open-source agent development framework that lets you build, debug, and deploy reliable AI agents at enterprise scale. Start with agents and tools and grow into sophisticated multi-agent systems, ADK allows developers to build everything from personal AI assistants to mission-critical business workflows.",
+      "rank": 3,
+      "provider": "duckduckgo",
+      "source_type_guess": "official",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_b_019",
+      "job_id": "job_b",
+      "query": "Gemini ADK demo feasibility",
+      "title": "cloud-solutions/projects/build-with-gemini-demo/prototype-adk-agent ...",
+      "url": "https://github.com/GoogleCloudPlatform/cloud-solutions/tree/main/projects/build-with-gemini-demo/prototype-adk-agent-with-gemini-cli",
+      "snippet": "Prototype ADK Agents with Gemini CLI This demonstration guide walks through the process of rapidly prototyping an ADK (Agent Development Kit) agent using the Gemini CLI. You will leverage the Gemini CLI's planning and implementation capabilities to quickly scaffold and refine a functional customer support agent. This \"vibe prototyping\" approach allows for fast iteration and development ...",
+      "rank": 4,
+      "provider": "duckduckgo",
+      "source_type_guess": "unknown",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    }
+  ],
+  "fetched_sources": [
+    {
+      "source_id": "src_res_job_a_007",
+      "result_id": "res_job_a_007",
+      "url": "https://codelabs.developers.google.com/intro-to-adk-live",
+      "canonical_url": "https://codelabs.developers.google.com/intro-to-adk-live",
+      "title": "Introduction to ADK Gemini Live API Toolkit - Google Codelabs",
+      "domain": "codelabs.developers.google.com",
+      "text": "What is Bidi-streaming? Bidirectional streaming (bidi-streaming) enables simultaneous two-way communication between your application and AI models. Unlike traditional request-response patterns where you send a complete message and wait for a complete reply, bidi-streaming allows: Continuous input : Stream audio, video, or text as it's captured Real-time output : Receive AI responses as they're generated Natural interruption : Users can interrupt the AI mid-response, just like in human conversation Why this matters: Bidi-streaming makes AI conversations feel natural. The AI can respond while you're still providing context, and you can interrupt it when you've heard enough—just like talking to a human. What is ADK Gemini Live API Toolkit? The Agent Development Kit (ADK) provides a high-level abstraction over the Gemini Live API , handling the complex plumbing of real-time streaming so you can focus on building your application. ADK Gemini Live API Toolkit manages: Connection lifecycle : Establishing, maintaining, and recovering WebSocket connections Message routing : Directing audio, text, and images to the right handlers Session state : Persisting conversation history across reconnections Tool execution : Automatically calling and resuming from function calls Why ADK over raw Live API? You could build directly on the Gemini Live API, but ADK handles the complex infrastructure so you can focus on your application: Capability Raw Live API ADK Gemini Live API Toolkit Agent Framework Build from scratch Single/multi-agent with tools, evaluation, security Tool Execution Manual handling Automatic parallel execution Connection Management Manual reconnection Transparent session resumption Event Model Custom structures Unified, typed Event objects Async Framework Manual coordination LiveRequestQueue + run_live() generator Session Persistence Manual implementation Built-in SQL, Vertex AI, or in-memory The bottom line: ADK reduces months of infrastructure development to days of application development. You focus on what your agent does, not how streaming works. Real-World Use Cases Customer Service : A customer shows their defective coffee machine via phone camera while explaining the issue. The AI identifies the model and failure point, and the customer can interrupt to correct details mid-conversation. E-commerce : A shopper holds up clothing to their webcam asking \"Find shoes that match these pants.\" The agent analyzes the style and engages in fluid back-and-forth: \"Show me something more casual\" → \"How about these sneakers?\" → \"Add the blue ones in size 10.\" Field Service : A technician wearing smart glasses streams their view while asking \"I'm hearing a strange noise from this compressor—can you identify it?\" The agent provides step-by-step guidance hands-free. Healthcare : A patient shares a live video of a skin condition. The AI performs preliminary analysis, asks clarifying questions, and guides next steps. Financial Services : A client reviews their portfolio while the agent displays charts and simulates trade impacts. The client can share their screen to discuss specific news articles. Shopper's Concierge 2 Demo : Real-time Agentic RAG demo for e-commerce, built with ADK Gemini Live API Toolkit and Vertex AI Vector Search, Embeddings, Feature Store and Ranking API: Learn More: Developer Guide For a comprehensive deep-dive, see the ADK Gemini Live API Toolkit Developer Guide —a 5-part series covering architecture to production deployment: Part Focus What You'll Learn Part 1 Foundation Architecture, Live API platforms, 4-phase lifecycle Part 2 Upstream Sending text, audio, video via LiveRequestQueue Part 3 Downstream Event handling, tool execution, multi-agent workflows Part 4 Configuration Session management, quotas, production controls Part 5 Multimodal Audio specs, model architectures, advanced features 2. Workshop Overview What You'll Build In this hands-on workshop, you'll build a complete bidirectional streaming AI application from scratch. By the end, you'll have a working voice AI that can: Accept text, audio, and image input Respond with streaming text or natural speech Handle interruptions naturally Use tools like Google Search Unlike reading documentation, you'll examine each component step by step , understanding how the pieces fit together as you build incrementally. Learning Approach We follow an incremental build approach: Step 1: Minimal WebSocket Server → \"Hello World\" response Step 2: Add the Agent → Define AI behavior and tools Step 3: Application Initialization → Runner and session service Step 4: Session Initialization → RunConfig and LiveRequestQueue Step 5: Upstream Task → Client to queue communication Step 6: Downstream Task → Events to client streaming Step 7: Add Audio → Voice input and output Step 8: Add Image Input → Multimodal AI Each step builds on the previous one. You'll test after every step to see your progress. Prerequisites Google Cloud account with billing enabled Basic Python and async programming (async/await) knowledge Web browser with microphone and web camera access (Chrome recommended) Time Estimate Full workshop : ~90 minutes Quick version (Steps 1-4 only): ~45 minutes 3. Workshop Start the workshop by following the instructions here: https://github.com/kazunori279/adk-streaming-guide/blob/main/workshops/workshop.md 4. Wrap-up & Key Takeaways What You Built You built a complete bidirectional streaming AI application from scratch. The application handles text, voice, and image input with real-time streaming responses—the foundation for building production-ready conversational AI. Component What It Does Step Agent Defines AI personality, instructions, and available tools (e.g., Google Search) Step 2 SessionService Persists conversation history across reconnections Step 3 Runner Orchestrates the streaming lifecycle, connects agent to Live API Step 3 RunConfig Configures response modality (TEXT/AUDIO), transcription, session resumption Step 4 LiveRequestQueue Unified interface for sending text, audio, and images to the model Step 5 run_live() Async generator that yields streaming events from the model Step 6 send_realtime() Sends audio/image blobs for continuous streaming input Step 7-8 Resources Continue learning with these official resources. The ADK Gemini Live API Toolkit Guide provides deeper coverage of everything in this workshop. Resource URL ADK Documentation https://google.github.io/adk-docs/ ADK Gemini Live API Toolkit Guide https://google.github.io/adk-docs/streaming/dev-guide/ Gemini Live API https://ai.google.dev/gemini-api/docs/live Vertex AI Live API https://cloud.google.com/vertex-ai/generative-ai/docs/live-api ADK Samples Repository https://github.com/google/adk-samples Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License , and code samples are licensed under the Apache 2.0 License . For details, see the Google Developers Site Policies . Java is a registered trademark of Oracle and/or its affiliates. Connect Blog Facebook Medium Twitter YouTube Programs Women Techmakers Google Developer Groups Google Developer Experts Accelerators Developer consoles Google API Console Google Cloud Platform Console Google Play Console Firebase Console Actions on Google Console Cast SDK Developer Console Chrome Web Store Dashboard Android Chrome Firebase Google Cloud Platform All products Terms Privacy Manage cookies Sign up for the Google Developers newsletter Subscribe English Deutsch Español Español – América Latina Français Indonesia Italiano Polski Português – Brasil Tiếng Việt Türkçe Русский עברית العربيّة فارسی हिंदी বাংলা ภาษาไทย 中文 – 简体 中文 – 繁體 日本語 한국어",
+      "markdown": null,
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T07:24:50.369092Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 8039,
+        "clean_text_chars": 7703,
+        "removed_noise_markers": [
+          "boilerplate_or_code"
+        ],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_b_018",
+      "result_id": "res_job_b_018",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "canonical_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "title": "Agent Development Kit | Gemini Enterprise Agent Platform | Google Cloud ...",
+      "domain": "docs.cloud.google.com",
+      "text": "Agent Development Kit (ADK) is an open-source agent development framework that lets you build, debug, and deploy reliable AI agents at enterprise scale. Start with agents and tools and grow into sophisticated multi-agent systems, ADK allows developers to build everything from personal AI assistants to mission-critical business workflows. ADK provides developers with a comprehensive suite of tools to build, run, evaluate, and scale AI architectures. Users can leverage flexible orchestration to define predictable pipelines using workflow agents or rely on agent-coordinated dynamic routing for more adaptive behavior. It natively supports multi-agent architectures, allowing developers to compose specialized teams of agents that can collaborate and delegate tasks. ADK features a rich tool ecosystem for integrating third-party applications and your own custom code. Apply built-in and partner evaluation tools to test execution trajectories. Run agents locally or scale them globally using Runtime, Cloud Run, or Google Kubernetes Engine. ADK is available in Python, TypeScript, Go, and Java. Start building Get started Set up your environment and get an agent running in a few minutes. Tools and integrations Check out the list of pre-built tools and integrations that you can use with ADK agents. Technical overview Learn about the core concepts and key capabilities offered by ADK. For details, see the Google Developers Site Policies . Java is a registered trademark of Oracle and/or its affiliates. Last updated 2026-05-08 UTC. Products and pricing See all products Google Cloud pricing Google Cloud Marketplace Contact sales Support Community forums Support Release Notes System status Resources GitHub Getting Started with Google Cloud Code samples Cloud Architecture Center Training and Certification Engage Blog Events X (Twitter) Google Cloud on YouTube Google Cloud Tech on YouTube About Google Privacy Site terms Google Cloud terms Manage cookies Our third decade of climate action: join us Sign up for the Google Cloud newsletter Subscribe English Deutsch Español – América Latina Français Indonesia Italiano Português – Brasil 中文 – 简体 中文 – 繁體 日本語 한국어",
+      "markdown": null,
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T07:24:50.523915Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 8312,
+        "clean_text_chars": 2170,
+        "removed_noise_markers": [
+          "boilerplate_or_code"
+        ],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_b_011",
+      "result_id": "res_job_b_011",
+      "url": "https://www.agentql.com/blog/2025-multimodal-agents-hackathon",
+      "canonical_url": "https://www.agentql.com/blog/2025-multimodal-agents-hackathon",
+      "title": "Hacking with AgentQL at Multimodal AI Agents Hackathon ... | AgentQL",
+      "domain": "www.agentql.com",
+      "text": "Hacking with AgentQL at Multimodal AI Agents Hackathon in San Francisco | AgentQL AgentQL by TinyFish Docs Pricing Quick Start Integrations Playground Blog Join our Discord Fork on GitHub Get API key Search Hacking with AgentQL at Multimodal AI Agents Hackathon in San Francisco Scrape raw HTML with AgentQL's REST API Langflow + AgentQL: drag, drop, and automate Web data in AI pipelines AgentQL Integrations: The Agentic Web begins now that every page is an endpoint AgentQL Enters the Agentic World with Langchain and LlamaIndex AgentStack + AgentQL: Give your Agents access to the Internet AgentQL MCP Server: Structured Web Data for Claude, Cursor, Windsurf, and more Dify + AgentQL: Build AI Apps with Live Web Data, No Code Needed Zapier + AgentQL: No-Code Web Data for Smarter Workflows Something is coming. Automated web application testing with AI and Playwright Accurate data extraction from PDFs and images with AgentQL Introducing Scheduled Scraping Workflows Updates to Our Pricing Model Launch Week Recap—make the web AI-ready Get data from any page: AgentQL’s REST API Endpoint—Launch week day 5 Natural Language Query Generation for Faster Results—Launch week day 4 Stealth Mode—Enhanced Bot Detection Evasion—Launch week day 3 Fast Mode—AgentQL is “fast by default”—Launch week day 2 AgentQL for fullstack developers: announcing our JavaScript SDK—Launch week day 1 AgentQL Launch Week starts next week—Here's what's coming! Introducing Playwright Smart Locator Blog Announcements Apr 3, 2025 Hacking with AgentQL at Multimodal AI Agents Hackathon in San Francisco Four teams reimagined how we interact with the web at the Multimodal AI Agents Hackathon. From voice-powered browsing to AI-generated cover letters, see how they used AgentQL to bring their ideas to life. Rachel-Lee Nabors Share article: AgentQL was born from the belief that anyone should be able to ask the web for what they need using the power of language and AI. So when we partnered with Creators Corner to sponsor the Multimodal AI Agents Hackathon in San Francisco , we hoped to put AgentQL into the hands of builders from around the world. Over the course of a two intense days, four teams shipped prototypes powered by AgentQL. From hands-free browsing to internship search automation, these projects didn't just use our API—they challenged how we use the web and imagined new possibilities. We were impressed by their creativity, curiosity, and scrappy execution. And today, we're celebrating all four. Grand Prize Winner: people-coming-over What if your AI agent could see your room and redesign it for you? Helen Koch and Kirill Igumenshchev built just that—a shopping agent that uses image recognition to suggest furniture and decor upgrades based on a photo of your space. And with AgentQL, it even handles checkout. They built a full-stack LLM-native shopping flow using AgentQL, LlamaIndex, Samba Vision, ApertureDB, and more. The interface is clean and fast, the UX delightful. Honestly, we're still recovering from how cool this one is. This project took home four awards! Check out the demo and details at Devpost or dive into the repo on Github . Internship Hunt: Powered by Agno, Gemini, and AgentQL Freshmen Stiven Triana and Hammon Dutra from Minerva University built an internship search assistant to save time and reduce friction in the job hunt. Upload your resume, get matched with internships, and receive custom-generated cover letters based on the requirements of each opportunity. \"We used AgentQL's REST API to check whether each internship required a cover letter, research statement, or why-us essay. Then we generated those automatically.\" Their work demonstrates how AgentQL can surface structure from messy websites, enabling automation of tedious workflows. These students weren't just hacking—they were building tools they now use for their real internship applications. You can use it today or check out its source code on GitHub . The judges at the event were so impressed, their project took second place! Check out their full writeup and demo on LinkedIn! LookMaNoHands: Voice Browsing with AgentQL Built by student Carl Kho exploring brain-computer interfaces, LookMaNoHands uses speech-to-text, AgentQL, and browser automation to navigate the web entirely by voice. No clicking. No scrolling. Just speaking. \"AgentQL was absolutely crucial... I used queryElements() extensively to locate UI elements using natural language. It's like having a superpower to control the browser with plain English!\" This project isn't just about accessibility—it's a step toward a future where our thoughts drive digital actions. Check out the writeup and code . \"What really surprised me about AgentQL was its robustness and adaptability to diverse website structures. The natural language queries genuinely seemed to understand the semantic context of web elements. Even when website layouts shifted slightly, AgentQL's intelligent selectors could still pinpoint the intended elements, making the automation remarkably resilient to UI changes. This showed me how far AI has come in understanding and interpreting the complexities of the live web – it's far more adaptable than I initially imagined.\" Fixit: Real-Time Appliance Troubleshooting Built by graduate students Prachi Sethi and Osheen Gupta , Fixit is an AI-powered assistant that helps users diagnose and resolve appliance issues using text, image, audio, or video inputs. \"We used AgentQL to extract the user guide directly from the brand's official site, once the appliance was identified. It gave us accurate, brand-specific instructions without needing to manually hunt down the right PDF.\" Their biggest challenge was integrating multiple input modes—image, voice, text—and ensuring AgentQL could pull relevant data seamlessly. What surprised them? \"AgentQL let us write natural language queries instead of complex code. That made scraping guides much faster and easier than we expected.\" If given more time, they'd expand the system to offer real-time, voice-guided troubleshooting and broader support across appliance brands. Explore the Fixit GitHub repo . \"Special thanks to the AgentQL team for supporting us with guidance and updates during the hackathon. That kind of responsiveness really helped us move fast.\" What we learned These teams showed how AgentQL can be the glue connecting the live web and multimodal agents. They pushed our API to its limits—and helped us spot places we can improve. Huge thanks to all the participants for teaching us so much and including AgentQL in their projects. Each team received access to our Professional Plan, and a few are continuing to build their ideas into real tools for students and users everywhere. If you're curious about how to get started with AgentQL, head over here . —The TinyFish team building AgentQL Previous post In this article Grand Prize Winner: people-coming-over Internship Hunt: Powered by Agno, Gemini, and AgentQL LookMaNoHands: Voice Browsing with AgentQL Fixit: Real-Time Appliance Troubleshooting What we learned Author Rachel-Lee Nabors Head of Developer Relations Share article: AgentQL by TinyFish References Python SDK JavaScript SDK REST API Tools Browser Extension Playground Integrations Learn AgentQL Examples Quick Start Documentation AgentQL Query Language More Blog Playground Web Automation Legal Privacy Policy Terms of Service © 2026 — Copyright X.com (Twitter) LinkedIn GitHub Discord Bluesky",
+      "markdown": null,
+      "source_type": "blog",
+      "source_quality_score": 0.45,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T07:24:51.469385Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 7462,
+        "clean_text_chars": 7462,
+        "removed_noise_markers": [],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_b_002",
+      "result_id": "res_job_b_002",
+      "url": "https://geminiliveagentchallenge.devpost.com/",
+      "canonical_url": "https://geminiliveagentchallenge.devpost.com/",
+      "title": "Gemini Live Agent Challenge: Redefining Interaction: From",
+      "domain": "geminiliveagentchallenge.devpost.com",
+      "text": "Gemini Live Agent Challenge: Redefining Interaction: From Static Chatbots to Immersive Experiences - Devpost Log in Sign up Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation Join a hackathon Devpost Participate in our public hackathons Hackathons Projects Devpost for Teams Access your company's private hackathons Login Host a hackathon Devpost Grow your developer ecosystem and promote your platform Host a public hackathon Devpost for Teams Drive innovation, collaboration, and retention within your organization Host an internal hackathon By use case AI hackathons Customer hackathons Employee hackathons Public hackathons Resources Blog Insights into hackathon planning and participation Customer stories Inspiration from peers and other industry leaders Planning guides Best practices for planning online and in-person hackathons Webinars & events Upcoming events and on-demand recordings Help desk Common questions and support documentation Log in Sign up Descend Overview My projects Participants (11878) Resources Rules Project gallery Updates Discussions FAQs Gemini Live Agent Challenge Redefining Interaction: From Static Chatbots to Immersive Experiences This hackathon has ended Find more hackathons View the winners Who can participate Above legal age of majority in country of residence Specific countries/territories excluded View full rules View schedule Feb 16 – Mar 16, 2026 Online Public $ 80,000 in cash 11878 participants Google Managed by Devpost Communication Machine Learning/AI Voice skills Hey builders! 🛑 Stop typing, and start interacting! We are moving beyond the text box. The future isn't about just chatting with AI—it's about immersive, real-time experiences. To celebrate the power of multimodal AI, we’re challenging you to build the next generation of agents that can help you see 🙈, hear 🙉, speak 🙊, and create in the Gemini Live Agent Challenge . Requirements What to Build Entrants must develop a NEW next-generation AI Agent that utilizes multimodal inputs and outputs and moves beyond simple text-in/text-out interactions. Projects should leverage Google’s Live API with the creative power of video/image generation to solve complex problems or create entirely new user experiences within one of these three categories: Live Agents 🗣️ Focus : Real-time Interaction (Audio/Vision). Build an agent that users can talk to naturally can be interrupted. This could be a real-time translator, a vision-enabled customized tutor that \"sees\" your homework, or a customer support voice agent that handles interruptions gracefully. Mandatory Tech: Must use Gemini Live API or the use of ADK. The agents are hosted on Google Cloud. Creative Storyteller ✍️ Focus: Multimodal Storytelling with Interleaved Output Build an agent that thinks and creates like a creative director, seamlessly weaving together text, images, audio, and video in a single, fluid output stream. Leverage Gemini's native interleaved output to generate rich, mixed-media responses that combine narration with visuals, explanations with generated imagery, or storyboards with voiceover, all in one cohesive flow. Examples include Interactive storybooks (text + generated illustrations inline), marketing asset generator (copy + visuals + video in one go), educational explainers (narration woven with diagrams), and social content creator (caption + image + hashtags together). Mandatory Tech : Must use Gemini's interleaved/mixed output capabilities. The agents are hosted on Google Cloud. UI Navigator ☸️ Focus: Visual UI Understanding & Interaction Build an agent that becomes the user's hands on screen. The agent observes the browser or device display, interprets visual elements with or without relying on APIs or DOM access, and performs actions based on user intent. Examples include a universal web navigator, a cross-application workflow automator, or a visual QA testing agent. Mandatory Tech: Must use Gemini multimodal to interpret screenshots/screen recordings and output executable actions. The agents are hosted on Google Cloud. All projects MUST: Leverage a Gemini model Agents must be built using either Google GenAI SDK OR ADK (Agent Development Kit) Use at least one Google Cloud service What to Submit 📃 Text Description: Summary of the Project’s features and functionality, technologies used, information about any other data sources used, and your findings and learnings as you worked through the project. 👨‍💻 URL to your Public Code Repository: Let us see how you built it! Include spin-up instructions in your README for the judges to see your project is reproducible 🖥️ Proof of Google Cloud Deployment : You must demonstrate that the backend is running on Google Cloud with a short recording (separate from your demo) proving your Project’s backend is running on Google Cloud. Proof would either be (1) a quick screen recording that shows the behind-the-scenes of their app running on GCP (e.g. console logs or console view of a deployment) or (2) a link to a code file in their code repo that demonstrates use of Google Cloud services and APIs (e.g. API calls to Vertex AI endpoints) 🏗️ Architecture Diagram: A clear visual representation of your system (e.g., how Gemini connects to your backend, database, and frontend) Pro tip: Add this to th file upload or image carousel so it's easy for judges to find! 📹 Demonstration Video: <4-minute video Demos your multimodal/agentic features working in real-time (no mockups) Pitches your project: what problem did you solve and what value does your solution bring? For Bonus Points, optionally you can do one or all of the following: Publish a piece of content (blog, podcast, video) covering how the project was built with Google AI models and Google Cloud. You must include language that says you created the piece of content for the purposes of entering this hackathon. When sharing on social media, use the hashtag #GeminiLiveAgentChallenge. Prove you automated your Cloud Deployment using scripts or infrastructure-as-code tools. This code must be included in your public repository. Sign up for a Google Developer Group and provide a link to your public GDG profile Hackathon Sponsors Prizes $ 80,000 in prizes Grand Prize $ 25,000 in cash 1 winner • $25,000 in USD • $3,000 in Google Cloud Credits for use with a Cloud Billing Account • Virtual Coffee with a Google Team Member • Social Promo • Maximum of two (2) Google Cloud Next 2026 conference tickets for two (2) teammates (April 22-24, 2026) (Value: $2,299 each) • Maximum of two (2) travel stipends for airfare and hotel to Google Cloud Next 2026 in Las Vegas, NV for two (2) teammates (maximum of $3,000 USD each) • Opportunity to demo your Project in a Google Cloud Next 2026 presentation (additional requirements in Official Rules) Best of Live Agents $ 10,000 in cash 1 winner • $10,000 in USD • $1,000 in Google Cloud Credits for use with a Cloud Billing Account Virtual Coffee with a Google Team Member • Social Promo • Maximum of two (2) Google Cloud Next 2026 conference tickets for two (2) teammates (April 22-24, 2026) (Value: $2,299 each) Best of Creative Storytellers $ 10,000 in cash 1 winner • $10,000 in USD • $1,000 in Google Cloud Credits for use with a Cloud Billing Account Virtual Coffee with a Google Team Member • Social Promo • Maximum of two (2) Google Cloud Next 2026 conference tickets for two (2) teammates (April 22-24, 2026) (Value: $2,299 each) Best of UI Navigators $ 10,000 in cash 1 winner • $10,000 in USD • $1,000 in Google Cloud Credits for use with a Cloud Billing Account Virtual Coffee with a Google Team Member • Social Promo • Maximum of two (2) Google Cloud Next 2026 conference tickets for two (2) teammates (April 22-24, 2026) (Value: $2,299 each) Best Multimodal Integration & User Experience $ 5,000 in cash 1 winner • $5,000 in USD • $500 in Google Cloud Credits for use with a Cloud Billing Account Best Technical Execution & Agent Architecture $ 5,000 in cash 1 winner • $5,000 in USD • $500 in Google Cloud Credits for use with a Cloud Billing Account Best Innovation & Thought Leadership $ 5,000 in cash 1 winner • $5,000 in USD • $500 in Google Cloud Credits for use with a Cloud Billing Account Honorable Mentions $ 2,000 in cash 5 winners • $2,000 in USD • $500 in Google Cloud Credits for use with a Cloud Billing AccountCloud Billing Account Devpost Achievements Submitting to this hackathon could earn you: Judges Abhijeet Rajwade Senior Customer Engineer, AI Infra Abhishek Dharmaratnakar Staff Software Engineer, YouTube Premium & AI Labs Ajeet Mirwani Alexandre Debargis Customer Engineer, Data Analytics Annie Wang Software Engineer Anuj Shah Senior Software Engineer Anushree Sinha Software Engineer, GenAI Search Notifications Ayo Adedeji Developer Relations Engineer Chloe Gaudreau Customer Engineer, AI ML Christina Lin Developer Relations Engineering Manager Debanshu Das Senior Software Engineer James O'Reilly Janet Vong Jenna Inouye Kent Hua Customer Engineer Specialist, Apps Kevin Lamenzo Technical Writer Khushan Adatiya Senior Software Engineer Manas Srivastava Customer Engineer Miguel Leon Outcome Customer Engineer Nicolas Fadli Customer Engineer, Platform Nitin Soni Consulting account lead Nivedita Kumari Data Analytics Customer Engineer Olivier Bourgeois Developer Relations Engineer Pritam Pal Customer Engineer Priya Pandey Developer Relations Engineering Manager Sagar Malla AI/ML Outcome Customer Engineer Sathya AG Principal Architect, Retail Shobhit Gupta Solutions Architect Shruti Dhumak Head of Customer Engineering Shub Shrivastava Customer Engineer AI Infra/AppMod Smitha Kolan Developer Relations Engineer Srivaths Ranganathan Staff Software Engineer, YouTube Subu Ramkumar Customer Engineer Sukesh Kumar AI/ML Customer Engineer Uday Korat Software Engineer Urvish Pandya Technical Program Manager Yashesh Shroff AI Infra Customer Engineer Zaid Elkhateeb Customer Engineer Judging Criteria Innovation & Multimodal User Experience (40%) Does the project break the \"text box\" paradigm? Does the agent help \"See, Hear, and Speak\" in a way that feels seamless? Does it have a distinct persona/voice? Is the experience \"Live\" and context-aware, or does it feel disjointed and turn-based? Technical Implementation & Agent Architecture (30%) Does the code effectively utilize the Google GenAI SDK or ADK? Is the backend robustly hosted on Google Cloud? Is the agent logic sound? Does it handle errors gracefully? Does the agent avoid hallucinations? Is there evidence of grounding? Demo & Presentation (30%) Does the video define the problem and solution? Is the architecture diagram clear? Is there visual proof of Cloud deployment? Does the video show the actual software working? View Full Rules for Details Questions? Email the hackathon manager Tell your friends Hackathon sponsors This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply. Devpost About Careers Contact Help Hackathons Browse hackathons Explore projects Host a hackathon Hackathon guides Portfolio Your projects Your hackathons Settings Connect Twitter Discord Facebook LinkedIn © 2026 Devpost, Inc. All rights reserved. Community guidelines Security CA notice Privacy policy Terms of service",
+      "markdown": null,
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T07:24:51.458932Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 11949,
+        "clean_text_chars": 11949,
+        "removed_noise_markers": [],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_b_019",
+      "result_id": "res_job_b_019",
+      "url": "https://github.com/GoogleCloudPlatform/cloud-solutions/tree/main/projects/build-with-gemini-demo/prototype-adk-agent-with-gemini-cli",
+      "canonical_url": "https://github.com/GoogleCloudPlatform/cloud-solutions/tree/main/projects/build-with-gemini-demo/prototype-adk-agent-with-gemini-cli",
+      "title": "cloud-solutions/projects/build-with-gemini-demo/prototype-adk-agent ...",
+      "domain": "github.com",
+      "text": "cloud-solutions/projects/build-with-gemini-demo/prototype-adk-agent-with-gemini-cli at main · GoogleCloudPlatform/cloud-solutions · GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights GitHub Skills SUPPORT & SERVICES Documentation Customer support Community forum Trust center Partners View all resources Open Source COMMUNITY GitHub Sponsors Fund open source developers PROGRAMS Security Lab Maintainer Community Accelerator GitHub Stars Archive Program REPOSITORIES Topics Trending Collections Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features Copilot for Business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Pricing Search or jump to... Search code, repositories, users, issues, pull requests... Search Clear Search syntax tips Provide feedback We read every piece of feedback, and take your input very seriously. Include my email address so I can be contacted Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Name Query To see all available qualifiers, see our documentation . Cancel Create saved search Sign in Sign up Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert GoogleCloudPlatform / cloud-solutions Public Notifications You must be signed in to change notification settings Fork 39 Star 118 Code Issues 1 Pull requests 21 Actions Security and quality 0 Insights Additional navigation options Code Issues Pull requests Actions Security and quality Insights Files Expand file tree main Breadcrumbs cloud-solutions / projects / build-with-gemini-demo / prototype-adk-agent-with-gemini-cli / Copy path Directory actions More options More options Directory actions More options More options Latest commit History History History main Breadcrumbs cloud-solutions / projects / build-with-gemini-demo / prototype-adk-agent-with-gemini-cli / Top Folders and files Name Name Last commit message Last commit date parent directory .. .gemini/ commands/ adk-plan .gemini/ commands/ adk-plan .env.sample .env.sample AGENTS.txt AGENTS.txt GEMINI.md GEMINI.md README.md README.md View all files README.md Outline Prototype ADK Agents with Gemini CLI This demonstration guide walks through the process of rapidly prototyping an ADK (Agent Development Kit) agent using the Gemini CLI. You will leverage the Gemini CLI's planning and implementation capabilities to quickly scaffold and refine a functional customer support agent. This \"vibe prototyping\" approach allows for fast iteration and development, showcasing how AI-assisted tools can accelerate the creation of complex agents and services. By the end of this demo section, you will have a working ADK agent capable of looking up and summarizing in-memory ticket data, all built and debugged primarily through natural language commands in the Gemini CLI. Key Files GEMINI.md : Provides instructions on how to use the reference documentation to build ADK agents. AGENTS.txt : Contains detailed information and best practices for agent development. AGENTS.txt file is imported into the GEMINI.md and will be included in the Gemini CLI session’s context when you interact with the Gemini CLI. This feature facilitates the decomposition of large GEMINI.md files into smaller, more manageable modules that can be seamlessly reused across varied contexts. The import processor supports both relative and absolute paths, incorporating robust safety mechanisms to avoid circular imports and ensure secure file access. Custom Commands These custom commands help you in both planning and implementing ADK agents. /adk-plan:new - this command leverages provided documentation (GEMINI.md, AGENTS.md) to generate an implementation plan, ensuring adherence to best practices. /adk-plan:impl - this command uses the implementation plan to generate the necessary Python files, reducing boilerplate and focusing on ADK requirements. Start building the agent Change the working directory: git clone --filter=blob:none --no-checkout https://github.com/GoogleCloudPlatform/cloud-solutions cd cloud-solutions git sparse-checkout set --cone projects/build-with-gemini-demo/prototype-adk-agent-with-gemini-cli git checkout cd projects/build-with-gemini-demo/prototype-adk-agent-with-gemini-cli Rename .env.sample to .env file and update with your Google Cloud project information: GOOGLE_GENAI_USE_VERTEXAI=TRUE GOOGLE_CLOUD_PROJECT=\"<ENTER_YOUR_PROJECT_ID>\" GOOGLE_CLOUD_LOCATION=\"<ENTER_YOUR_PROJECT_LOCATION>\" # e.g. us-central1 Acquire new user credentials: gcloud auth application-default login Run Gemini CLI: gemini Send prompt to create implementation plan: /adk-plan:new Build a customer support ADK agent that allows users to look up the full details of any ticket using its ID and also provide the ability to return a summary for any selected ticket. For summary requests return ticket description. Generate 20 sample tickets (each with an integer based ID, title, and description) and use them as an in-memory db. Review generated plan and request implementation. You can find an example plan in the projects/build-with-gemini-demo/prototype-adk-agent-sample/plans/customer_support_agent.md file. Send prompt to implement the plan: /adk-plan:impl implement the plan and generate a requirements.txt file for more reproducible builds. Review and approve tools and suggested code changes. The prototype-adk-agent-sample folder contains sample implementation plan and customer support agent built with the prompts above. Exit from Gemini CLI and run commands to setup virtual environment and install required dependencies for ADK agent: python -m venv .venv source .venv/bin/activate pip install -r requirements.txt Start ADK Web Server to test the agent: adk web . Click on the link to open application in the browser. In the Cloud Shell environment, select Web Preview from the menu and change port(eg. 8000) and preview the application. Testing the Agent After you start the application and select the agent from the dropdown in the top left corner. Send a greeting to the agent and ask how they can help. This will prompt the agent to describe available operations. Sample queries to try: lookup ticket # 10 summarize ticket # 5 You can find an example implementation of this agent in the projects/build-with-gemini-demo/prototype-adk-agent-sample directory. Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy Security Status Community Docs Contact Manage cookies Do not share my personal information You can’t perform that action at this time.",
+      "markdown": null,
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T07:24:51.501471Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 7852,
+        "clean_text_chars": 7852,
+        "removed_noise_markers": [],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_a_014",
+      "result_id": "res_job_a_014",
+      "url": "https://github.com/google-gemini/cookbook",
+      "canonical_url": "https://github.com/google-gemini/cookbook",
+      "title": "GitHub - google- gemini /cookbook: Examples and guides for using the...",
+      "domain": "github.com",
+      "text": "GitHub - google-gemini/cookbook: Examples and guides for using the Gemini API · GitHub Skip to content Navigation Menu Toggle navigation Sign in Appearance settings Platform AI CODE CREATION GitHub Copilot Write better code with AI GitHub Spark Build and deploy intelligent apps GitHub Models Manage and compare prompts MCP Registry New Integrate external tools DEVELOPER WORKFLOWS Actions Automate any workflow Codespaces Instant dev environments Issues Plan and track work Code Review Manage code changes APPLICATION SECURITY GitHub Advanced Security Find and fix vulnerabilities Code security Secure your code as you build Secret protection Stop leaks before they start EXPLORE Why GitHub Documentation Blog Changelog Marketplace View all features Solutions BY COMPANY SIZE Enterprises Small and medium teams Startups Nonprofits BY USE CASE App Modernization DevSecOps DevOps CI/CD View all use cases BY INDUSTRY Healthcare Financial services Manufacturing Government View all industries View all solutions Resources EXPLORE BY TOPIC AI Software Development DevOps Security View all topics EXPLORE BY TYPE Customer stories Events & webinars Ebooks & reports Business insights GitHub Skills SUPPORT & SERVICES Documentation Customer support Community forum Trust center Partners View all resources Open Source COMMUNITY GitHub Sponsors Fund open source developers PROGRAMS Security Lab Maintainer Community Accelerator GitHub Stars Archive Program REPOSITORIES Topics Trending Collections Enterprise ENTERPRISE SOLUTIONS Enterprise platform AI-powered developer platform AVAILABLE ADD-ONS GitHub Advanced Security Enterprise-grade security features Copilot for Business Enterprise-grade AI features Premium Support Enterprise-grade 24/7 support Pricing Search or jump to... Search code, repositories, users, issues, pull requests... Search Clear Search syntax tips Provide feedback We read every piece of feedback, and take your input very seriously. Include my email address so I can be contacted Cancel Submit feedback Saved searches Use saved searches to filter your results more quickly Name Query To see all available qualifiers, see our documentation . Cancel Create saved search Sign in Sign up Appearance settings Resetting focus You signed in with another tab or window. Reload to refresh your session. You signed out in another tab or window. Reload to refresh your session. You switched accounts on another tab or window. Reload to refresh your session. Dismiss alert google-gemini / cookbook Public Notifications You must be signed in to change notification settings Fork 2.6k Star 17.2k Code Issues 46 Pull requests 58 Actions Projects Security and quality 0 Insights Additional navigation options Code Issues Pull requests Actions Projects Security and quality Insights google-gemini/cookbook main Branches Tags Go to file Code Open more actions menu Folders and files Name Name Last commit message Last commit date Latest commit History 640 Commits 640 Commits .devcontainer .devcontainer .gemini .gemini .github .github examples examples quickstarts-js quickstarts-js quickstarts quickstarts .gitignore .gitignore CONTRIBUTING.md CONTRIBUTING.md LICENSE LICENSE README.md README.md View all files Repository files navigation README Contributing Apache-2.0 license Security Welcome to the Gemini API Cookbook This cookbook provides a structured learning path for using the Gemini API, focusing on hands-on tutorials and practical examples. For comprehensive API documentation, visit ai.google.dev . For Gemma quickstarts and examples, check out the Gemma cookbook . Gemini 3 : For the most recent updates on our latest generation, please check the Get Started and the thinking guides who include migration guides . 🍌 Nano-Banana 2 : Go bananas with our latest image generation model: Nano-Banana 2 . Get started here with 512px, thinking, search and image grounding, and a ton of examples! 🎶 Lyria 3 : Channel your inner composer with Lyria 3 . Get started here with 30s clips and full song generation, image-to-music, and a ton of examples! Navigating the Cookbook This cookbook is organized into two main categories: Quick Starts : Step-by-step guides covering both introductory topics (\" Get Started \") and specific API features. Examples : Practical use cases demonstrating how to combine multiple features. We also showcase Demos in separate repositories, illustrating end-to-end applications of the Gemini API. What's New? Here are the recent additions and updates to the Gemini API and the Cookbook: Webhooks : Get real-time notifications for async operations like batch jobs and video generation with the Webhooks quickstart . Inference tiers : Learn how to use the Priority and Flex tiers in the Inference tiers guide to help you balance speed, cost, and reliability. 🎶 Lyria 3 : Convert your ideas into songs with full control over the music structure and more! 🍌 Nano-Banana 2 & Pro: Use Gemini's native image generation capabilities to edit images with high consistency or generate visual stories. Experience Nano-Banana 2 for high speed or Nano-Banana Pro for 4K quality—both now with thinking and search grounding! File Search: Discover how to ground generations in your own data in a hosted RAG system with the File Search quickstart . Grounding with Google Maps: Get started using factual geographical data from 📍 Google Maps in your apps! See the Google Maps section of the Grounding Guide . Veo 3.1 : Get started with our video generation model with this Veo guide , including image-to-videos and video extension! Gemini Robotics-ER 1.5 : Learn about this new Gemini model specifically for spatial understanding and reasoning for robotics applications . Lyria and TTS : Get started with podcast and music generation with the TTS and Lyria RealTime models. LiveAPI : Get started with the multimodal Live API and unlock new interactivity with Gemini. Recently Added Guides: Grounding : Discover different ways to ground Gemini's answer using different tools, from Google Search to Youtube and URLs and the new Maps grounding tool. Batch API : Use Batch API to send large volume of non-time-sensitive requests to the model and get up to 90% discount. Logs and datasets : Process and evaluate your collected logs using the Batch API. 1. Quick Starts The quickstarts section contains step-by-step tutorials to get you started with Gemini and learn about its specific features. To begin, you'll need: A Google account. An API key (create one in Google AI Studio ). We recommend starting with the following: Authentication : Set up your API key for access. Get started : Get started with Gemini models and the Gemini API, covering basic prompting and multimodal input. Then, explore the other quickstarts tutorials to learn about individual features: Get started with Live API : Get started with the live API with this comprehensive overview of its capabilities Get started with Veo : Get started with our video generation capabilities Get started with Imagen and Native image generation : Get started with our image generation capabilities Grounding : use Google Search for grounded responses Code execution : Generate and run Python code to solve complex tasks and even output graphs And many more 2. Examples (Practical Use Cases) These examples demonstrate how to combine multiple Gemini API features or 3rd-party tools to build more complex applications. Browser as a tool : Use a web browser for live and internal (intranet) web interactions Illustrate a book : Use Gemini to create illustration for an open-source book Animated Story Generation : Create animated videos by combining Gemini's story generation, Imagen, and audio synthesis Plotting and mapping Live : Mix Live API and Code execution to solve complex tasks live 3D Spatial understanding : Use Gemini 3D spatial abilities to understand 3D scenes Gradio and live API : Use gradio to deploy your own instance of the Live API And many many more 3. Demos (End-to-End Applications) These fully functional, end-to-end applications showcase the power of Gemini in real-world scenarios. Gemini CLI : Open-source AI agent that brings the power of Gemini directly into your terminal Gemini API quickstart : Python Flask App running with the Google AI Gemini API, designed to get you started building with Gemini's multi-modal capabilities Multimodal Live API Web Console : React-based starter app for using the Multimodal Live API over a websocket Fullstack Langgraph Quickstart : A fullstack application using a React frontend and a LangGraph-powered backend agent Google AI Studio Starter Applets : A collection of small apps that demonstrate how Gemini can be used to create interactive experiences Official SDKs The Gemini API is a REST API. The Gemini API on Google Cloud Vertex AI For enterprise developers, the Gemini API is also available on Google Cloud Vertex AI. See this repo for examples. Contributing Contributions are welcome! See CONTRIBUTING.md for details. Thank you for developing with the Gemini API! We're excited to see what you create. About Examples and guides for using the Gemini API ai.google.dev/gemini-api/docs Topics gemini gemini-api Resources Readme License Apache-2.0 license Contributing Contributing Security policy Security policy Uh oh! There was an error while loading. Please reload this page . Activity Custom properties Stars 17.2k stars Watchers 196 watching Forks 2.6k forks Report repository Uh oh! There was an error while loading. Please reload this page . Contributors Uh oh! There was an error while loading. Please reload this page . Languages Jupyter Notebook 99.9% Other 0.1% Footer © 2026 GitHub, Inc. Footer navigation Terms Privacy Security Status Community Docs Contact Manage cookies Do not share my personal information You can’t perform that action at this time.",
+      "markdown": null,
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T07:24:50.907755Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 10026,
+        "clean_text_chars": 9808,
+        "removed_noise_markers": [
+          "boilerplate_or_code"
+        ],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_a_013",
+      "result_id": "res_job_a_013",
+      "url": "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+      "canonical_url": "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+      "title": "Building a Multimodal Agent with the ADK, Azure ACI, and Gemini ...",
+      "domain": "dev.to",
+      "text": "Building a Multimodal Agent with the ADK, Azure ACI, and Gemini Flash Live 3.1 - DEV Community Skip to content Navigation menu Search Powered by Algolia Search Log in Create account DEV Community Close Add reaction Like Unicorn Exploding Head Raised Hands Fire Jump to Comments Save Boost More... Copy link Copy link Copied to Clipboard Share to X Share to LinkedIn Share to Facebook Share to Mastodon Report Abuse xbill for Google Developer Experts Posted on Apr 18 • Originally published at xbill999.Medium on Apr 18 Building a Multimodal Agent with the ADK, Azure ACI, and Gemini Flash Live 3.1 # geminilive # azureaci # gemini # appagent Azure (39 Part Series) 1 Customizing Azure Cloud Shell for Cross Cloud Development 2 Customizing an Azure VM for Cross Cloud Development ... 35 more parts... 3 Cross Platform ADK Agents with Azure Cloud Shell 4 Cross Platform ADK Agents with an Azure Linux VM 5 Running the ADK Visual Builder on an Azure VM 6 Running Azure CLI Tools on ChromeOS / ChromeOS Flex 7 Local MCP Development with Python, Gemini CLI, and Azure Cloud Shell 8 Local MCP Development with Python, Gemini CLI, and an Azure Linux VM 9 MCP Development with Python, Gemini CLI, and the Azure Linux VM 10 MCP Development with Python, and the Azure App Service 11 MCP Development with Python, and the Azure Container Instance 12 MCP Development with Gemini CLI, Python, and Azure Functions 13 MCP Development with Python, and Azure Fabric 14 Building a Multimodal Cross Cloud Live Agent with ADK, Azure App Service, and Gemini CLI 15 MCP Development with Python, and Azure Container Apps 16 Cross Cloud ADK with Python, and the Azure App Service 17 Running the ADK Visual Builder on Azure App Service 18 Deploying ADK Agents on the Azure App Service 19 Deploying ADK Agents on Azure ACI 20 Deploying ADK Agents on Azure ACA (Azure Container Apps) 21 MCP Development with Python, and Azure Kubernates Service (AKS) 22 Building a Multimodal Cross Cloud Live Agent with ADK, Azure ACA, and Gemini CLI 23 Building a Multimodal Cross Cloud Live Agent with ADK, Azure ACI, and Gemini CLI 24 Deploying ADK Agents on Azure Kubernates Service (AKS) 25 Deploying ADK Agents on Azure Fabric 26 Building a Multimodal Cross Cloud Live Agent with ADK, Azure AKS, and Gemini CLI 27 Building a Multimodal Agent with the ADK, Azure ACA, and Gemini Flash Live 3.1 28 Multi-Agent A2A with the Agent Development Kit(ADK), Azure AKS, and Gemini CLI 29 Building Multimodal Real Time Agent with ADK, Azure AKS, Gemini CLI, and Gemini Flash Live 3.1 30 Multi-Agent A2A with the Agent Development Kit(ADK), Azure ACA, and Gemini CLI 31 Building a Multimodal Agent with the ADK, Azure ACI, and Gemini Flash Live 3.1 32 Multi-Agent A2A with the Agent Development Kit(ADK), Azure ACI, and Gemini CLI 33 Building a Multimodal Real-Time Agent with ADK, Azure AKS, Gemini CLI, and Gemini Flash Live 3.1 34 Building a Multimodal Agent with the ADK, Azure Appservice, and Gemini Flash Live 3.1 35 Multi-Agent A2A with the Agent Development Kit(ADK), Azure App Service, and Gemini CLI 36 Multi-Agent A2A with the Agent Development Kit(ADK), Azure Functions, and Gemini CLI 37 Multi-Agent A2A with the Agent Development Kit(ADK), Azure Fabric, and Gemini CLI 38 Building ADK Agents with Phi Models on Azure Foundry 39 Building ADK Agents with Azure Cloud Shell Leveraging the Google Agent Development Kit (ADK) and the underlying Gemini LLM to build Agentic apps using the Gemini Live API with the Python programming language deployed to Azure Container Instances. Aren’t There a Billion Python ADK Demos? Yes there are. Python has traditionally been the main coding language for ML and AI tools. The goal of this article is to provide a minimal viable basic working ADK streaming multi-modal agent using the latest Gemini Live Models. In the Spirit of Mr. McConaughey’s “alright, alright, alright” So what is different about this lab compared to all the others out there? This is one of the first implementations of the latest Gemini 3.1 Flash Live Model with the Agent Development Kit (ADK). The starting point for the demo was an existing Code lab- which was updated and re-engineered with Gemini CLI. The original Codelab- is here: Way Back Home - Building an ADK Bi-Directional Streaming Agent | Google Codelabs What Is Python? Python is an interpreted language that allows for rapid development and testing and has deep libraries for working with ML and AI: Welcome to Python.org Python Version Management One of the downsides of the wide deployment of Python has been managing the language versions across platforms and maintaining a supported version. The pyenv tool enables deploying consistent versions of Python: GitHub - pyenv/pyenv: Simple Python version management As of writing — the mainstream python version is 3.13. To validate your current Python: python --version Python 3.13.12 Enter fullscreen mode Exit fullscreen mode Azure Container Instances Azure Container Instances (ACI) is a serverless, managed service that allows you to run Docker containers in the cloud without managing virtual machines. It is ideal for rapid deployment, bursting, and simple, isolated applications, offering per-second billing and quick startup times. ACI supports Linux and Windows containers, with options for volume mounting and GPU resources. More details are available here: https://azure.microsoft.com/en-us/products/container-instances Why would I want Gemini CLI with Azure? Isn’t that a Google Thing? Yes- Gemini CLI leverages the Google Cloud console and Gemini models but it is also open source and platform agnostic. Many applications are already cross-cloud so this enables familiar tools to be run natively on Microsoft Azure. Azure Container Instance Configuration To configure your Azure Service with the base system tools- this article provides a reference: MCP Development with Python, and the Azure Container Instance Gemini Live Models Gemini Live is a conversational AI feature from Google that enables free-flowing, real-time voice, video, and screen-sharing interactions, allowing you to brainstorm, learn, or problem-solve through natural dialogue. Powered by the Gemini 3.1 Flash Live model , it provides low-latency, human-like, and emotionally aware speech in over 200 countries. More details are available here: Gemini 3.1 Flash Live Preview | Gemini API | Google AI for Developers The Gemini Live Models bring unique real-time capabilities than can be used directly from an Agent. A summary of the model is also available here: https://deepmind.google/models/model-cards/gemini-3-1-flash-live/ Enter fullscreen mode Exit fullscreen mode Gemini CLI If not pre-installed you can download the Gemini CLI to interact with the source files and provide real-time assistance: npm install -g @google/gemini-cli Enter fullscreen mode Exit fullscreen mode Testing the Gemini CLI Environment Once you have all the tools and the correct Node.js version in place- you can test the startup of Gemini CLI. You will need to authenticate with a Key or your Google Account: ▝▜▄ Gemini CLI v0.33.1 ▝▜▄ ▗▟▀ Logged in with Google /auth ▝▀ Gemini Code Assist Standard /upgrade no sandbox (see /docs) /model Auto (Gemini 3) | 239.8 MB Enter fullscreen mode Exit fullscreen mode Node Version Management Gemini CLI needs a consistent, up to date version of Node. The nvm command can be used to get a standard Node environment: GitHub - nvm-sh/nvm: Node Version Manager - POSIX-compliant bash script to manage multiple active node.js versions Agent Development Kit The Google Agent Development Kit (ADK) is an open-source, Python-based framework designed to streamline the creation, deployment, and orchestration of sophisticated, multi-agent AI systems. It treats agent development like software engineering, offering modularity, state management, and built-in tools (like Google Search) to build autonomous agents. The ADK can be installed from here: Agent Development Kit (ADK) Where do I start? The strategy for starting multimodal real time agent development is a incremental step by step approach. First, the basic development environment is setup with the required system variables, and a working Gemini CLI configuration. Then, a minimal ADK Agent is built and tested locally. Next — the entire solution is deployed to Azure ACA. Setup the Basic Environment At this point you should have a working Python environment and a working Gemini CLI installation. All of the relevant code examples and documentation is available in GitHub. This repo has a wide variety of samples- but this lab will focus on the ‘level_3-gemini’ setup. The next step is to clone the GitHub repository to your local environment: cd ~ git clone https://github.com/xbill9/gemini-cli-azure cd gemini31-aci Enter fullscreen mode Exit fullscreen mode Then run init.sh from the cloned directory. The script will attempt to determine your shell environment and set the correct variables: source init.sh Enter fullscreen mode Exit fullscreen mode If your session times out or you need to re-authenticate- you can run the set_env.sh script to reset your environment variables: source set_env.sh Enter fullscreen mode Exit fullscreen mode Variables like PROJECT_ID need to be setup for use in the various build scripts- so the set_env script can be used to reset the environment if you time-out. Build the User Interface The front end files provide the user interface: xbill@penguin:~/gemini-cli-azure/gemini31-aci$ make frontend cd frontend && npm install && npm run build added 218 packages, and audited 219 packages in 2s 49 packages are looking for funding run `npm fund` for details 1 high severity vulnerability To address all issues, run: npm audit fix Run `npm audit` for details. > frontend@0.0.0 build > vite build vite v7.3.1 building client environment for production... ✓ 33 modules transformed. dist/index.html 0.46 kB │ gzip: 0.29 kB dist/assets/index-xOQlTZZB.css 21.60 kB │ gzip: 4.54 kB dist/assets/index-0hbet2qm.js 214.56 kB │ gzip: 67.44 kB ✓ built in 1.02s xbill@penguin:~/gemini-cli-azure/gemini31-aca$ Enter fullscreen mode Exit fullscreen mode Test The User Interface The mock server test script allows the interface and Browser settings to be set to allow multimedia — without using any external Model calls or tokens: xbill@penguin:~/gemini-cli-azure/gemini31-aci$ make mock . ./mock.sh http://127.0.0.1:8080/ Serving static files from: /home/xbill/way-back-home/level_3_gemini/frontend/dist INFO: Started server process [24098] INFO: Waiting for application startup. INFO: Application startup complete. INFO: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit) Enter fullscreen mode Exit fullscreen mode The Deployed mock front-end will look similar to: Verify The ADK Installation To verify the setup, run the ADK CLI locally with the biometric_agent: xbill@penguin:~/gemini-cli-azure/gemini31-aci$ make testadk . ./testadk.sh connect to local ADK CLI Log setup complete: /tmp/agents_log/agent.20260406_160553.log To access latest log: tail -F /tmp/agents_log/agent.latest.log /home/xbill/.local/lib/python3.13/site-packages/google/adk/cli/cli.py:204: UserWarning: [EXPERIMENTAL] InMemoryCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time. credential_service = InMemoryCredentialService() /home/xbill/.local/lib/python3.13/site-packages/google/adk/auth/credential_service/in_memory_credential_service.py:33: UserWarning: [EXPERIMENTAL] BaseCredentialService: This feature is experimental and may change or be removed in future versions without notice. It may introduce breaking changes at any time. super(). __init__ () Running agent biometric_agent, type exit to exit. [biometric_agent]: Scanner Online. Test The ADK Web Interface This tests the Audio / Video ADK agent interactions: xbill@penguin:~/gemini-cli-azure/gemini31-aci$ make adk . ./runadk.sh connect on http://127.0.0.1:8000/ 2026-04-06 16:",
+      "markdown": null,
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T07:24:51.530115Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 22421,
+        "clean_text_chars": 22421,
+        "removed_noise_markers": [],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_b_006",
+      "result_id": "res_job_b_006",
+      "url": "https://deepmind.google/models/gemini/",
+      "canonical_url": "https://deepmind.google/models/gemini",
+      "title": "Gemini 3 — Google DeepMind",
+      "domain": "deepmind.google",
+      "text": "Gemini 3.1 Flash-Lite Best for high-volume tasks that need efficiency and intelligence Try in Google AI Studio Learn more Your browser does not support the video tag. Gemini 3.1 Deep Think Best for modern challenges across science, research and engineering Try in Gemini Learn more Your browser does not support the video tag. Gemini 3.1 Pro Best for complex tasks and bringing creative concepts to life Try in Gemini Learn more Your browser does not support the video tag. Gemini 3 Flash Our latest Gemini 3 model that helps you bring any idea to life - faster Try in Gemini Learn more Your browser does not support the video tag. Explore the latest Introducing our most intelligent model yet. With state-of-the-art reasoning to help you learn, build, and plan anything. Models Capabilities Hands-on Showcase Performance Safety Try Gemini Models Completing everyday tasks, or solving complex problems. Discover the right model for what you need Your browser does not support the video tag. 3.1 Pro Best for complex tasks and bringing creative concepts to life Learn more Your browser does not support the video tag. 3 Flash Best for frontier intelligence at speed Learn more Your browser does not support the video tag. 3.1 Flash-Lite Best for high-volume tasks that need efficiency and intelligence Learn more Gemini 3.1 Deep Think Pushes the boundaries of intelligence, delivering a significant upgrade to Gemini 3.1's specialized reasoning mode to help you solve the most complex technical problems. Gemini 3.1 Deep Think mode can better help tackle real world problems that require rigor, breakthrough creativity and intelligence. Available for Google AI Ultra subscribers . Try Deep Think Learn more Capabilities Slide 1 of 4 Reasoning with unprecedented depth and nuance Smart, concise, direct responses – with genuine insight over cliche and flattery. Advanced multimodal understanding Text, images, video, audio – even code. Gemini 3 is state-of-the-art on reasoning with unprecedented depth and nuance. Our best model for vibe coding and agentic coding Gemini 3 brings exceptional instruction following – with meaningful improved tool use and agentic coding. Improved agentic capabilities Better tool use. Simultaneous, multi-step tasks. Gemini 3’s agentic capabilities can build more helpful and intelligent personal AI assistants. Gemini 1 introduced native multimodality and long context to help AI understand the world. Gemini 2 added thinking, reasoning and tool use to create a foundation for agents. Now, Gemini 3 brings these capabilities together – so you can bring any idea to life. Slide 1 of 3 Learn anything Understand complex topics in a way that makes sense for you – with clear, concise, and helpful responses Build anything Bring your ideas to life – from sketches and prompts to interactive tools and experiences Plan anything Delegate tasks and multi-step projects to get things done faster than ever before Get started Build with Gemini 3 Slide 1 of 3 Google Antigravity Build with our new agentic development platform Download Learn more Your browser does not support the video tag. Google AI Studio Leap from prompt to production Try Google AI Studio Your browser does not support the video tag. Gemini API Get started building with cutting-edge AI models Build with Gemini Your browser does not support the video tag. Hands-on Explore what you can do with Gemini 3 Slide 1 of 6 Created with Gemini 3 Pro Code a 3D visualization of the universe Gemini 3 uses state-of-the-art reasoning to generate richer visualizations and deeper interactivity. See how it codes a seamless 3D journey through the scale of the universe, from a proton to the observable universe, demonstrating a massive leap in “vibe coding” performance over Gemini 2.5. Created with Gemini 3 Flash Visual context in an instant Leverage Gemini 3 Flash’s multimodal capabilities in visual recognition and reasoning to add contextual UI on image generations. 3 Flash has the capability to describe the content of the image in a compelling and interactive way. Created with Gemini 3 Pro Interact with complex topics like RNA transcription Gemini 3’s state-of-the-art reasoning provides unprecedented nuance and depth Created with Gemini 3 Flash Assist in near real-time game play In this slingshot game, Gemini 3 Flash delivers near real-time strategic guidance by simultaneously analyzing the video and hand-tracking inputs. It handles complex geometric calculations and velocity estimation to enable responsive live assistance. Created with Gemini 3 Pro Turn treasured recipes into shareable family cookbooks Gemini 3 seamlessly synthesizes information across text, images, video, audio, and even code to help you learn. Generate code for interactive flashcards, games and experiences to help you master new material. Created with Gemini 3 Flash Creative UI in a spark Generate new UIs instantly with Gemini 3 Flash, explore multiple creative variations, and interact with 3 Flash in near real-time to have it come up with best UI outcomes, all with one click. Showcase Slide 1 of 12 “Gemini 3 Pro brings a new level of multimodal understanding, planning, and tool-calling that transforms how Box AI interprets and applies your institutional knowledge. The result is content actively working for you to deliver faster decisions and execute across mission-critical workflows, from sales and marketing to legal and finance.” Ben Kus, CTO, Box “Gemini 3 has been a game-changer for Cline. We're using it to handle complex, long-horizon coding tasks that require deep context understanding across entire codebases. The model uses long context far more effectively than Gemini 2.5 Pro and has solved problems that stumped other leading models... This is a massive leap.” Nik Pash, Head of AI, Cline “We’re excited to partner with Google to launch Gemini 3 in Cursor! Gemini 3 Pro shows noticeable improvements in frontend quality, and works well for solving the most ambitious tasks.” Sualeh Asif, Co-founder and Chief Product Officer, Cursor “With Gemini 3 Pro in Figma Make, teams have a strong foundation to explore and steer their ideas with code-backed prototypes. The model translates designs with precision and generates a wide, inventive range of styles, layouts, and interactions. As foundation models get better, Figma gets better — and I’m excited to see how Gemini 3 Pro helps our community unlock new creative possibilities.” Loredana Crisan, Chief Design Officer, Figma “By bringing Gemini 3 Pro to GitHub Copilot, we’re seeing promising gains in how quickly and confidently developers can move from idea to code. In our early testing in VS Code, Gemini 3 Pro demonstrated 35% higher accuracy in resolving software engineering challenges than Gemini 2.5 Pro. That's the kind of potential that translates to developers solving real-world problems with more speed and effectiveness.” Joe Binder, VP of Product, GitHub “At JetBrains, we pride ourselves on code quality, so we challenged Gemini 3 Pro with demanding frontline tasks: from generating thousands of lines of front-end code to even simulating an operating-system interface from a single prompt. The new Gemini 3 Pro model advances the depth, reasoning, and reliability of AI in developer tools, showing more than a 50% improvement over Gemini 2.5 Pro in the number of solved benchmark tasks. In collaboration with Google, we’re now integrating Gemini 3 Pro into Junie and AI Assistant, to deliver smarter, more context-aware experiences to millions of developers worldwide.” Vladislav Tankov, Director of AI, Jetbrains “We’ve observed even stronger performance in the model’s reasoning and problem-solving capabilities. Many of Manus’ recent advancements—such as Wide Research and the web-building capabilities introduced in Manus 1.5—have become significantly more powerful with Gemini 3’s support.” Tao Zhang, Co-Founder and Chief Product Officer, Manus AI “Gemini 3 represents a significant advancement in multimodal AI... From accurately transcribing 3-hour multilingual meetings with superior speaker identification, to extracting structured data from poor-quality document photos, outperforming baseline models by over 50%, it showcased impressive capabilities that redefine enterprise potential.” Yusuke Kaji, General Manager, AI for Business, Rakuten Group Inc “Gemini 3 Pro truly stands out for its design capabilities, offering an unprecedented level of flexibility while creating apps. Like a skilled UI designer, it can range from well-organized wireframes to stunning high-fidelity prototypes.” Michele Catasta, President & Head of AI, Replit “Gemini 3 is a major leap forward for agentic AI. It follows complex instructions with minimal prompt tuning and reliably calls tools, which are critical capabilities to build truly helpful agents.” Mikhail Parakhin, Chief Technology Officer, Shopify “Our early evaluations indicate that Gemini 3 is delivering state-of-the-art reasoning with depth and nuance. We have observed measurable and significant progress in both legal reasoning and complex contract understanding.” Joel Hron, Chief Technology Officer, Thomson Reuters “At Wayfair, we’ve been piloting Google’s Gemini 3 Pro to turn complex partner support SOPs into clear, data-accurate infographics for our field associates. Compared with Gemini 2.5 Pro, it’s a clear step forward in handling structured business tasks that require precision and consistency — helping our teams grasp key information faster and support partners more effectively.” Fiona Tan, CTO, Wayfair Performance Gemini 3 is state-of-the-art across a wide range of benchmarks Our most intelligent model yet sets a new bar for AI model performance Benchmark Notes Gemini 3.1 Pro Thinking (High) Gemini 3 Pro Thinking (High) Sonnet 4.6 Thinking (Max) Opus 4.6 Thinking (Max) GPT-5.2 Thinking (xhigh) GPT-5.3-Codex Thinking (xhigh) Humanity's Last Exam Academic reasoning (full set, text + MM) No tools 44.4% 37.5% 33.2% 40.0% 34.5% — Search (blocklist) + Code 51.4% 45.8% 49.0% 53.1% 45.5% — ARC-AGI-2 Abstract reasoning puzzles ARC Prize Verified 77.1% 31.1% 58.3% 68.8% 52.9% — GPQA Diamond Scientific knowledge No tools 94.3% 91.9% 89.9% 91.3% 92.4% — Terminal-Bench 2.0 Agentic terminal coding Terminus-2 harness 68.5% 56.9% 59.1% 65.4% 54.0% 64.7% Other best self-reported harness — — — — 62.2% (Codex) 77.3% (Codex) SWE-Bench Verified Agentic coding Single attempt 80.6% 76.2% 79.6% 80.8% 80.0% — SWE-Bench Pro (Public) Diverse agentic coding tasks Single attempt 54.2% 43.3% — — 55.6% 56.8% LiveCodeBench Pro Competitive coding problems from Codeforces, ICPC, and IOI Elo 2887 2439 — — 2393 — SciCode Scientific research coding 59% 56% 47% 52% 52% — APEX-Agents Long horizon professional tasks 33.5% 18.4% — 29.8% 23.0% — GDPval-AA Elo Expert tasks 1317 1195 1633 1606 1462 — τ2-bench Agentic and tool use Retail 90.8% 85.3% 91.7% 91.9% 82.0% — Telecom 99.3% 98.0% 97.9% 99.3% 98.7% — MCP Atlas Multi-step workflows using MCP 69.2% 54.1% 61.3% 59.5% 60.6% — BrowseComp Agentic search Search + Python + Browse 85.9% 59.2% 74.7% 84.0% 65.8% — MMMU-Pro Multimodal understanding and reasoning No tools 80.5% 81.0% 74.5% 73.9% 79.5% — MMMLU Multilingual Q&A 92.6% 91.8% 89.3% 91.1% 89.6% — MRCR v2 (8-needle) Long context performance 128k (average) 84.9% 77.0% 84.9% 84.0% 83.8% — 1M (pointwise) 26.3% 26.3% Not supported Not supported Not supported — Methodology: deepmind.google/models/evals-methodology/gemini-3-1-pro Safety Building with responsibility at the core As we develop these new technologies, we recognize the responsibility it entails, and aim to prioritize safety and security in all our efforts. Learn more For developers Build with cutting-edge generative AI models and tools to make AI helpful for everyone Gemini’s advanced thinking, native multimodality and massive context window empowers developers to build next-generation experiences. Start building Create and adapt voxel art Recombine and regenerate voxel art through Gemin",
+      "markdown": null,
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T07:24:51.756079Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 17833,
+        "clean_text_chars": 13417,
+        "removed_noise_markers": [
+          "boilerplate_or_code"
+        ],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_b_016",
+      "result_id": "res_job_b_016",
+      "url": "https://googlecloudplatform.github.io/cloud-solutions/build-with-gemini-demo/",
+      "canonical_url": "https://googlecloudplatform.github.io/cloud-solutions/build-with-gemini-demo",
+      "title": "Accelerate software development with Gemini - Cloud Solutions",
+      "domain": "googlecloudplatform.github.io",
+      "text": "Accelerate software development with Gemini - Cloud Solutions Skip to content Cloud Solutions Accelerate software development with Gemini Initializing search cloud-solutions Cloud Solutions cloud-solutions Google Cloud Authenticate to AlloyDB via workload identity from GKE clusters HA solution with Patroni and etcd for AlloyDB Omni Arm reference guides Arm reference guides Arm on Google Cloud: Overview Game servers on Axion Event-based media streaming and transcoding on Axion Java and Web Stacks on Axion Accelerate software development with Gemini Accelerate software development with Gemini Accelerate software development with Gemini Accelerate software development with Gemini Table of contents Requirements Prototype ADK Agents with Gemini CLI Key Files Custom Commands Prepare the environment for ADK agent development Start building the agent Implement features with Gemini CLI Prerequisites Prepare the environment for Atlassian integration Check MCP server configuration Codebase explanation (Optional) If you did not configure JIRA and Confluence projects Bring requirements into the context of Gemini CLI session Start implementation Automate GitHub Pull Requests reviews with Code Review Agent GitHub Prerequisites Google Cloud Project Prerequisites Install Gemini Code Assist application on GitHub Code Review Agent Configuration Prepare to create GitHub Pull Request Pull Request Review Invoking Gemini Agentic development with Gemini CLI Automating UI tests with Playwright & Gemini CLI Automated code reviews with Gemini CLI Interactive code reviews with Gemini CLI Implementing UI changes with Gemini CLI Parallel Feature Development with Gemini CLI Prototype ADK Agents with Gemini CLI Prototype with Gemini CLI Custom Commands Prototype with the Gemini CLI Conductor Extension Scanning and fixing security issues with Gemini CLI and Snyk Bulk delete GCS files using BigQuery Remote Function Confidential ai model serving Confidential ai model serving Overview Deployment Contextual AI Conversational Agent - Apparel Database Archival and Pruning Streaming Spanner changes to BigQuery Load Apache Avro files to Cloud Spanner with Slowly Changing Dimensions (SCD) using Dataflow Flex template Dataflow Flex Template Google Cloud Storage to AlloyDB Dataflow Flex Template Google Cloud Storage to AlloyDB Overview Configuration Build and Run Template Development Documentation Dataflow flex template for Kafka Protobuf messages to BigQuery Gemini-powered .NET modernization demo Gemini-powered .NET modernization demo Get started Gemini prompt Sample modernization report FSI Financial Assistant Gemini-powered migrations to Google Cloud Gemini-powered migrations to Google Cloud Overview Examples Examples Amazon EKS container migration analysis Amazon Lambda function selection plan Amazon S3 bucket selection Amazon S3 migration analysis Azure Blob Storage container selection Hive-BigQuery-Connector Demo Setup Imagen Object Changer Imagen Voice Captioning Gemini-powered Java modernization demo Hybrid NEG controller for Kubernetes Hybrid NEG controller for Kubernetes Overview Use cases User guide Network configuration for hybrid connectivity Build the controller manager container image Deployment Deployment Deploy outside Google Cloud Deploy to an Amazon Elastic Kubernetes Service (EKS) cluster Deploy to an Azure Kubernetes Service (AKS) cluster Deploy to a Google Kubernetes Engine (GKE) cluster Deploy to a local kind Kubernetes cluster Troubleshoot Limitations References Accelerating the Path from Lab to Life Migrate from AWS to Google Cloud Migrate from AWS to Google Cloud Migrate from AWS to Google Cloud: Get started Migrate live traffic from Amazon EKS to GKE using reverse proxies Migrate Amazon EKS and Amazon RDS to Google Kubernetes Engine (GKE) and Cloud SQL Gemini-powered Amazon S3 to Cloud Storage migration recommendations Migrate VMs to Compute Engine and databases to Cloud SQL Migrate from Azure to Google Cloud Migrate from Azure to Google Cloud Get started Migrate from Azure VMs to Compute Engine Migrate from AKS to GKE Migrate from Azure Blob Storage to Cloud Storage Database Migrations Database Migrations Migrate Azure SQL Managed Instance to Cloud SQL for SQL Server Migrate Azure SQL Database to Cloud SQL for SQL Server Migrate Azure Database for MySQL to Cloud SQL for MySQL Migrate Azure Database for PostgreSQL to Cloud SQL and AlloyDB for PostgreSQL Migrate SQL Server to Cloud SQL for PostgreSQL and AlloyDB for PostgreSQL Nutanix Cloud Clusters (NC2) on Google Cloud Migrate, Modernize, and Build with Data Cloud Migrate, Modernize, and Build with Data Cloud Overview Migrate from PostgreSQL to Alloy DB using Database Migration Service MMB Hero Demo NVIDIA Omniverse on Google Cloud NVIDIA Omniverse on Google Cloud Overview NVIDIA RTX Virtual Workstation: G2 machine family (L4 GPUs), Ubuntu 22.04 Provision and configure a Google Kubernetes Engine platform for NVIDIA Omniverse applications Deploy NVIDIA Omniverse Kit App Streaming applications on Google Cloud Deploy NVIDIA Omniverse Farm on Google Cloud Pino Google Cloud Logging configuration for Node.JS SA Tools LLM model loading best practice Serverless event processing Batch translate audio languages Generate translated subtitles for videos Streamlit PubSub Demo Vision AI Edge Platform Table of contents Requirements Prototype ADK Agents with Gemini CLI Key Files Custom Commands Prepare the environment for ADK agent development Start building the agent Implement features with Gemini CLI Prerequisites Prepare the environment for Atlassian integration Check MCP server configuration Codebase explanation (Optional) If you did not configure JIRA and Confluence projects Bring requirements into the context of Gemini CLI session Start implementation Automate GitHub Pull Requests reviews with Code Review Agent GitHub Prerequisites Google Cloud Project Prerequisites Install Gemini Code Assist application on GitHub Code Review Agent Configuration Prepare to create GitHub Pull Request Pull Request Review Invoking Gemini Accelerating Development with Gemini: Prototyping, Implementation, and Code Review ¶ In this demo, you prototype and implement application features with Gemini. This demo guide walks you through the following steps: Prepare the environment Prototype ADK agents with Gemini CLI Implement new features with Gemini CLI Automate GitHub Pull Requests reviews with Code Review Agent Requirements ¶ To follow this demo, you need: A Google Cloud project with the Owner role. JIRA/Confluence project GitHub account and repository Gemini CLI: Installed and configured. For installation instructions, visit geminicli.com . GitHub CLI: Installed and configured. For installation instructions, visit Installation . Detailed setup instructions for each demonstration are located within their respective sections below. Prototype ADK Agents with Gemini CLI ¶ This demonstration guide walks through the process of rapidly prototyping an ADK (Agent Development Kit) agent using the Gemini CLI. You will leverage the Gemini CLI's planning and implementation capabilities to quickly scaffold and refine a functional customer support agent. This \"vibe prototyping\" approach allows for fast iteration and development, showcasing how AI-assisted tools can accelerate the creation of complex agents and services. By the end of this demo section, you will have a working ADK agent capable of looking up and summarizing in-memory ticket data, all built and debugged primarily through natural language commands in the Gemini CLI. Key Files ¶ GEMINI.md : Provides instructions on how to use the reference documentation to build ADK agents. AGENTS.txt : Contains detailed information and best practices for agent development. AGENTS.txt file is imported into the GEMINI.md and will be included in the Gemini CLI session’s context when you interact with the Gemini CLI. This feature facilitates the decomposition of large GEMINI.md files into smaller, more manageable modules that can be seamlessly reused across varied contexts. The import processor supports both relative and absolute paths, incorporating robust safety mechanisms to avoid circular imports and ensure secure file access. Custom Commands ¶ These custom commands help you with planning and implementing ADK agents. /adk-plan:new - this command leverages provided documentation (GEMINI.md, AGENTS.txt) to generate an implementation plan, ensuring adherence to best practices. /adk-plan:impl - this command uses the implementation plan to generate the necessary Python files, reducing boilerplate and focusing on ADK requirements. Prepare the environment for ADK agent development ¶ Open Cloud Shell . Clone the repository and set the working directory: git clone --filter = blob:none --no-checkout https://github.com/GoogleCloudPlatform/cloud-solutions cd cloud-solutions git sparse-checkout set --cone projects/build-with-gemini-demo git checkout Start building the agent ¶ Change the working directory: cd \" $( git rev-parse --show-toplevel ) /projects/build-with-gemini-demo/prototype-adk-agent-with-gemini-cli\" Rename .env.sample to .env file and update with your Google Cloud project information: GOOGLE_GENAI_USE_VERTEXAI=TRUE GOOGLE_CLOUD_PROJECT=\"<ENTER_YOUR_PROJECT_ID>\" GOOGLE_CLOUD_LOCATION=\"<ENTER_YOUR_PROJECT_LOCATION>\" # e.g. us-central1 Acquire new user credentials: gcloud auth application-default login Run Gemini CLI: gemini Send prompt to create implementation plan: /adk-plan:new Build a customer support ADK agent that allows users to look up the full details of any ticket using its ID and also provide the ability to return a summary for any selected ticket. For summary requests return ticket description. Generate 20 sample tickets (each with an integer based ID, title, and description) and use them as an in-memory db. Review generated plan and request implementation. You can find an example plan in the projects/build-with-gemini-demo/prototype-adk-agent-sample/plans/customer_support_agent.md file. Send prompt to implement the plan: /adk-plan:impl implement the plan and generate a requirements.txt file for more reproducible builds. Review and approve tools and suggested code changes. The prototype-adk-agent-sample folder contains sample implementation plan and customer support agent built with the prompts above. Exit from Gemini CLI and run commands to setup virtual environment and install required dependencies for ADK agent: python -m venv .venv source .venv/bin/activate pip install -r requirements.txt Start ADK Web Server to test the agent: adk web . Click on the link to open application in the browser. In the Cloud Shell environment, select Web Preview from the menu and change port(eg. 8000) and preview the application. Testing the Agent After you start the application and select the agent from the dropdown in the top left corner. Send a greeting to the agent and ask how they can help. This will prompt the agent to describe available operations. Sample queries to try: lookup ticket # 10 summarize ticket # 5 You can find an example implementation of this agent in the projects/build-with-gemini-demo/prototype-adk-agent-sample directory. Stop ADK Web server before moving to the next section. Implement features with Gemini CLI ¶ This guide demonstrates how Gemini CLI accelerate feature development within the SDLC. Using Model Context Protocol (MCP) servers, it brings requirements from external systems(eg. JIRA, Confluence) into Gemini chat for efficient planning, review, and implementation. The workflow covers setup, code generation (adding rating to a menu service), and automatic JIRA updates. Prerequisites ¶ For this demo you need to have JIRA and Confluence projects configured. Sign up . Create Atlassian API token: You will use API Token Authentication to configure Atlassian MCP server. Additional details . Go to API Tokens Click Create API token , give it a name and save the generated token to set environment variables. Create new Co",
+      "markdown": null,
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T07:24:51.357418Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 19698,
+        "clean_text_chars": 19698,
+        "removed_noise_markers": [],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    }
+  ],
+  "fetched_source_summary": {
+    "fetched_http_count": 10,
+    "fetched_camofox_count": 0,
+    "arxiv_metadata_count": 0,
+    "failed_count": 10
+  },
+  "evidence_items": [
+    {
+      "evidence_id": "ev_job_a_001",
+      "job_id": "job_a",
+      "result_id": "res_job_a_007",
+      "claim": "ADK Gemini Live API Toolkit automatically handles tool execution, including calling and resuming from function calls.",
+      "source_title": "Introduction to ADK Gemini Live API Toolkit - Google Codelabs",
+      "source_url": "https://codelabs.developers.google.com/intro-to-adk-live",
+      "source_quote": "Tool execution : Automatically calling and resuming from function calls",
+      "fetched_source_id": "src_res_job_a_007",
+      "quote_location": "page",
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.9,
+      "limitations": [
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_a_002",
+      "job_id": "job_a",
+      "result_id": "res_job_a_007",
+      "claim": "A working voice AI built with ADK can accept text, audio, and image input.",
+      "source_title": "Introduction to ADK Gemini Live API Toolkit - Google Codelabs",
+      "source_url": "https://codelabs.developers.google.com/intro-to-adk-live",
+      "source_quote": "By the end, you'll have a working voice AI that can: Accept text, audio, and image input",
+      "fetched_source_id": "src_res_job_a_007",
+      "quote_location": "page",
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.9,
+      "limitations": [
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_a_003",
+      "job_id": "job_a",
+      "result_id": "res_job_a_014",
+      "claim": "Grounding with Google Search is a recommended pattern for Gemini agents.",
+      "source_title": "GitHub - google- gemini /cookbook: Examples and guides for using the...",
+      "source_url": "https://github.com/google-gemini/cookbook",
+      "source_quote": "Grounding : use Google Search for grounded responses",
+      "fetched_source_id": "src_res_job_a_014",
+      "quote_location": "page",
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.8,
+      "limitations": [
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_a_004",
+      "job_id": "job_a",
+      "result_id": "res_job_a_014",
+      "claim": "The Gemini API supports multimodal input handling as part of its basic usage.",
+      "source_title": "GitHub - google- gemini /cookbook: Examples and guides for using the...",
+      "source_url": "https://github.com/google-gemini/cookbook",
+      "source_quote": "Get started : Get started with Gemini models and the Gemini API, covering basic prompting and multimodal input.",
+      "fetched_source_id": "src_res_job_a_014",
+      "quote_location": "page",
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.9,
+      "limitations": [
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_a_005",
+      "job_id": "job_a",
+      "result_id": "res_job_a_013",
+      "claim": "Gemini Live enables real-time multimodal interactions including voice, video, and screen-sharing.",
+      "source_title": "Building a Multimodal Agent with the ADK, Azure ACI, and Gemini ...",
+      "source_url": "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+      "source_quote": "Gemini Live is a conversational AI feature from Google that enables free-flowing, real-time voice, video, and screen-sharing interactions",
+      "fetched_source_id": "src_res_job_a_013",
+      "quote_location": "page",
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.7,
+      "limitations": [
+        "Does not provide implementation details for function calling or grounding",
+        "Third-party source, not official documentation",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_a_006",
+      "job_id": "job_a",
+      "result_id": "res_job_a_013",
+      "claim": "The ADK is an open-source Python framework for building multi-agent AI systems.",
+      "source_title": "Building a Multimodal Agent with the ADK, Azure ACI, and Gemini ...",
+      "source_url": "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+      "source_quote": "The Google Agent Development Kit (ADK) is an open-source, Python-based framework designed to streamline the creation, deployment, and orchestration of sophisticated, multi-agent AI systems.",
+      "fetched_source_id": "src_res_job_a_013",
+      "quote_location": "page",
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.5,
+      "limitations": [
+        "The blog focuses on deployment on Azure ACI, not on specific Gemini API workflows",
+        "Does not discuss function calling or grounding",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_001",
+      "job_id": "job_b",
+      "result_id": "res_job_b_018",
+      "claim": "The Agent Development Kit includes built-in and partner evaluation tools to test agent execution trajectories.",
+      "source_title": "Agent Development Kit | Gemini Enterprise Agent Platform | Google Cloud ...",
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "source_quote": "Apply built-in and partner evaluation tools to test execution trajectories.",
+      "fetched_source_id": "src_res_job_b_018",
+      "quote_location": "page",
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.8,
+      "limitations": [
+        "The context does not specify hackathon-specific evaluation metrics or methods.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_002",
+      "job_id": "job_b",
+      "result_id": "res_job_b_018",
+      "claim": "Users can quickly set up an agent environment and get it running in a few minutes using the ADK.",
+      "source_title": "Agent Development Kit | Gemini Enterprise Agent Platform | Google Cloud ...",
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "source_quote": "Set up your environment and get an agent running in a few minutes.",
+      "fetched_source_id": "src_res_job_b_018",
+      "quote_location": "page",
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.7,
+      "limitations": [
+        "Does not explicitly mention multimodal agents, but implies rapid prototyping for demos.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_003",
+      "job_id": "job_b",
+      "result_id": "res_job_b_011",
+      "claim": "The Internship Hunt project used Gemini along with AgentQL for an internship search assistant that generates cover letters.",
+      "source_title": "Hacking with AgentQL at Multimodal AI Agents Hackathon ... | AgentQL",
+      "source_url": "https://www.agentql.com/blog/2025-multimodal-agents-hackathon",
+      "source_quote": "Internship Hunt: Powered by Agno, Gemini, and AgentQL",
+      "fetched_source_id": "src_res_job_b_011",
+      "quote_location": "page",
+      "source_type": "blog",
+      "source_quality_score": 0.45,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.9,
+      "limitations": [
+        "The source does not provide detailed evaluation of the agent's performance.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_004",
+      "job_id": "job_b",
+      "result_id": "res_job_b_011",
+      "claim": "Fixit is a real-time appliance troubleshooting agent that uses text, image, audio, or video inputs, demonstrating a multimodal agent hackathon project.",
+      "source_title": "Hacking with AgentQL at Multimodal AI Agents Hackathon ... | AgentQL",
+      "source_url": "https://www.agentql.com/blog/2025-multimodal-agents-hackathon",
+      "source_quote": "Fixit is an AI-powered assistant that helps users diagnose and resolve appliance issues using text, image, audio, or video inputs.",
+      "fetched_source_id": "src_res_job_b_011",
+      "quote_location": "page",
+      "source_type": "blog",
+      "source_quality_score": 0.45,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.95,
+      "limitations": [
+        "The project is described in a promotional blog post, and further technical details are limited.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_005",
+      "job_id": "job_b",
+      "result_id": "res_job_b_002",
+      "claim": "The Gemini Live Agent Challenge requires projects to leverage Google's Live API with multimodal inputs and outputs, moving beyond text-only interactions.",
+      "source_title": "Gemini Live Agent Challenge: Redefining Interaction: From",
+      "source_url": "https://geminiliveagentchallenge.devpost.com/",
+      "source_quote": "Entrants must develop a NEW next-generation AI Agent that utilizes multimodal inputs and outputs and moves beyond simple text-in/text-out interactions.",
+      "fetched_source_id": "src_res_job_b_002",
+      "quote_location": "page",
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.9,
+      "limitations": [
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_006",
+      "job_id": "job_b",
+      "result_id": "res_job_b_002",
+      "claim": "Judging criteria for the hackathon include evaluation of evidence grounding and avoidance of hallucinations.",
+      "source_title": "Gemini Live Agent Challenge: Redefining Interaction: From",
+      "source_url": "https://geminiliveagentchallenge.devpost.com/",
+      "source_quote": "Does the agent avoid hallucinations? Is there evidence of grounding?",
+      "fetched_source_id": "src_res_job_b_002",
+      "quote_location": "page",
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.85,
+      "limitations": [
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_007",
+      "job_id": "job_b",
+      "result_id": "res_job_b_019",
+      "claim": "An existing hackathon project (demo) uses Gemini for an evidence-grounded agent that looks up and summarizes ticket data.",
+      "source_title": "cloud-solutions/projects/build-with-gemini-demo/prototype-adk-agent ...",
+      "source_url": "https://github.com/GoogleCloudPlatform/cloud-solutions/tree/main/projects/build-with-gemini-demo/prototype-adk-agent-with-gemini-cli",
+      "source_quote": "You will have a working ADK agent capable of looking up and summarizing in-memory ticket data, all built and debugged primarily through natural language commands in the Gemini CLI.",
+      "fetched_source_id": "src_res_job_b_019",
+      "quote_location": "page",
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.9,
+      "limitations": [
+        "Single demo from Google Cloud Solutions repository; may not reflect all hackathon projects.",
+        "anchor_method:normalized",
+        "anchor_confidence:0.95"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_008",
+      "job_id": "job_b",
+      "result_id": "res_job_b_019",
+      "claim": "In a hackathon context, agent performance can be evaluated by testing with sample queries like 'lookup ticket #10' and 'summarize ticket #5'.",
+      "source_title": "cloud-solutions/projects/build-with-gemini-demo/prototype-adk-agent ...",
+      "source_url": "https://github.com/GoogleCloudPlatform/cloud-solutions/tree/main/projects/build-with-gemini-demo/prototype-adk-agent-with-gemini-cli",
+      "source_quote": "Sample queries to try: lookup ticket # 10 summarize ticket # 5",
+      "fetched_source_id": "src_res_job_b_019",
+      "quote_location": "page",
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.8,
+      "limitations": [
+        "Provides only basic functional testing; lacks metrics on latency, accuracy, or user satisfaction.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_009",
+      "job_id": "job_b",
+      "result_id": "res_job_b_006",
+      "claim": "Gemini 3 Flash provides a quick-win demo for multimodal agents by enabling visual context in an instant through multimodal recognition and reasoning for UI generation.",
+      "source_title": "Gemini 3 — Google DeepMind",
+      "source_url": "https://deepmind.google/models/gemini/",
+      "source_quote": "Created with Gemini 3 Flash Visual context in an instant Leverage Gemini 3 Flash’s multimodal capabilities in visual recognition and reasoning to add contextual UI on image generations.",
+      "fetched_source_id": "src_res_job_b_006",
+      "quote_location": "page",
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.9,
+      "limitations": [
+        "This example is from the product page, not from a hackathon project, but it illustrates a feasible demo concept.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_010",
+      "job_id": "job_b",
+      "result_id": "res_job_b_006",
+      "claim": "SWE-Bench Verified provides a benchmark for evaluating agentic coding performance, which can be used in a hackathon context to measure agent performance.",
+      "source_title": "Gemini 3 — Google DeepMind",
+      "source_url": "https://deepmind.google/models/gemini/",
+      "source_quote": "SWE-Bench Verified Agentic coding Single attempt 80.6%",
+      "fetched_source_id": "src_res_job_b_006",
+      "quote_location": "page",
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.8,
+      "limitations": [
+        "The benchmark is not tailored for hackathon settings, but it offers a quantitative evaluation method for agent abilities.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_011",
+      "job_id": "job_b",
+      "result_id": "res_job_b_016",
+      "claim": "The Gemini CLI feature implementation demo uses MCP servers to bring external requirements (JIRA/Confluence) into context, grounding the agent in real-world data, which is relevant to evidence-grounded agents.",
+      "source_title": "Accelerate software development with Gemini - Cloud Solutions",
+      "source_url": "https://googlecloudplatform.github.io/cloud-solutions/build-with-gemini-demo/",
+      "source_quote": "Using Model Context Protocol (MCP) servers, it brings requirements from external systems(eg. JIRA, Confluence) into Gemini chat for efficient planning, review, and implementation.",
+      "fetched_source_id": "src_res_job_b_016",
+      "quote_location": "page",
+      "source_type": "unknown",
+      "source_quality_score": 0.2,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.5,
+      "limitations": [
+        "Not a hackathon project per se",
+        "Does not include evaluation",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    }
+  ],
+  "fact_ledger": {
+    "verified_facts": [],
+    "partial_facts": [
+      {
+        "fact_id": "fact_ev_job_a_001",
+        "claim": "ADK Gemini Live API Toolkit automatically handles tool execution, including calling and resuming from function calls.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_a_001"
+        ],
+        "source_urls": [
+          "https://codelabs.developers.google.com/intro-to-adk-live"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_a_002",
+        "claim": "A working voice AI built with ADK can accept text, audio, and image input.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_a_002"
+        ],
+        "source_urls": [
+          "https://codelabs.developers.google.com/intro-to-adk-live"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_a_003",
+        "claim": "Grounding with Google Search is a recommended pattern for Gemini agents.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_a_003"
+        ],
+        "source_urls": [
+          "https://github.com/google-gemini/cookbook"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_a_004",
+        "claim": "The Gemini API supports multimodal input handling as part of its basic usage.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_a_004"
+        ],
+        "source_urls": [
+          "https://github.com/google-gemini/cookbook"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_a_005",
+        "claim": "Gemini Live enables real-time multimodal interactions including voice, video, and screen-sharing.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_a_005"
+        ],
+        "source_urls": [
+          "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_a_006",
+        "claim": "The ADK is an open-source Python framework for building multi-agent AI systems.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_a_006"
+        ],
+        "source_urls": [
+          "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_b_001",
+        "claim": "The Agent Development Kit includes built-in and partner evaluation tools to test agent execution trajectories.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_b_001"
+        ],
+        "source_urls": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_b_002",
+        "claim": "Users can quickly set up an agent environment and get it running in a few minutes using the ADK.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_b_002"
+        ],
+        "source_urls": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_b_004",
+        "claim": "Fixit is a real-time appliance troubleshooting agent that uses text, image, audio, or video inputs, demonstrating a multimodal agent hackathon project.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_b_004"
+        ],
+        "source_urls": [
+          "https://www.agentql.com/blog/2025-multimodal-agents-hackathon"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_b_005",
+        "claim": "The Gemini Live Agent Challenge requires projects to leverage Google's Live API with multimodal inputs and outputs, moving beyond text-only interactions.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_b_005"
+        ],
+        "source_urls": [
+          "https://geminiliveagentchallenge.devpost.com/"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_b_006",
+        "claim": "Judging criteria for the hackathon include evaluation of evidence grounding and avoidance of hallucinations.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_b_006"
+        ],
+        "source_urls": [
+          "https://geminiliveagentchallenge.devpost.com/"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_b_009",
+        "claim": "Gemini 3 Flash provides a quick-win demo for multimodal agents by enabling visual context in an instant through multimodal recognition and reasoning for UI generation.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_b_009"
+        ],
+        "source_urls": [
+          "https://deepmind.google/models/gemini/"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_b_011",
+        "claim": "The Gemini CLI feature implementation demo uses MCP servers to bring external requirements (JIRA/Confluence) into context, grounding the agent in real-world data, which is relevant to evidence-grounded agents.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_b_011"
+        ],
+        "source_urls": [
+          "https://googlecloudplatform.github.io/cloud-solutions/build-with-gemini-demo/"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      }
+    ],
+    "contradictions": [],
+    "unsupported_claims": [
+      {
+        "claim": "The Internship Hunt project used Gemini along with AgentQL for an internship search assistant that generates cover letters.",
+        "evidence_id": "ev_job_b_003",
+        "reason": "source quote does not support claim"
+      },
+      {
+        "claim": "An existing hackathon project (demo) uses Gemini for an evidence-grounded agent that looks up and summarizes ticket data.",
+        "evidence_id": "ev_job_b_007",
+        "reason": "source quote does not support claim"
+      },
+      {
+        "claim": "In a hackathon context, agent performance can be evaluated by testing with sample queries like 'lookup ticket #10' and 'summarize ticket #5'.",
+        "evidence_id": "ev_job_b_008",
+        "reason": "source quote conflicts with claim"
+      },
+      {
+        "claim": "SWE-Bench Verified provides a benchmark for evaluating agentic coding performance, which can be used in a hackathon context to measure agent performance.",
+        "evidence_id": "ev_job_b_010",
+        "reason": "source quote does not support claim"
+      }
+    ],
+    "dropped_evidence": [],
+    "source_quality": {
+      "official": 4,
+      "academic": 3,
+      "news": 2,
+      "blog": 1,
+      "unknown": 0
+    },
+    "source_quality_summary": {
+      "official": 4,
+      "unknown": 11,
+      "blog": 2
+    },
+    "summary": "0 verified, 13 partial, 4 unsupported, 0 contradictions"
+  },
+  "report": {
+    "report_id": "report_v2",
+    "title": "Multimodal Grounded Agent with ADK for Milan AI Week Hackathon",
+    "answer_summary": "We recommend building a multimodal, evidence-grounded AI agent using the ADK Gemini Live API Toolkit, which provides automatic tool execution and evaluation capabilities [fact_ev_job_a_001][fact_ev_job_b_001]. The agent leverages grounding with Google Search for verifiable responses and accepts text, audio, and image inputs via Gemini API multimodal support [fact_ev_job_a_003][fact_ev_job_a_004]. Rapid setup with ADK and real-time voice, video, and screen-sharing via Gemini Live make this workflow highly feasible for hackathon demo [fact_ev_job_a_005][fact_ev_job_b_002].",
+    "sections": [
+      {
+        "section_id": "sec_llm_01",
+        "heading": "Architecture and Tool Execution",
+        "content": "The ADK is an open-source Python framework for building multi-agent AI systems [fact_ev_job_a_006]. Its Gemini Live API Toolkit automatically handles tool execution, including calling and resuming from function calls, which streamlines agent orchestration [fact_ev_job_a_001].",
+        "used_fact_ids": [
+          "fact_ev_job_a_006",
+          "fact_ev_job_a_001"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live",
+          "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6"
+        ]
+      },
+      {
+        "section_id": "sec_llm_02",
+        "heading": "Multimodal Inputs and Real-Time Interaction",
+        "content": "A working voice AI built with ADK accepts text, audio, and image input [fact_ev_job_a_002]. The Gemini API supports multimodal input handling as part of its basic usage [fact_ev_job_a_004]. Gemini Live further enables real-time multimodal interactions including voice, video, and screen-sharing for an engaging demo [fact_ev_job_a_005].",
+        "used_fact_ids": [
+          "fact_ev_job_a_002",
+          "fact_ev_job_a_004",
+          "fact_ev_job_a_005"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live",
+          "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+          "https://github.com/google-gemini/cookbook"
+        ]
+      },
+      {
+        "section_id": "sec_llm_03",
+        "heading": "Grounding for Evidence-Grounded Responses",
+        "content": "Grounding with Google Search is a recommended pattern for Gemini agents to ensure responses are evidence-based and verifiable [fact_ev_job_a_003]. This directly supports the hackathon requirement for high-confidence, fact-backed outputs.",
+        "used_fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://github.com/google-gemini/cookbook"
+        ]
+      },
+      {
+        "section_id": "sec_llm_04",
+        "heading": "Evaluation and Demo Feasibility",
+        "content": "The Agent Development Kit includes built-in and partner evaluation tools to test agent execution trajectories [fact_ev_job_b_001]. Users can quickly set up an agent environment and get it running in a few minutes using the ADK, making the workflow practical for a hackathon timeline [fact_ev_job_b_002].",
+        "used_fact_ids": [
+          "fact_ev_job_b_001",
+          "fact_ev_job_b_002"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ]
+      }
+    ],
+    "key_findings": [
+      {
+        "finding": "ADK Gemini Live API Toolkit automatically handles tool execution, including calling and resuming from function calls.",
+        "fact_ids": [
+          "fact_ev_job_a_001"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "A working voice AI built with ADK can accept text, audio, and image input.",
+        "fact_ids": [
+          "fact_ev_job_a_002"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Grounding with Google Search is a recommended pattern for Gemini agents.",
+        "fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://github.com/google-gemini/cookbook"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "The Gemini API supports multimodal input handling as part of its basic usage.",
+        "fact_ids": [
+          "fact_ev_job_a_004"
+        ],
+        "citations": [
+          "https://github.com/google-gemini/cookbook"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Gemini Live enables real-time multimodal interactions including voice, video, and screen-sharing.",
+        "fact_ids": [
+          "fact_ev_job_a_005"
+        ],
+        "citations": [
+          "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6"
+        ],
+        "confidence": 0.55
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "unsupported_not_included": [
+      {
+        "claim": "The Internship Hunt project used Gemini along with AgentQL for an internship search assistant that generates cover letters.",
+        "evidence_id": "ev_job_b_003",
+        "reason": "source quote does not support claim"
+      },
+      {
+        "claim": "An existing hackathon project (demo) uses Gemini for an evidence-grounded agent that looks up and summarizes ticket data.",
+        "evidence_id": "ev_job_b_007",
+        "reason": "source quote does not support claim"
+      },
+      {
+        "claim": "In a hackathon context, agent performance can be evaluated by testing with sample queries like 'lookup ticket #10' and 'summarize ticket #5'.",
+        "evidence_id": "ev_job_b_008",
+        "reason": "source quote conflicts with claim"
+      },
+      {
+        "claim": "SWE-Bench Verified provides a benchmark for evaluating agentic coding performance, which can be used in a hackathon context to measure agent performance.",
+        "evidence_id": "ev_job_b_010",
+        "reason": "source quote does not support claim"
+      }
+    ],
+    "confidence_score": 0.4,
+    "confidence_breakdown": {
+      "verified_ratio": 0.0,
+      "source_quality": 0.26,
+      "agreement": 1.0,
+      "recency": 0.5,
+      "coverage": 1.0
+    },
+    "used_fact_ids": [
+      "fact_ev_job_a_006",
+      "fact_ev_job_a_001",
+      "fact_ev_job_a_002",
+      "fact_ev_job_a_004",
+      "fact_ev_job_a_005",
+      "fact_ev_job_a_003",
+      "fact_ev_job_b_001",
+      "fact_ev_job_b_002"
+    ],
+    "unused_fact_ids": [
+      "fact_ev_job_b_004",
+      "fact_ev_job_b_005",
+      "fact_ev_job_b_006",
+      "fact_ev_job_b_009",
+      "fact_ev_job_b_011"
+    ],
+    "sources": [
+      "https://codelabs.developers.google.com/intro-to-adk-live",
+      "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "https://github.com/google-gemini/cookbook"
+    ],
+    "iterations": 1,
+    "patch_applied": false,
+    "degraded_synthesis": false
+  },
+  "report_v1": {
+    "report_id": "report_v1",
+    "title": "Multimodal Grounded Agent with ADK for Milan AI Week Hackathon",
+    "answer_summary": "We recommend building a multimodal, evidence-grounded AI agent using the ADK Gemini Live API Toolkit, which provides automatic tool execution and evaluation capabilities [fact_ev_job_a_001][fact_ev_job_b_001]. The agent leverages grounding with Google Search for verifiable responses and accepts text, audio, and image inputs via Gemini API multimodal support [fact_ev_job_a_003][fact_ev_job_a_004]. Rapid setup with ADK and real-time voice, video, and screen-sharing via Gemini Live make this workflow highly feasible for hackathon demo [fact_ev_job_a_005][fact_ev_job_b_002].",
+    "sections": [
+      {
+        "section_id": "sec_llm_01",
+        "heading": "Architecture and Tool Execution",
+        "content": "The ADK is an open-source Python framework for building multi-agent AI systems [fact_ev_job_a_006]. Its Gemini Live API Toolkit automatically handles tool execution, including calling and resuming from function calls, which streamlines agent orchestration [fact_ev_job_a_001].",
+        "used_fact_ids": [
+          "fact_ev_job_a_006",
+          "fact_ev_job_a_001"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live",
+          "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6"
+        ]
+      },
+      {
+        "section_id": "sec_llm_02",
+        "heading": "Multimodal Inputs and Real-Time Interaction",
+        "content": "A working voice AI built with ADK accepts text, audio, and image input [fact_ev_job_a_002]. The Gemini API supports multimodal input handling as part of its basic usage [fact_ev_job_a_004]. Gemini Live further enables real-time multimodal interactions including voice, video, and screen-sharing for an engaging demo [fact_ev_job_a_005].",
+        "used_fact_ids": [
+          "fact_ev_job_a_002",
+          "fact_ev_job_a_004",
+          "fact_ev_job_a_005"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live",
+          "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+          "https://github.com/google-gemini/cookbook"
+        ]
+      },
+      {
+        "section_id": "sec_llm_03",
+        "heading": "Grounding for Evidence-Grounded Responses",
+        "content": "Grounding with Google Search is a recommended pattern for Gemini agents to ensure responses are evidence-based and verifiable [fact_ev_job_a_003]. This directly supports the hackathon requirement for high-confidence, fact-backed outputs.",
+        "used_fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://github.com/google-gemini/cookbook"
+        ]
+      },
+      {
+        "section_id": "sec_llm_04",
+        "heading": "Evaluation and Demo Feasibility",
+        "content": "The Agent Development Kit includes built-in and partner evaluation tools to test agent execution trajectories [fact_ev_job_b_001]. Users can quickly set up an agent environment and get it running in a few minutes using the ADK, making the workflow practical for a hackathon timeline [fact_ev_job_b_002].",
+        "used_fact_ids": [
+          "fact_ev_job_b_001",
+          "fact_ev_job_b_002"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ]
+      }
+    ],
+    "key_findings": [
+      {
+        "finding": "ADK Gemini Live API Toolkit automatically handles tool execution, including calling and resuming from function calls.",
+        "fact_ids": [
+          "fact_ev_job_a_001"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "A working voice AI built with ADK can accept text, audio, and image input.",
+        "fact_ids": [
+          "fact_ev_job_a_002"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Grounding with Google Search is a recommended pattern for Gemini agents.",
+        "fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://github.com/google-gemini/cookbook"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "The Gemini API supports multimodal input handling as part of its basic usage.",
+        "fact_ids": [
+          "fact_ev_job_a_004"
+        ],
+        "citations": [
+          "https://github.com/google-gemini/cookbook"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Gemini Live enables real-time multimodal interactions including voice, video, and screen-sharing.",
+        "fact_ids": [
+          "fact_ev_job_a_005"
+        ],
+        "citations": [
+          "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6"
+        ],
+        "confidence": 0.55
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "unsupported_not_included": [
+      {
+        "claim": "The Internship Hunt project used Gemini along with AgentQL for an internship search assistant that generates cover letters.",
+        "evidence_id": "ev_job_b_003",
+        "reason": "source quote does not support claim"
+      },
+      {
+        "claim": "An existing hackathon project (demo) uses Gemini for an evidence-grounded agent that looks up and summarizes ticket data.",
+        "evidence_id": "ev_job_b_007",
+        "reason": "source quote does not support claim"
+      },
+      {
+        "claim": "In a hackathon context, agent performance can be evaluated by testing with sample queries like 'lookup ticket #10' and 'summarize ticket #5'.",
+        "evidence_id": "ev_job_b_008",
+        "reason": "source quote conflicts with claim"
+      },
+      {
+        "claim": "SWE-Bench Verified provides a benchmark for evaluating agentic coding performance, which can be used in a hackathon context to measure agent performance.",
+        "evidence_id": "ev_job_b_010",
+        "reason": "source quote does not support claim"
+      }
+    ],
+    "confidence_score": 0.4,
+    "confidence_breakdown": {
+      "verified_ratio": 0.0,
+      "source_quality": 0.26,
+      "agreement": 1.0,
+      "recency": 0.5,
+      "coverage": 1.0
+    },
+    "used_fact_ids": [
+      "fact_ev_job_a_006",
+      "fact_ev_job_a_001",
+      "fact_ev_job_a_002",
+      "fact_ev_job_a_004",
+      "fact_ev_job_a_005",
+      "fact_ev_job_a_003",
+      "fact_ev_job_b_001",
+      "fact_ev_job_b_002"
+    ],
+    "unused_fact_ids": [
+      "fact_ev_job_b_004",
+      "fact_ev_job_b_005",
+      "fact_ev_job_b_006",
+      "fact_ev_job_b_009",
+      "fact_ev_job_b_011"
+    ],
+    "sources": [
+      "https://codelabs.developers.google.com/intro-to-adk-live",
+      "https://deepmind.google/models/gemini/",
+      "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "https://geminiliveagentchallenge.devpost.com/",
+      "https://github.com/google-gemini/cookbook",
+      "https://googlecloudplatform.github.io/cloud-solutions/build-with-gemini-demo/",
+      "https://www.agentql.com/blog/2025-multimodal-agents-hackathon"
+    ],
+    "iterations": 1,
+    "patch_applied": false,
+    "degraded_synthesis": false
+  },
+  "report_v2": {
+    "report_id": "report_v2",
+    "title": "Multimodal Grounded Agent with ADK for Milan AI Week Hackathon",
+    "answer_summary": "We recommend building a multimodal, evidence-grounded AI agent using the ADK Gemini Live API Toolkit, which provides automatic tool execution and evaluation capabilities [fact_ev_job_a_001][fact_ev_job_b_001]. The agent leverages grounding with Google Search for verifiable responses and accepts text, audio, and image inputs via Gemini API multimodal support [fact_ev_job_a_003][fact_ev_job_a_004]. Rapid setup with ADK and real-time voice, video, and screen-sharing via Gemini Live make this workflow highly feasible for hackathon demo [fact_ev_job_a_005][fact_ev_job_b_002].",
+    "sections": [
+      {
+        "section_id": "sec_llm_01",
+        "heading": "Architecture and Tool Execution",
+        "content": "The ADK is an open-source Python framework for building multi-agent AI systems [fact_ev_job_a_006]. Its Gemini Live API Toolkit automatically handles tool execution, including calling and resuming from function calls, which streamlines agent orchestration [fact_ev_job_a_001].",
+        "used_fact_ids": [
+          "fact_ev_job_a_006",
+          "fact_ev_job_a_001"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live",
+          "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6"
+        ]
+      },
+      {
+        "section_id": "sec_llm_02",
+        "heading": "Multimodal Inputs and Real-Time Interaction",
+        "content": "A working voice AI built with ADK accepts text, audio, and image input [fact_ev_job_a_002]. The Gemini API supports multimodal input handling as part of its basic usage [fact_ev_job_a_004]. Gemini Live further enables real-time multimodal interactions including voice, video, and screen-sharing for an engaging demo [fact_ev_job_a_005].",
+        "used_fact_ids": [
+          "fact_ev_job_a_002",
+          "fact_ev_job_a_004",
+          "fact_ev_job_a_005"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live",
+          "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+          "https://github.com/google-gemini/cookbook"
+        ]
+      },
+      {
+        "section_id": "sec_llm_03",
+        "heading": "Grounding for Evidence-Grounded Responses",
+        "content": "Grounding with Google Search is a recommended pattern for Gemini agents to ensure responses are evidence-based and verifiable [fact_ev_job_a_003]. This directly supports the hackathon requirement for high-confidence, fact-backed outputs.",
+        "used_fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://github.com/google-gemini/cookbook"
+        ]
+      },
+      {
+        "section_id": "sec_llm_04",
+        "heading": "Evaluation and Demo Feasibility",
+        "content": "The Agent Development Kit includes built-in and partner evaluation tools to test agent execution trajectories [fact_ev_job_b_001]. Users can quickly set up an agent environment and get it running in a few minutes using the ADK, making the workflow practical for a hackathon timeline [fact_ev_job_b_002].",
+        "used_fact_ids": [
+          "fact_ev_job_b_001",
+          "fact_ev_job_b_002"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ]
+      }
+    ],
+    "key_findings": [
+      {
+        "finding": "ADK Gemini Live API Toolkit automatically handles tool execution, including calling and resuming from function calls.",
+        "fact_ids": [
+          "fact_ev_job_a_001"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "A working voice AI built with ADK can accept text, audio, and image input.",
+        "fact_ids": [
+          "fact_ev_job_a_002"
+        ],
+        "citations": [
+          "https://codelabs.developers.google.com/intro-to-adk-live"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Grounding with Google Search is a recommended pattern for Gemini agents.",
+        "fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://github.com/google-gemini/cookbook"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "The Gemini API supports multimodal input handling as part of its basic usage.",
+        "fact_ids": [
+          "fact_ev_job_a_004"
+        ],
+        "citations": [
+          "https://github.com/google-gemini/cookbook"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Gemini Live enables real-time multimodal interactions including voice, video, and screen-sharing.",
+        "fact_ids": [
+          "fact_ev_job_a_005"
+        ],
+        "citations": [
+          "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6"
+        ],
+        "confidence": 0.55
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "unsupported_not_included": [
+      {
+        "claim": "The Internship Hunt project used Gemini along with AgentQL for an internship search assistant that generates cover letters.",
+        "evidence_id": "ev_job_b_003",
+        "reason": "source quote does not support claim"
+      },
+      {
+        "claim": "An existing hackathon project (demo) uses Gemini for an evidence-grounded agent that looks up and summarizes ticket data.",
+        "evidence_id": "ev_job_b_007",
+        "reason": "source quote does not support claim"
+      },
+      {
+        "claim": "In a hackathon context, agent performance can be evaluated by testing with sample queries like 'lookup ticket #10' and 'summarize ticket #5'.",
+        "evidence_id": "ev_job_b_008",
+        "reason": "source quote conflicts with claim"
+      },
+      {
+        "claim": "SWE-Bench Verified provides a benchmark for evaluating agentic coding performance, which can be used in a hackathon context to measure agent performance.",
+        "evidence_id": "ev_job_b_010",
+        "reason": "source quote does not support claim"
+      }
+    ],
+    "confidence_score": 0.4,
+    "confidence_breakdown": {
+      "verified_ratio": 0.0,
+      "source_quality": 0.26,
+      "agreement": 1.0,
+      "recency": 0.5,
+      "coverage": 1.0
+    },
+    "used_fact_ids": [
+      "fact_ev_job_a_006",
+      "fact_ev_job_a_001",
+      "fact_ev_job_a_002",
+      "fact_ev_job_a_004",
+      "fact_ev_job_a_005",
+      "fact_ev_job_a_003",
+      "fact_ev_job_b_001",
+      "fact_ev_job_b_002"
+    ],
+    "unused_fact_ids": [
+      "fact_ev_job_b_004",
+      "fact_ev_job_b_005",
+      "fact_ev_job_b_006",
+      "fact_ev_job_b_009",
+      "fact_ev_job_b_011"
+    ],
+    "sources": [
+      "https://codelabs.developers.google.com/intro-to-adk-live",
+      "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "https://github.com/google-gemini/cookbook"
+    ],
+    "iterations": 1,
+    "patch_applied": false,
+    "degraded_synthesis": false
+  },
+  "coverage_patch": {
+    "coverage_score": 0.6,
+    "coverage_diff": {
+      "missed_verified_details": [],
+      "missed_caveats": [
+        {
+          "fact_id": "fact_ev_job_a_001",
+          "claim": "ADK Gemini Live API Toolkit automatically handles tool execution, including calling and resuming from function calls.",
+          "notes": "Partial support; caveat required"
+        },
+        {
+          "fact_id": "fact_ev_job_a_002",
+          "claim": "A working voice AI built with ADK can accept text, audio, and image input.",
+          "notes": "Partial support; caveat required"
+        },
+        {
+          "fact_id": "fact_ev_job_a_003",
+          "claim": "Grounding with Google Search is a recommended pattern for Gemini agents.",
+          "notes": "Partial support; caveat required"
+        },
+        {
+          "fact_id": "fact_ev_job_a_004",
+          "claim": "The Gemini API supports multimodal input handling as part of its basic usage.",
+          "notes": "Partial support; caveat required"
+        },
+        {
+          "fact_id": "fact_ev_job_a_005",
+          "claim": "Gemini Live enables real-time multimodal interactions including voice, video, and screen-sharing.",
+          "notes": "Partial support; caveat required"
+        },
+        {
+          "fact_id": "fact_ev_job_a_006",
+          "claim": "The ADK is an open-source Python framework for building multi-agent AI systems.",
+          "notes": "Partial support; caveat required"
+        },
+        {
+          "fact_id": "fact_ev_job_b_001",
+          "claim": "The Agent Development Kit includes built-in and partner evaluation tools to test agent execution trajectories.",
+          "notes": "Partial support; caveat required"
+        },
+        {
+          "fact_id": "fact_ev_job_b_002",
+          "claim": "Users can quickly set up an agent environment and get it running in a few minutes using the ADK.",
+          "notes": "Partial support; caveat required"
+        }
+      ],
+      "missed_contradictions": [],
+      "search_result_unused_but_relevant": [],
+      "missing_user_intent": [
+        {
+          "intent": "Function calling capabilities and patterns",
+          "reason": "coverage checklist item not addressed"
+        },
+        {
+          "intent": "Grounding techniques (e.g., via Google Search or custom tools)",
+          "reason": "coverage checklist item not addressed"
+        },
+        {
+          "intent": "Multimodal input support (text, images, audio, video)",
+          "reason": "coverage checklist item not addressed"
+        },
+        {
+          "intent": "Evaluation methods for agent accuracy and reliability",
+          "reason": "coverage checklist item not addressed"
+        },
+        {
+          "intent": "Demo feasibility considerations (limited time, APIs, hardware)",
+          "reason": "coverage checklist item not addressed"
+        },
+        {
+          "intent": "Hackathon-specific tips (time constraints, presentability)",
+          "reason": "coverage checklist item not addressed"
+        }
+      ]
+    },
+    "missed_verified_details": [],
+    "missed_caveats": [
+      {
+        "fact_id": "fact_ev_job_a_001",
+        "claim": "ADK Gemini Live API Toolkit automatically handles tool execution, including calling and resuming from function calls.",
+        "notes": "Partial support; caveat required"
+      },
+      {
+        "fact_id": "fact_ev_job_a_002",
+        "claim": "A working voice AI built with ADK can accept text, audio, and image input.",
+        "notes": "Partial support; caveat required"
+      },
+      {
+        "fact_id": "fact_ev_job_a_003",
+        "claim": "Grounding with Google Search is a recommended pattern for Gemini agents.",
+        "notes": "Partial support; caveat required"
+      },
+      {
+        "fact_id": "fact_ev_job_a_004",
+        "claim": "The Gemini API supports multimodal input handling as part of its basic usage.",
+        "notes": "Partial support; caveat required"
+      },
+      {
+        "fact_id": "fact_ev_job_a_005",
+        "claim": "Gemini Live enables real-time multimodal interactions including voice, video, and screen-sharing.",
+        "notes": "Partial support; caveat required"
+      },
+      {
+        "fact_id": "fact_ev_job_a_006",
+        "claim": "The ADK is an open-source Python framework for building multi-agent AI systems.",
+        "notes": "Partial support; caveat required"
+      },
+      {
+        "fact_id": "fact_ev_job_b_001",
+        "claim": "The Agent Development Kit includes built-in and partner evaluation tools to test agent execution trajectories.",
+        "notes": "Partial support; caveat required"
+      },
+      {
+        "fact_id": "fact_ev_job_b_002",
+        "claim": "Users can quickly set up an agent environment and get it running in a few minutes using the ADK.",
+        "notes": "Partial support; caveat required"
+      }
+    ],
+    "missed_contradictions": [],
+    "search_results_unused_but_relevant": [],
+    "missing_user_intent": [
+      {
+        "intent": "Function calling capabilities and patterns",
+        "reason": "coverage checklist item not addressed"
+      },
+      {
+        "intent": "Grounding techniques (e.g., via Google Search or custom tools)",
+        "reason": "coverage checklist item not addressed"
+      },
+      {
+        "intent": "Multimodal input support (text, images, audio, video)",
+        "reason": "coverage checklist item not addressed"
+      },
+      {
+        "intent": "Evaluation methods for agent accuracy and reliability",
+        "reason": "coverage checklist item not addressed"
+      },
+      {
+        "intent": "Demo feasibility considerations (limited time, APIs, hardware)",
+        "reason": "coverage checklist item not addressed"
+      },
+      {
+        "intent": "Hackathon-specific tips (time constraints, presentability)",
+        "reason": "coverage checklist item not addressed"
+      }
+    ],
+    "patch_operations": [],
+    "needs_new_search": true,
+    "followup_research_jobs": [
+      {
+        "job_id": "job_followup_001",
+        "job_name": "Follow-up Coverage Search",
+        "objective": "Find evidence for missing coverage area: Function calling capabilities and patterns",
+        "search_queries": [
+          "Which Gemini-first, evidence-grounded AI agent workflow should SYNAPSE build for the Milan AI Week hackathon? Focus on Gemini API or ADK function calling, grounding, multimodal inputs, evaluation, and demo feasibility. Function calling capabilities and patterns"
+        ],
+        "source_priorities": [
+          "official",
+          "paper",
+          "docs"
+        ],
+        "must_answer": [
+          "Function calling capabilities and patterns"
+        ],
+        "avoid": [],
+        "evidence_requirements": {
+          "min_sources": 5,
+          "require_quotes": true,
+          "allow_snippet_only": false
+        }
+      }
+    ]
+  },
+  "job_summaries": [
+    {
+      "job_id": "job_a",
+      "search_coverage": {
+        "queries_run": 3,
+        "results_found": 15,
+        "official_sources_found": 7,
+        "academic_sources_found": 0
+      },
+      "search_header_count": 3,
+      "evidence_count": 6,
+      "extraction_failure_count": 0,
+      "fallback_evidence_count": 0,
+      "fallback_reasons": {}
+    },
+    {
+      "job_id": "job_b",
+      "search_coverage": {
+        "queries_run": 4,
+        "results_found": 20,
+        "official_sources_found": 1,
+        "academic_sources_found": 1
+      },
+      "search_header_count": 6,
+      "evidence_count": 11,
+      "extraction_failure_count": 1,
+      "fallback_evidence_count": 0,
+      "fallback_reasons": {}
+    }
+  ],
+  "timings": {
+    "planner": 110.635457,
+    "research_jobs": 279.852113,
+    "fact_checker": 129.733794,
+    "synthesizer": 31.533127,
+    "coverage_auditor": 0.000105,
+    "patch_applicator": 0.000236,
+    "total": 551.755033
+  },
+  "token_usage": {
+    "prompt_tokens": 28756,
+    "completion_tokens": 21392,
+    "total_tokens": 50148
+  },
+  "provider_metrics": {
+    "search_provider": "composite",
+    "search_errors": [
+      "arxiv search failed: ",
+      "arxiv search failed: Client error '429 Unknown Error' for url 'https://export.arxiv.org/api/query?search_query=Gemini+API+agent+workflow+function+calling+grounding&start=0&max_results=3&sortBy=relevance&sortOrder=descending'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+    ],
+    "search_events": [
+      {
+        "provider": "duckduckgo",
+        "query": "Which Gemini-first, evidence-grounded AI agent workflow should SYNAPSE build for the Milan AI Week hackathon? Focus on Gemini API or ADK function calling, grounding, multimodal inputs, evaluation, and demo feasibility.",
+        "max_results": 3,
+        "result_count": 3,
+        "seconds": 1.643996,
+        "wall_start": "2026-05-11T07:22:49.471442+00:00",
+        "wall_end": "2026-05-11T07:22:51.115455+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "Which Gemini-first, evidence-grounded AI agent workflow should SYNAPSE build for the Milan AI Week hackathon? Focus on Gemini API or ADK function calling, grounding, multimodal inputs, evaluation, and demo feasibility. recent analysis",
+        "max_results": 3,
+        "result_count": 3,
+        "seconds": 1.935699,
+        "wall_start": "2026-05-11T07:22:49.480324+00:00",
+        "wall_end": "2026-05-11T07:22:51.416049+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "Which Gemini-first, evidence-grounded AI agent workflow should SYNAPSE build for the Milan AI Week hackathon? Focus on Gemini API or ADK function calling, grounding, multimodal inputs, evaluation, and demo feasibility. official documentation",
+        "max_results": 3,
+        "result_count": 3,
+        "seconds": 6.74529,
+        "wall_start": "2026-05-11T07:22:49.476862+00:00",
+        "wall_end": "2026-05-11T07:22:56.222169+00:00",
+        "ok": true
+      },
+      {
+        "provider": "arxiv",
+        "query": "Which Gemini-first, evidence-grounded AI agent workflow should SYNAPSE build for the Milan AI Week hackathon? Focus on Gemini API or ADK function calling, grounding, multimodal inputs, evaluation, and demo feasibility.",
+        "max_results": 2,
+        "result_count": 0,
+        "seconds": 8.452615,
+        "wall_start": "2026-05-11T07:22:56.222284+00:00",
+        "wall_end": "2026-05-11T07:23:04.674918+00:00",
+        "ok": false,
+        "error": "arxiv search failed: "
+      },
+      {
+        "provider": "arxiv",
+        "query": "Gemini API agent workflow function calling grounding",
+        "max_results": 3,
+        "result_count": 0,
+        "seconds": 0.684607,
+        "wall_start": "2026-05-11T07:24:40.118354+00:00",
+        "wall_end": "2026-05-11T07:24:40.802977+00:00",
+        "ok": false,
+        "error": "arxiv search failed: Client error '429 Unknown Error' for url 'https://export.arxiv.org/api/query?search_query=Gemini+API+agent+workflow+function+calling+grounding&start=0&max_results=3&sortBy=relevance&sortOrder=descending'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/429"
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "Google ADK function calling Gemini",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.641906,
+        "wall_start": "2026-05-11T07:24:40.111749+00:00",
+        "wall_end": "2026-05-11T07:24:41.753671+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "Gemini multimodal agent tutorial official",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.763438,
+        "wall_start": "2026-05-11T07:24:40.115183+00:00",
+        "wall_end": "2026-05-11T07:24:41.878645+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "Gemini ADK demo feasibility",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.762964,
+        "wall_start": "2026-05-11T07:24:40.431605+00:00",
+        "wall_end": "2026-05-11T07:24:42.194595+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "Gemini agent evaluation metrics",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.914478,
+        "wall_start": "2026-05-11T07:24:40.424372+00:00",
+        "wall_end": "2026-05-11T07:24:42.338867+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "multimodal document agent hackathon",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 2.202494,
+        "wall_start": "2026-05-11T07:24:40.428065+00:00",
+        "wall_end": "2026-05-11T07:24:42.630585+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "evidence-grounded AI agent hackathon Gemini",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 3.564059,
+        "wall_start": "2026-05-11T07:24:40.420661+00:00",
+        "wall_end": "2026-05-11T07:24:43.984740+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "Gemini API agent workflow function calling grounding",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 3.884154,
+        "wall_start": "2026-05-11T07:24:40.106915+00:00",
+        "wall_end": "2026-05-11T07:24:43.991088+00:00",
+        "ok": true
+      }
+    ],
+    "source_fetch": {
+      "fetched_http_count": 10,
+      "fetched_camofox_count": 0,
+      "arxiv_metadata_count": 0,
+      "failed_count": 10
+    },
+    "source_fetch_events": [
+      {
+        "result_id": "res_job_a_008",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://medium.com/@vinothkkumar24/gemini-function-calling-in-production-what-most-tutorials-skip-f8908001f0f2",
+        "seconds": 1.876606,
+        "wall_start": "2026-05-11T07:24:48.090310+00:00",
+        "wall_end": "2026-05-11T07:24:49.966932+00:00",
+        "text_chars": 0,
+        "error": "Client error '403 Forbidden' for url 'https://medium.com/@vinothkkumar24/gemini-function-calling-in-production-what-most-tutorials-skip-f8908001f0f2'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      },
+      {
+        "result_id": "res_job_a_012",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://medium.com/@turna.fardousi/building-a-multimodal-chatbot-with-gemini-api-8015bfbee538",
+        "seconds": 3.639239,
+        "wall_start": "2026-05-11T07:24:46.342751+00:00",
+        "wall_end": "2026-05-11T07:24:49.982003+00:00",
+        "text_chars": 0,
+        "error": "Client error '403 Forbidden' for url 'https://medium.com/@turna.fardousi/building-a-multimodal-chatbot-with-gemini-api-8015bfbee538'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      },
+      {
+        "result_id": "res_job_a_007",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://codelabs.developers.google.com/intro-to-adk-live",
+        "seconds": 4.90628,
+        "wall_start": "2026-05-11T07:24:45.463002+00:00",
+        "wall_end": "2026-05-11T07:24:50.369297+00:00",
+        "text_chars": 7703,
+        "error": null
+      },
+      {
+        "result_id": "res_job_a_004",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://ai.google.dev/gemini-api/docs/tools",
+        "seconds": 6.183102,
+        "wall_start": "2026-05-11T07:24:44.285420+00:00",
+        "wall_end": "2026-05-11T07:24:50.468534+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_b_018",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+        "seconds": 6.531364,
+        "wall_start": "2026-05-11T07:24:43.992754+00:00",
+        "wall_end": "2026-05-11T07:24:50.524129+00:00",
+        "text_chars": 2170,
+        "error": null
+      },
+      {
+        "result_id": "res_job_b_001",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://www.aiwire.net/2025/07/28/agentic-ai-sets-the-tone-at-tpc25s-hackathon-and-tutorial-plenary-session/",
+        "seconds": 1.601874,
+        "wall_start": "2026-05-11T07:24:48.951412+00:00",
+        "wall_end": "2026-05-11T07:24:50.553298+00:00",
+        "text_chars": 0,
+        "error": "Client error '403 Forbidden' for url 'https://hpcwire.com/aiwire/2025/07/28/agentic-ai-sets-the-tone-at-tpc25s-hackathon-and-tutorial-plenary-session/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      },
+      {
+        "result_id": "res_job_a_002",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://ai.google.dev/gemini-api/docs/google-search",
+        "seconds": 5.74394,
+        "wall_start": "2026-05-11T07:24:44.875456+00:00",
+        "wall_end": "2026-05-11T07:24:50.619410+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_a_014",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://github.com/google-gemini/cookbook",
+        "seconds": 3.402898,
+        "wall_start": "2026-05-11T07:24:47.505167+00:00",
+        "wall_end": "2026-05-11T07:24:50.908080+00:00",
+        "text_chars": 9808,
+        "error": null
+      },
+      {
+        "result_id": "res_job_b_010",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://arxiv.org/html/2510.10909v4",
+        "seconds": 4.434607,
+        "wall_start": "2026-05-11T07:24:46.923506+00:00",
+        "wall_end": "2026-05-11T07:24:51.358126+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_a_006",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://ai.google.dev/gemini-api/docs/function-calling",
+        "seconds": 5.312449,
+        "wall_start": "2026-05-11T07:24:46.048362+00:00",
+        "wall_end": "2026-05-11T07:24:51.360820+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_a_003",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://ai.google.dev/gemini-api/docs/image-generation?hl=de",
+        "seconds": 6.19237,
+        "wall_start": "2026-05-11T07:24:45.168515+00:00",
+        "wall_end": "2026-05-11T07:24:51.360890+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_b_016",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://googlecloudplatform.github.io/cloud-solutions/build-with-gemini-demo/",
+        "seconds": 1.832466,
+        "wall_start": "2026-05-11T07:24:49.528445+00:00",
+        "wall_end": "2026-05-11T07:24:51.360917+00:00",
+        "text_chars": 12000,
+        "error": null
+      },
+      {
+        "result_id": "res_job_a_011",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://www.youtube.com/watch?v=y2ETLEZ-oi8",
+        "seconds": 4.160617,
+        "wall_start": "2026-05-11T07:24:47.214484+00:00",
+        "wall_end": "2026-05-11T07:24:51.375114+00:00",
+        "text_chars": 224,
+        "error": null
+      },
+      {
+        "result_id": "res_job_a_001",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://ai.google.dev/gemini-api/docs/tool-combination",
+        "seconds": 6.881183,
+        "wall_start": "2026-05-11T07:24:44.579071+00:00",
+        "wall_end": "2026-05-11T07:24:51.460268+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_b_002",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://geminiliveagentchallenge.devpost.com/",
+        "seconds": 3.153669,
+        "wall_start": "2026-05-11T07:24:48.376631+00:00",
+        "wall_end": "2026-05-11T07:24:51.530316+00:00",
+        "text_chars": 11949,
+        "error": null
+      },
+      {
+        "result_id": "res_job_b_011",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://www.agentql.com/blog/2025-multimodal-agents-hackathon",
+        "seconds": 4.895526,
+        "wall_start": "2026-05-11T07:24:46.634967+00:00",
+        "wall_end": "2026-05-11T07:24:51.530500+00:00",
+        "text_chars": 7462,
+        "error": null
+      },
+      {
+        "result_id": "res_job_b_019",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://github.com/GoogleCloudPlatform/cloud-solutions/tree/main/projects/build-with-gemini-demo/prototype-adk-agent-with-gemini-cli",
+        "seconds": 3.738064,
+        "wall_start": "2026-05-11T07:24:47.794020+00:00",
+        "wall_end": "2026-05-11T07:24:51.532099+00:00",
+        "text_chars": 7852,
+        "error": null
+      },
+      {
+        "result_id": "res_job_a_013",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://dev.to/gde/building-a-multimodal-agent-with-the-adk-azure-aci-and-gemini-flash-live-31-3hp6",
+        "seconds": 2.86674,
+        "wall_start": "2026-05-11T07:24:48.665390+00:00",
+        "wall_end": "2026-05-11T07:24:51.532136+00:00",
+        "text_chars": 12000,
+        "error": null
+      },
+      {
+        "result_id": "res_job_a_010",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/tools/function-calling",
+        "seconds": 5.950641,
+        "wall_start": "2026-05-11T07:24:45.754667+00:00",
+        "wall_end": "2026-05-11T07:24:51.705323+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_b_006",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://deepmind.google/models/gemini/",
+        "seconds": 2.516566,
+        "wall_start": "2026-05-11T07:24:49.239770+00:00",
+        "wall_end": "2026-05-11T07:24:51.756351+00:00",
+        "text_chars": 12000,
+        "error": null
+      }
+    ],
+    "llm_provider": "opencode_go",
+    "synthesizer_llm_provider": "opencode_go",
+    "llm_call_count": 14,
+    "llm_calls": [
+      {
+        "call_index": 1,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "LoosePlannerJSON",
+        "json_mode": true,
+        "max_tokens": 2400,
+        "temperature": 0.1,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:23:04.675112+00:00",
+        "http_status": 200,
+        "latency_ms": 52910.08,
+        "wall_end": "2026-05-11T07:23:57.585189+00:00",
+        "finish_reason": "length",
+        "reasoning_tokens": 1634,
+        "prompt_tokens": 2212,
+        "completion_tokens": 2400,
+        "total_tokens": 4612,
+        "response_chars": 3256,
+        "visible_chars": 3256,
+        "reasoning_content_chars": 7232,
+        "truncated_by_reasoning": false,
+        "ok": false,
+        "error_type": "JSONDecodeError",
+        "error": "Expecting ',' delimiter: line 49 column 6 (char 2789)"
+      },
+      {
+        "call_index": 2,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "LoosePlannerJSON",
+        "json_mode": true,
+        "max_tokens": 2400,
+        "temperature": 0,
+        "message_count": 3,
+        "wall_start": "2026-05-11T07:23:57.585205+00:00",
+        "http_status": 200,
+        "latency_ms": 42521.35,
+        "wall_end": "2026-05-11T07:24:40.106594+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 1068,
+        "prompt_tokens": 2225,
+        "completion_tokens": 1952,
+        "total_tokens": 4177,
+        "response_chars": 3809,
+        "visible_chars": 3809,
+        "reasoning_content_chars": 4760,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 3,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:24:51.760523+00:00",
+        "http_status": 200,
+        "latency_ms": 22979.25,
+        "wall_end": "2026-05-11T07:25:14.739814+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 805,
+        "prompt_tokens": 1789,
+        "completion_tokens": 958,
+        "total_tokens": 2747,
+        "response_chars": 608,
+        "visible_chars": 608,
+        "reasoning_content_chars": 3670,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 4,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:24:52.048878+00:00",
+        "http_status": 200,
+        "latency_ms": 49236.13,
+        "wall_end": "2026-05-11T07:25:41.285044+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 1008,
+        "prompt_tokens": 2207,
+        "completion_tokens": 1144,
+        "total_tokens": 3351,
+        "response_chars": 570,
+        "visible_chars": 570,
+        "reasoning_content_chars": 4832,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 5,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:24:52.052227+00:00",
+        "http_status": 200,
+        "latency_ms": 72188.05,
+        "wall_end": "2026-05-11T07:26:04.240313+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 777,
+        "prompt_tokens": 664,
+        "completion_tokens": 950,
+        "total_tokens": 1614,
+        "response_chars": 774,
+        "visible_chars": 774,
+        "reasoning_content_chars": 3814,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 6,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:24:52.053984+00:00",
+        "http_status": 200,
+        "latency_ms": 94525.55,
+        "wall_end": "2026-05-11T07:26:26.579578+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 690,
+        "prompt_tokens": 1810,
+        "completion_tokens": 892,
+        "total_tokens": 2702,
+        "response_chars": 890,
+        "visible_chars": 890,
+        "reasoning_content_chars": 3253,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 7,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:25:15.024941+00:00",
+        "http_status": 200,
+        "latency_ms": 137296.15,
+        "wall_end": "2026-05-11T07:27:32.321128+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 2727,
+        "prompt_tokens": 3116,
+        "completion_tokens": 2917,
+        "total_tokens": 6033,
+        "response_chars": 924,
+        "visible_chars": 924,
+        "reasoning_content_chars": 13086,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 8,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:26:04.527395+00:00",
+        "http_status": 200,
+        "latency_ms": 110718.99,
+        "wall_end": "2026-05-11T07:27:55.246424+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 771,
+        "prompt_tokens": 2800,
+        "completion_tokens": 931,
+        "total_tokens": 3731,
+        "response_chars": 739,
+        "visible_chars": 739,
+        "reasoning_content_chars": 3800,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 9,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:26:26.866985+00:00",
+        "http_status": 200,
+        "latency_ms": 110719.5,
+        "wall_end": "2026-05-11T07:28:17.586522+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 700,
+        "prompt_tokens": 1855,
+        "completion_tokens": 923,
+        "total_tokens": 2778,
+        "response_chars": 954,
+        "visible_chars": 954,
+        "reasoning_content_chars": 3357,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 10,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:27:55.534367+00:00",
+        "http_status": 200,
+        "latency_ms": 41158.36,
+        "wall_end": "2026-05-11T07:28:36.692767+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 501,
+        "prompt_tokens": 3042,
+        "completion_tokens": 705,
+        "total_tokens": 3747,
+        "response_chars": 962,
+        "visible_chars": 962,
+        "reasoning_content_chars": 2362,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 11,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:28:17.875444+00:00",
+        "http_status": 200,
+        "latency_ms": 62081.08,
+        "wall_end": "2026-05-11T07:29:19.956567+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 1533,
+        "prompt_tokens": 2551,
+        "completion_tokens": 1843,
+        "total_tokens": 4394,
+        "response_chars": 1453,
+        "visible_chars": 1453,
+        "reasoning_content_chars": 7485,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 12,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "EntailmentBatch",
+        "json_mode": true,
+        "max_tokens": 3000,
+        "temperature": 0,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:29:19.960461+00:00",
+        "http_status": 200,
+        "latency_ms": 60514.94,
+        "wall_end": "2026-05-11T07:30:20.475409+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 2349,
+        "prompt_tokens": 2236,
+        "completion_tokens": 2777,
+        "total_tokens": 5013,
+        "response_chars": 1171,
+        "visible_chars": 1171,
+        "reasoning_content_chars": 10356,
+        "truncated_by_reasoning": false,
+        "ok": false,
+        "error_type": "ValueError",
+        "error": "LLM JSON failed schema validation: 1 validation error for EntailmentBatch\n  Input should be a valid dictionary or instance of EntailmentBatch [type=model_type, input_value=[{'evidence_id': 'ev_job_..., 'status': 'VERIFIED'}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.11/v/model_type"
+      },
+      {
+        "call_index": 13,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "EntailmentBatch",
+        "json_mode": true,
+        "max_tokens": 3000,
+        "temperature": 0,
+        "message_count": 3,
+        "wall_start": "2026-05-11T07:30:20.475435+00:00",
+        "http_status": 200,
+        "latency_ms": 69214.55,
+        "wall_end": "2026-05-11T07:31:29.689989+00:00",
+        "finish_reason": "length",
+        "reasoning_tokens": 2320,
+        "prompt_tokens": 2249,
+        "completion_tokens": 3000,
+        "total_tokens": 5249,
+        "response_chars": 2726,
+        "visible_chars": 2726,
+        "reasoning_content_chars": 10477,
+        "truncated_by_reasoning": false,
+        "ok": false,
+        "error_type": "JSONDecodeError",
+        "error": "Extra data: line 6 column 4 (char 294)"
+      },
+      {
+        "call_index": 1,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": null,
+        "json_mode": false,
+        "max_tokens": 64000,
+        "temperature": 0.2,
+        "message_count": 2,
+        "wall_start": "2026-05-11T07:31:29.692921+00:00",
+        "http_status": 200,
+        "latency_ms": 31532.48,
+        "wall_end": "2026-05-11T07:32:01.225440+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 886,
+        "prompt_tokens": 640,
+        "completion_tokens": 1334,
+        "total_tokens": 1974,
+        "response_chars": 1998,
+        "visible_chars": 1998,
+        "reasoning_content_chars": 3900,
+        "truncated_by_reasoning": false,
+        "ok": true
+      }
+    ],
+    "truncated_by_reasoning_count": 0,
+    "profile_events": [
+      {
+        "operation": "planner",
+        "seconds": 110.635457,
+        "wall_start": "2026-05-11T07:22:49.471331+00:00",
+        "wall_end": "2026-05-11T07:24:40.106791+00:00",
+        "ok": true
+      },
+      {
+        "operation": "job_b:searcher",
+        "seconds": 3.878241,
+        "wall_start": "2026-05-11T07:24:40.106855+00:00",
+        "wall_end": "2026-05-11T07:24:43.985101+00:00",
+        "ok": true,
+        "job_id": "job_b"
+      },
+      {
+        "operation": "job_a:searcher",
+        "seconds": 3.884605,
+        "wall_start": "2026-05-11T07:24:40.106833+00:00",
+        "wall_end": "2026-05-11T07:24:43.991442+00:00",
+        "ok": true,
+        "job_id": "job_a"
+      },
+      {
+        "operation": "source_fetcher:global",
+        "seconds": 7.763691,
+        "wall_start": "2026-05-11T07:24:43.992686+00:00",
+        "wall_end": "2026-05-11T07:24:51.756379+00:00",
+        "ok": true,
+        "search_header_count": 20
+      },
+      {
+        "operation": "job_a:evidence_extractor",
+        "seconds": 160.846995,
+        "wall_start": "2026-05-11T07:24:51.758553+00:00",
+        "wall_end": "2026-05-11T07:27:32.605561+00:00",
+        "ok": true,
+        "job_id": "job_a",
+        "fetched_source_count": 3
+      },
+      {
+        "operation": "job_b:evidence_extractor",
+        "seconds": 268.20024,
+        "wall_start": "2026-05-11T07:24:51.758578+00:00",
+        "wall_end": "2026-05-11T07:29:19.958828+00:00",
+        "ok": true,
+        "job_id": "job_b",
+        "fetched_source_count": 6
+      },
+      {
+        "operation": "research_jobs",
+        "seconds": 279.852113,
+        "wall_start": "2026-05-11T07:24:40.106798+00:00",
+        "wall_end": "2026-05-11T07:29:19.958919+00:00",
+        "ok": true
+      },
+      {
+        "operation": "fact_checker",
+        "seconds": 129.733794,
+        "wall_start": "2026-05-11T07:29:19.959056+00:00",
+        "wall_end": "2026-05-11T07:31:29.692860+00:00",
+        "ok": true
+      },
+      {
+        "operation": "synthesizer",
+        "seconds": 31.533127,
+        "wall_start": "2026-05-11T07:31:29.692869+00:00",
+        "wall_end": "2026-05-11T07:32:01.226002+00:00",
+        "ok": true
+      },
+      {
+        "operation": "coverage_auditor",
+        "seconds": 0.000105,
+        "wall_start": "2026-05-11T07:32:01.226009+00:00",
+        "wall_end": "2026-05-11T07:32:01.226116+00:00",
+        "ok": true
+      },
+      {
+        "operation": "patch_applicator",
+        "seconds": 0.000236,
+        "wall_start": "2026-05-11T07:32:01.226119+00:00",
+        "wall_end": "2026-05-11T07:32:01.226357+00:00",
+        "ok": true
+      }
+    ],
+    "run_quality": {
+      "score": 0.736,
+      "grade": "good",
+      "signals": {
+        "fetched_source_count": 9,
+        "successful_fetched_source_count": 9,
+        "successful_fetch_rate": 1.0,
+        "evidence_count": 17,
+        "llm_evidence_count": 17,
+        "fallback_evidence_count": 0,
+        "fallback_rate": 0.0,
+        "snippet_evidence_count": 0,
+        "snippet_rate": 0.0,
+        "average_source_quality": 0.406,
+        "verified_fact_count": 0,
+        "partial_fact_count": 13,
+        "unsupported_claim_count": 4,
+        "contradiction_count": 0,
+        "report_confidence": 0.4,
+        "coverage_score": 0.6,
+        "degraded": false
+      },
+      "fallback_reasons": {}
+    }
+  },
+  "run_quality": {
+    "score": 0.736,
+    "grade": "good",
+    "signals": {
+      "fetched_source_count": 9,
+      "successful_fetched_source_count": 9,
+      "successful_fetch_rate": 1.0,
+      "evidence_count": 17,
+      "llm_evidence_count": 17,
+      "fallback_evidence_count": 0,
+      "fallback_rate": 0.0,
+      "snippet_evidence_count": 0,
+      "snippet_rate": 0.0,
+      "average_source_quality": 0.406,
+      "verified_fact_count": 0,
+      "partial_fact_count": 13,
+      "unsupported_claim_count": 4,
+      "contradiction_count": 0,
+      "report_confidence": 0.4,
+      "coverage_score": 0.6,
+      "degraded": false
+    },
+    "fallback_reasons": {}
+  },
+  "degraded": false,
+  "degraded_mode": false,
+  "errors": [],
+  "iterations": 1,
+  "history": [
+    {
+      "degraded": false
+    }
+  ]
+}

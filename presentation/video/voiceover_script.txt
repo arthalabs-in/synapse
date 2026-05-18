@@ -1,0 +1,320 @@
+================================================================================
+ SYNAPSE — Pitch Video Narration Script
+ Milan AI Week 2026 — Gemini Track
+================================================================================
+
+Runtime target : 5:00
+Word count     : ~755
+Rate           : ~150 wpm (conversational, confident, technical)
+Destination    : ElevenLabs -> presentation/video/assets/voiceover/act-1..5.mp3
+
+
+--------------------------------------------------------------------------------
+ VOICE + MODEL RECOMMENDATIONS
+--------------------------------------------------------------------------------
+
+Voice      : "Adam" (warm, grounded, American male) or "Brian" (premium,
+             cinematic). For a female read, "Rachel" (clear, articulate).
+             Default pick: Adam — reads technical prose without sounding robotic.
+
+Model      : eleven_multilingual_v2  (most stable for long takes)
+             eleven_v3                (more expressive, less consistent)
+
+Settings   : Stability       45–50
+             Similarity      75
+             Style           5–10
+             Speaker Boost   ON
+
+Generation : Render one ACT at a time, not the whole script. Better prosody,
+             and a weak line doesn't cost you the full 5-minute take.
+
+
+--------------------------------------------------------------------------------
+ PRONUNCIATION NOTES (already rewritten inline)
+--------------------------------------------------------------------------------
+
+- "Gemini 2.5 Pro"    -> written as "Gemini two point five Pro"
+- sec_partial         -> written as "the partial section"
+- fact_007            -> written as "fact zero-zero-seven"
+- PipelineResult      -> written as "pipeline result"
+- 50%, 62%, 87%       -> written as words ("fifty percent", etc.)
+- "Pydantic"          -> rendered as "strict data contracts" in the script
+                         (ElevenLabs sometimes stumbles on the word)
+
+
+================================================================================
+ MASTER SCRIPT (with on-screen cues and timestamps)
+================================================================================
+
+
+--------------------------------------------------------------------------------
+ ACT 1 — PROBLEM   (0:00–0:30,  ~75 words)
+--------------------------------------------------------------------------------
+
+[0:00] ON SCREEN: Title card — dark background, SYNAPSE wordmark, tagline
+                  "The research agent that cites — and patches — itself."
+                  Gemini glyph in corner.
+
+    Every large language model will happily invent a citation.
+    Every one of them. Even the best ones.
+
+[0:08] ON SCREEN: Fast cuts of Perplexity, ChatGPT, Claude answers with fake-
+                  looking citations highlighted in red.
+
+    Try this. Ask any mainstream AI for a research memo on any enterprise
+    topic. You'll get a confident answer, with citations that look real.
+    Some of them are. Some are dead links. Some are paraphrased into lies.
+    And none of them will tell you what they couldn't find.
+
+[0:25] ON SCREEN: Cut to stock footage — analyst at a desk, clock ticking.
+
+    For a strategy analyst, a consultant, or a lawyer — that's not a tool.
+    That's a liability.
+
+
+--------------------------------------------------------------------------------
+ ACT 2 — SOLUTION + ARCHITECTURE   (0:30–1:30,  ~150 words)
+--------------------------------------------------------------------------------
+
+[0:30] ON SCREEN: SYNAPSE logo reveal. Fade to architecture diagram — seven
+                  nodes connected left-to-right.
+
+    I built SYNAPSE to fix this. It's a Gemini-powered research agent that
+    refuses to put a single sentence in its final report unless that sentence
+    is tied to a verbatim quote from a real, fetched source. And then it
+    audits itself — and patches its own gaps — before it hands the report
+    to you.
+
+[0:50] ON SCREEN: Animated diagram — each node lights up as narrator names it:
+                  Planner -> Jobs -> Search -> Fetch -> Extract -> Fact Ledger
+                  -> Synth -> Audit -> Patch.
+
+    Here's how it works. You ask a question. Gemini two point five Pro plans
+    two independent research jobs. Each job runs its own web and academic
+    search, fetches the actual page text, and extracts quote-grounded
+    evidence — every quote is checked to be a verbatim substring of the
+    source. Gemini two point five Flash acts as the fact-checker, labeling
+    each claim verified, partial, or unsupported. A deterministic
+    synthesizer — not an LLM — assembles the report. Then a coverage auditor
+    reads its own draft, finds what it missed, and emits a typed patch. You
+    see report version one, the coverage diff, and report version two — side
+    by side.
+
+
+--------------------------------------------------------------------------------
+ ACT 3 — LIVE DEMO   (1:30–3:30,  ~300 words)
+--------------------------------------------------------------------------------
+
+[1:30] ON SCREEN: Screen recording of Streamlit app. Cursor types the query.
+
+    Let me show you. I'll ask: which CRM automation approach should a
+    two-hundred-person SaaS company adopt in 2026?
+
+[1:42] ON SCREEN: Planner precontext renders. Two job cards appear.
+
+    Gemini plans the research jobs — one focused on vendor-authoritative
+    sources, one on architecture tradeoffs. Two parallel jobs kick off.
+
+[1:55] ON SCREEN: Search headers table populates. Fetched sources table
+                  populates. Evidence table fills.
+
+    In about twenty seconds, SYNAPSE has searched, fetched, and extracted
+    twelve evidence quotes from twelve distinct sources. Every quote is a
+    verbatim substring of the fetched page. No paraphrasing. No summaries
+    of summaries.
+
+[2:18] ON SCREEN: Fact ledger table. Status column highlighted — green, yellow,
+                  red.
+
+    The fact checker classifies each one. You can see the fact ledger. Four
+    verified. Three partial, with explicit caveats. Two contradictions
+    flagged for human review. Two other claims were unsupported. They've
+    been dropped. They will not appear in the report.
+
+[2:45] ON SCREEN: Report v1 expands.
+
+    Here's report version one.
+
+[2:50] ON SCREEN: Coverage diff panel appears. Red missed-caveat row highlighted.
+
+    Now watch. The coverage auditor runs. It finds that the first draft
+    mentioned cost implications without referencing the partial-support
+    caveats from the fact ledger. It emits a patch operation — add caveat,
+    the partial section, fact zero-zero-seven. The patch applicator checks
+    that the patch text semantically overlaps with the fact's claim by at
+    least fifty percent before applying it.
+
+[3:15] ON SCREEN: Report v2 appears, caveat line highlighted. Confidence meter
+                  moves from 62% to 87%.
+
+    Report version two. Same claims. Same sources. But now the caveats are
+    explicit, and the coverage score has risen from sixty-two percent to
+    eighty-seven percent.
+
+[3:25] ON SCREEN: Terminal view — `python scripts/validate_live_golden.py`
+                  passes.
+
+    And none of this is theater. Every page you're looking at is a real,
+    validated pipeline result. I ship a validator script that fails if the
+    output contains a fake URL, a missing quote, or an unsupported claim
+    leaking into the report. You can run it yourself.
+
+
+--------------------------------------------------------------------------------
+ ACT 4 — GEMINI USAGE + BUSINESS VALUE   (3:30–4:30,  ~150 words)
+--------------------------------------------------------------------------------
+
+[3:30] ON SCREEN: Table — "Gemini model routing" — Planner: 2.5 Pro |
+                  Extractor: 2.5 Flash | Fact-check: 2.5 Flash |
+                  Synthesizer: deterministic | Auditor: deterministic.
+
+    Why does this matter on the Gemini track? Because SYNAPSE uses Gemini
+    the way it was designed to be used. Gemini two point five Pro handles
+    the structured reasoning — planning and judgment. Gemini two point five
+    Flash handles the high-volume evidence extraction and entailment work.
+
+[3:50] ON SCREEN: Gemini call inspector panel — live table showing model,
+                  tokens, latency per stage.
+
+    Every call is JSON-mode with schema validation and a stricter-temperature
+    retry if the first response fails. The call inspector in the UI shows
+    you exactly which model served each stage, how many tokens it used, and
+    how long it took.
+
+[4:10] ON SCREEN: Stock footage — analyst in a meeting holding a printed memo.
+                  Subtle overlay: "3 hours -> 10 minutes".
+
+    The user this is built for? A strategy analyst at a mid-sized company,
+    writing a decision memo for their director, who needs three hours of
+    research finished before a one-hour meeting. Ten minutes with SYNAPSE,
+    and they walk in with a cited memo a compliance officer can read
+    without flinching.
+
+
+--------------------------------------------------------------------------------
+ ACT 5 — CLOSING   (4:30–5:00,  ~75 words)
+--------------------------------------------------------------------------------
+
+[4:30] ON SCREEN: Dark card — GitHub URL, demo URL, QR code, "Built on Gemini
+                  — Milan AI Week 2026".
+
+    SYNAPSE is open source. The repository is on screen. The deployed
+    Gemini-powered demo is live at the URL below. Every claim in this video
+    is verified against the code — the live golden trace is included in
+    the repo.
+
+[4:50] ON SCREEN: Final tagline lingers. SYNAPSE wordmark fades in.
+
+    Research that cites itself. Research that patches itself. Built on
+    Gemini. Thank you.
+
+[5:00] END CARD.
+
+
+================================================================================
+ ELEVENLABS-READY CHUNKS (copy-paste these — no scene cues, no timestamps)
+================================================================================
+
+
+########## CHUNK 1 — ACT 1 : PROBLEM ##########
+
+Every large language model will happily invent a citation. Every one of them. Even the best ones.
+
+Try this. Ask any mainstream AI for a research memo on any enterprise topic. You'll get a confident answer, with citations that look real. Some of them are. Some are dead links. Some are paraphrased into lies. And none of them will tell you what they couldn't find.
+
+For a strategy analyst, a consultant, or a lawyer — that's not a tool. That's a liability.
+
+
+########## CHUNK 2 — ACT 2 : SOLUTION + ARCHITECTURE ##########
+
+I built SYNAPSE to fix this. It's a Gemini-powered research agent that refuses to put a single sentence in its final report unless that sentence is tied to a verbatim quote from a real, fetched source. And then it audits itself — and patches its own gaps — before it hands the report to you.
+
+Here's how it works. You ask a question. Gemini two point five Pro plans two independent research jobs. Each job runs its own web and academic search, fetches the actual page text, and extracts quote-grounded evidence — every quote is checked to be a verbatim substring of the source. Gemini two point five Flash acts as the fact-checker, labeling each claim verified, partial, or unsupported. A deterministic synthesizer — not an LLM — assembles the report. Then a coverage auditor reads its own draft, finds what it missed, and emits a typed patch. You see report version one, the coverage diff, and report version two — side by side.
+
+
+########## CHUNK 3 — ACT 3 : LIVE DEMO ##########
+
+Let me show you. I'll ask: which CRM automation approach should a two-hundred-person SaaS company adopt in 2026?
+
+Gemini plans the research jobs — one focused on vendor-authoritative sources, one on architecture tradeoffs. Two parallel jobs kick off.
+
+In about twenty seconds, SYNAPSE has searched, fetched, and extracted twelve evidence quotes from twelve distinct sources. Every quote is a verbatim substring of the fetched page. No paraphrasing. No summaries of summaries.
+
+The fact checker classifies each one. You can see the fact ledger. Four verified. Three partial, with explicit caveats. Two contradictions flagged for human review. Two other claims were unsupported. They've been dropped. They will not appear in the report.
+
+Here's report version one.
+
+Now watch. The coverage auditor runs. It finds that the first draft mentioned cost implications without referencing the partial-support caveats from the fact ledger. It emits a patch operation — add caveat, the partial section, fact zero-zero-seven. The patch applicator checks that the patch text semantically overlaps with the fact's claim by at least fifty percent before applying it.
+
+Report version two. Same claims. Same sources. But now the caveats are explicit, and the coverage score has risen from sixty-two percent to eighty-seven percent.
+
+And none of this is theater. Every page you're looking at is a real, validated pipeline result. I ship a validator script that fails if the output contains a fake URL, a missing quote, or an unsupported claim leaking into the report. You can run it yourself.
+
+
+########## CHUNK 4 — ACT 4 : GEMINI USAGE + BUSINESS VALUE ##########
+
+Why does this matter on the Gemini track? Because SYNAPSE uses Gemini the way it was designed to be used. Gemini two point five Pro handles the structured reasoning — planning and judgment. Gemini two point five Flash handles the high-volume evidence extraction and entailment work.
+
+Every call is JSON-mode with schema validation and a stricter-temperature retry if the first response fails. The call inspector in the UI shows you exactly which model served each stage, how many tokens it used, and how long it took.
+
+The user this is built for? A strategy analyst at a mid-sized company, writing a decision memo for their director, who needs three hours of research finished before a one-hour meeting. Ten minutes with SYNAPSE, and they walk in with a cited memo a compliance officer can read without flinching.
+
+
+########## CHUNK 5 — ACT 5 : CLOSING ##########
+
+SYNAPSE is open source. The repository is on screen. The deployed Gemini-powered demo is live at the URL below. Every claim in this video is verified against the code — the live golden trace is included in the repo.
+
+Research that cites itself. Research that patches itself. Built on Gemini. Thank you.
+
+
+================================================================================
+ DELIVERY NOTES
+================================================================================
+
+- Opening line is a cold hook. "Every large language model will happily
+  invent a citation" should land flat and matter-of-fact — no upward
+  inflection. The shock comes from the content, not the delivery.
+
+- "Every one of them. Even the best ones." — two short declaratives.
+  Punctuation is your friend. The two periods force a small pause that lets
+  it land.
+
+- "That's not a tool. That's a liability." — deliberately harder consonants.
+  If the first take is too soft, lower Stability to 35 and regenerate this
+  sentence alone.
+
+- Architecture section (Act 2) is the only place with real density. Keep
+  Stability higher here (55+) so the model doesn't drift on the multi-clause
+  sentences.
+
+- "Report version two. Same claims. Same sources. But now..." — the three
+  short sentences are the emotional peak. Do not let ElevenLabs smooth them
+  into one breath. If it does, manually split them into separate generations
+  and concatenate.
+
+- "Thank you." — last two words should be slightly slower and lower.
+  Regenerate just the closing sentence if it comes out rushed.
+
+
+================================================================================
+ OUTPUT CONVENTION
+================================================================================
+
+Save rendered audio as:
+
+    presentation/video/assets/voiceover/act-1.mp3
+    presentation/video/assets/voiceover/act-2.mp3
+    presentation/video/assets/voiceover/act-3.mp3
+    presentation/video/assets/voiceover/act-4.mp3
+    presentation/video/assets/voiceover/act-5.mp3
+
+When filenames match this convention, the Hyperframes composition will wire
+them in automatically at the correct data-start offsets:
+
+    act-1.mp3 -> data-start="0"
+    act-2.mp3 -> data-start="30"
+    act-3.mp3 -> data-start="90"
+    act-4.mp3 -> data-start="210"
+    act-5.mp3 -> data-start="270"
+
+Each clip should be trimmed to the exact act duration shown in its header.

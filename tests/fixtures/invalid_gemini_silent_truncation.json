@@ -1,0 +1,50 @@
+{
+  "research_question": "Compare GPUs",
+  "search_headers": [
+    {"url": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html"},
+    {"url": "https://www.nvidia.com/en-us/data-center/h100/"},
+    {"url": "https://docs.vllm.ai/en/latest/"}
+  ],
+  "fetched_sources": [
+    {"url": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html", "success": true},
+    {"url": "https://www.nvidia.com/en-us/data-center/h100/", "success": true},
+    {"url": "https://docs.vllm.ai/en/latest/", "success": true}
+  ],
+  "evidence_items": [
+    {"evidence_id": "ev_0", "claim": "c0", "source_url": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html", "source_quote": "q0"},
+    {"evidence_id": "ev_1", "claim": "c1", "source_url": "https://www.nvidia.com/en-us/data-center/h100/", "source_quote": "q1"},
+    {"evidence_id": "ev_2", "claim": "c2", "source_url": "https://docs.vllm.ai/en/latest/", "source_quote": "q2"},
+    {"evidence_id": "ev_3", "claim": "c3", "source_url": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html", "source_quote": "q3"},
+    {"evidence_id": "ev_4", "claim": "c4", "source_url": "https://www.nvidia.com/en-us/data-center/h100/", "source_quote": "q4"}
+  ],
+  "fact_ledger": {"unsupported_claims": []},
+  "coverage_patch": {"patch_operations": [{"op": "add", "fact_ids": ["fact_1"]}]},
+  "report_v1": {
+    "answer_summary": "v1",
+    "sections": [{"section_id": "sec_llm_0", "content": "v1", "used_fact_ids": ["fact_0"]}],
+    "key_findings": [],
+    "sources": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html"]
+  },
+  "report_v2": {
+    "answer_summary": "v2",
+    "sections": [{"section_id": "sec_llm_0", "content": "v2", "used_fact_ids": ["fact_0", "fact_1"]}],
+    "key_findings": [],
+    "sources": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html"]
+  },
+  "provider_metrics": {
+    "search_provider": "composite",
+    "llm_calls": [
+      {
+        "provider": "gemini",
+        "schema": "PlannerJSON",
+        "ok": false,
+        "finish_reason": "MAX_TOKENS",
+        "response_chars": 0,
+        "visible_chars": 0,
+        "truncated_by_reasoning": true,
+        "reasoning_tokens": 2000,
+        "completion_tokens": 0
+      }
+    ]
+  }
+}

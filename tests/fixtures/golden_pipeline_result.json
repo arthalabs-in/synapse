@@ -1,0 +1,365 @@
+{
+  "research_question": "What are the practical tradeoffs between AMD MI300X and NVIDIA H100 for LLM inference?",
+  "planner_precontext": {
+    "original_query": "What are the practical tradeoffs between AMD MI300X and NVIDIA H100 for LLM inference?",
+    "query_type": "comparison",
+    "query_interpretation": "Compare memory, throughput, software maturity, and deployment fit for LLM inference.",
+    "precontext_claims": [
+      {
+        "claim": "MI300X comparisons commonly emphasize high memory capacity for large-model inference.",
+        "source_id": "src_demo_001",
+        "url": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html",
+        "support_level": "weak"
+      },
+      {
+        "claim": "H100 comparisons commonly emphasize mature CUDA software support.",
+        "source_id": "src_demo_002",
+        "url": "https://docs.nvidia.com/cuda/",
+        "support_level": "weak"
+      }
+    ],
+    "planning_risks": ["Vendor benchmarks may not be directly comparable."],
+    "research_jobs": [
+      {
+        "job_id": "job_a",
+        "job_name": "Industry and vendor evidence",
+        "objective": "Find official and industry sources comparing MI300X and H100 for inference.",
+        "search_queries": ["MI300X H100 LLM inference memory throughput"],
+        "source_priorities": ["official", "docs", "benchmarks"],
+        "must_answer": ["memory capacity", "inference throughput"]
+      },
+      {
+        "job_id": "job_b",
+        "job_name": "Technical and deployment evidence",
+        "objective": "Find technical sources about software stack and deployment tradeoffs.",
+        "search_queries": ["MI300X H100 vLLM ROCm CUDA inference"],
+        "source_priorities": ["paper", "docs", "blog"],
+        "must_answer": ["software maturity", "deployment constraints"]
+      }
+    ],
+    "coverage_checklist": ["memory", "throughput", "software"],
+    "planner_confidence": 0.76
+  },
+  "search_headers": [
+    {
+      "result_id": "res_job_a_001",
+      "job_id": "job_a",
+      "query": "MI300X H100 LLM inference memory throughput",
+      "title": "Demo MI300X memory brief",
+      "url": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html",
+      "snippet": "MI300X includes 192GB of HBM3 memory.",
+      "rank": 1,
+      "source_type_guess": "official"
+    },
+    {
+      "result_id": "res_job_b_001",
+      "job_id": "job_b",
+      "query": "MI300X H100 vLLM ROCm CUDA inference",
+      "title": "Demo H100 software brief",
+      "url": "https://docs.nvidia.com/cuda/",
+      "snippet": "H100 deployments benefit from mature CUDA tooling.",
+      "rank": 1,
+      "source_type_guess": "docs"
+    }
+  ],
+  "evidence_items": [
+    {
+      "evidence_id": "ev_001",
+      "job_id": "job_a",
+      "result_id": "res_job_a_001",
+      "claim": "AMD MI300X includes 192GB of HBM3 memory.",
+      "source_title": "Demo MI300X memory brief",
+      "source_url": "https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html",
+      "source_quote": "AMD MI300X includes 192GB of HBM3 memory.",
+      "quote_location": "page",
+      "source_type": "official",
+      "date": "unknown",
+      "relevance_to_query": 0.9,
+      "limitations": []
+    },
+    {
+      "evidence_id": "ev_002",
+      "job_id": "job_b",
+      "result_id": "res_job_b_001",
+      "claim": "H100 deployments benefit from mature CUDA tooling.",
+      "source_title": "Demo H100 software brief",
+      "source_url": "https://docs.nvidia.com/cuda/",
+      "source_quote": "H100 deployments benefit from mature CUDA tooling.",
+      "quote_location": "snippet",
+      "source_type": "docs",
+      "date": "unknown",
+      "relevance_to_query": 0.4,
+      "limitations": ["snippet-only evidence"]
+    }
+  ],
+  "fact_ledger": {
+    "verified_facts": [
+      {
+        "fact_id": "fact_001",
+        "claim": "AMD MI300X includes 192GB of HBM3 memory.",
+        "status": "VERIFIED",
+        "confidence": 0.9,
+        "supporting_evidence_ids": ["ev_001"],
+        "source_urls": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html"],
+        "notes": "Direct quote supports claim"
+      }
+    ],
+    "partial_facts": [
+      {
+        "fact_id": "fact_002",
+        "claim": "H100 deployments benefit from mature CUDA tooling.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": ["ev_002"],
+        "source_urls": ["https://docs.nvidia.com/cuda/"],
+        "notes": "Snippet-only support; caveat required"
+      }
+    ],
+    "contradictions": [],
+    "unsupported_claims": [
+      {
+        "claim": "One accelerator is universally best for every inference workload.",
+        "evidence_id": "ev_bad",
+        "reason": "source quote does not support claim"
+      }
+    ],
+    "dropped_evidence": [],
+    "source_quality": {
+      "official": 4,
+      "academic": 3,
+      "news": 2,
+      "blog": 1,
+      "unknown": 0
+    },
+    "source_quality_summary": {
+      "official": 1,
+      "docs": 1
+    },
+    "summary": "1 verified, 1 partial, 1 unsupported, 0 contradictions"
+  },
+  "report": {
+    "report_id": "report_v2",
+    "title": "MI300X vs H100 for LLM inference",
+    "answer_summary": "MI300X has a memory-capacity advantage in this demo evidence; H100 has caveated software-stack support.",
+    "sections": [
+      {
+        "section_id": "sec_verified",
+        "heading": "Verified Findings",
+        "content": "- AMD MI300X includes 192GB of HBM3 memory.\n\nH100 deployments benefit from mature CUDA tooling.",
+        "used_fact_ids": ["fact_001", "fact_002"],
+        "citations": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html", "https://docs.nvidia.com/cuda/"]
+      },
+      {
+        "section_id": "sec_partial",
+        "heading": "Caveated Findings",
+        "content": "- Caveat: H100 deployments benefit from mature CUDA tooling. (Snippet-only support; caveat required)",
+        "used_fact_ids": ["fact_002"],
+        "citations": ["https://docs.nvidia.com/cuda/"]
+      }
+    ],
+    "key_findings": [
+      {
+        "finding": "AMD MI300X includes 192GB of HBM3 memory.",
+        "fact_ids": ["fact_001"],
+        "citations": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html"],
+        "confidence": 0.9
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "unsupported_not_included": [
+      {
+        "claim": "One accelerator is universally best for every inference workload.",
+        "evidence_id": "ev_bad",
+        "reason": "source quote does not support claim"
+      }
+    ],
+    "confidence_score": 0.75,
+    "confidence_breakdown": {
+      "verified_ratio": 0.5,
+      "source_quality": 0.88,
+      "agreement": 1.0,
+      "recency": 0.5,
+      "coverage": 1.0
+    },
+    "used_fact_ids": ["fact_001", "fact_002"],
+    "unused_fact_ids": [],
+    "sources": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html", "https://docs.nvidia.com/cuda/"],
+    "iterations": 1,
+    "patch_applied": true
+  },
+  "report_v1": {
+    "report_id": "report_v1",
+    "title": "MI300X vs H100 for LLM inference",
+    "answer_summary": "MI300X has a memory-capacity advantage in this demo evidence.",
+    "sections": [
+      {
+        "section_id": "sec_verified",
+        "heading": "Verified Findings",
+        "content": "- AMD MI300X includes 192GB of HBM3 memory.",
+        "used_fact_ids": ["fact_001"],
+        "citations": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html"]
+      }
+    ],
+    "key_findings": [
+      {
+        "finding": "AMD MI300X includes 192GB of HBM3 memory.",
+        "fact_ids": ["fact_001"],
+        "citations": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html"],
+        "confidence": 0.9
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "unsupported_not_included": [],
+    "confidence_score": 0.68,
+    "confidence_breakdown": {
+      "verified_ratio": 0.5,
+      "source_quality": 0.88,
+      "agreement": 1.0,
+      "recency": 0.5,
+      "coverage": 0.67
+    },
+    "used_fact_ids": ["fact_001"],
+    "unused_fact_ids": ["fact_002"],
+    "sources": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html"],
+    "iterations": 1,
+    "patch_applied": false
+  },
+  "report_v2": {
+    "report_id": "report_v2",
+    "title": "MI300X vs H100 for LLM inference",
+    "answer_summary": "MI300X has a memory-capacity advantage in this demo evidence; H100 has caveated software-stack support.",
+    "sections": [
+      {
+        "section_id": "sec_verified",
+        "heading": "Verified Findings",
+        "content": "- AMD MI300X includes 192GB of HBM3 memory.\n\nH100 deployments benefit from mature CUDA tooling.",
+        "used_fact_ids": ["fact_001", "fact_002"],
+        "citations": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html", "https://docs.nvidia.com/cuda/"]
+      },
+      {
+        "section_id": "sec_partial",
+        "heading": "Caveated Findings",
+        "content": "- Caveat: H100 deployments benefit from mature CUDA tooling. (Snippet-only support; caveat required)",
+        "used_fact_ids": ["fact_002"],
+        "citations": ["https://docs.nvidia.com/cuda/"]
+      }
+    ],
+    "key_findings": [
+      {
+        "finding": "AMD MI300X includes 192GB of HBM3 memory.",
+        "fact_ids": ["fact_001"],
+        "citations": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html"],
+        "confidence": 0.9
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "unsupported_not_included": [
+      {
+        "claim": "One accelerator is universally best for every inference workload.",
+        "evidence_id": "ev_bad",
+        "reason": "source quote does not support claim"
+      }
+    ],
+    "confidence_score": 0.75,
+    "confidence_breakdown": {
+      "verified_ratio": 0.5,
+      "source_quality": 0.88,
+      "agreement": 1.0,
+      "recency": 0.5,
+      "coverage": 1.0
+    },
+    "used_fact_ids": ["fact_001", "fact_002"],
+    "unused_fact_ids": [],
+    "sources": ["https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html", "https://docs.nvidia.com/cuda/"],
+    "iterations": 1,
+    "patch_applied": true
+  },
+  "coverage_patch": {
+    "coverage_score": 1.0,
+    "coverage_diff": {
+      "missed_verified_details": [],
+      "missed_caveats": [
+        {
+          "fact_id": "fact_002",
+          "claim": "H100 deployments benefit from mature CUDA tooling.",
+          "notes": "Snippet-only support; caveat required"
+        }
+      ],
+      "missed_contradictions": [],
+      "search_result_unused_but_relevant": [],
+      "missing_user_intent": []
+    },
+    "missed_verified_details": [],
+    "missed_caveats": [
+      {
+        "fact_id": "fact_002",
+        "claim": "H100 deployments benefit from mature CUDA tooling.",
+        "notes": "Snippet-only support; caveat required"
+      }
+    ],
+    "missed_contradictions": [],
+    "search_results_unused_but_relevant": [],
+    "missing_user_intent": [],
+    "patch_operations": [
+      {
+        "op": "add_caveat",
+        "target_section_id": "sec_partial",
+        "text": "Caveat required: H100 deployments benefit from mature CUDA tooling.",
+        "fact_ids": ["fact_002"],
+        "contradiction_ids": [],
+        "result_ids": [],
+        "reason": "Partial fact stated without explicit caveat"
+      }
+    ],
+    "needs_new_search": false,
+    "followup_research_jobs": []
+  },
+  "job_summaries": [
+    {
+      "job_id": "job_a",
+      "search_coverage": {
+        "queries_run": 1,
+        "results_found": 1,
+        "official_sources_found": 1,
+        "academic_sources_found": 0
+      },
+      "search_header_count": 1,
+      "evidence_count": 1,
+      "extraction_failure_count": 0
+    },
+    {
+      "job_id": "job_b",
+      "search_coverage": {
+        "queries_run": 1,
+        "results_found": 1,
+        "official_sources_found": 0,
+        "academic_sources_found": 0
+      },
+      "search_header_count": 1,
+      "evidence_count": 1,
+      "extraction_failure_count": 0
+    }
+  ],
+  "timings": {
+    "planner": 0.02,
+    "research_jobs": 0.04,
+    "fact_checker": 0.01,
+    "synthesizer": 0.01,
+    "coverage_auditor": 0.01,
+    "patch_applicator": 0.01,
+    "total": 0.1
+  },
+  "token_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0
+  },
+  "degraded": false,
+  "errors": [],
+  "iterations": 1,
+  "history": [
+    {
+      "mode": "demo"
+    }
+  ]
+}

@@ -1,0 +1,2387 @@
+{
+  "research_question": "What is the strongest technically defensible architecture for SYNAPSE as a production-grade, evidence-grounded autonomous research agent in 2026: Gemini ADK-native, LangGraph with Gemini models, or custom async Python orchestration? Evaluate against grounded citation integrity, quote anchoring, tool-call determinism, multimodal extensibility, failure observability, latency/cost, reproducible evaluation, deployment burden, and hackathon demo impact. Include where each option is likely to fail.",
+  "planner_precontext": {
+    "original_query": "What is the strongest technically defensible architecture for SYNAPSE as a production-grade, evidence-grounded autonomous research agent in 2026: Gemini ADK-native, LangGraph with Gemini models, or custom async Python orchestration? Evaluate against grounded citation integrity, quote anchoring, tool-call determinism, multimodal extensibility, failure observability, latency/cost, reproducible evaluation, deployment burden, and hackathon demo impact. Include where each option is likely to fail.",
+    "query_type": "comparison",
+    "query_interpretation": "User requests a rigorous technical comparison of three architectures (Gemini ADK, LangGraph+Gemini, custom async Python) for building a production-level autonomous research agent, evaluated across specific criteria including citation integrity, determinism, observability, cost, and deployment. The answer should highlight failure modes for each.",
+    "precontext_claims": [
+      {
+        "claim": "LangGraph models agents as graphs using three key components: State, Nodes, Edges.",
+        "source_id": "ddg_8207265_1",
+        "url": "https://ai.google.dev/gemini-api/docs/langgraph-example",
+        "support_level": "weak"
+      },
+      {
+        "claim": "LangGraph is trusted by developers to build reliable agents.",
+        "source_id": "ddg_8513615_2",
+        "url": "https://www.langchain.com/langgraph",
+        "support_level": "weak"
+      }
+    ],
+    "planning_risks": [],
+    "research_jobs": [
+      {
+        "job_id": "job_a",
+        "job_name": "Technical architecture comparison: determinism, observability, latency/cost",
+        "objective": "Gather evidence comparing Gemini ADK-native, LangGraph with Gemini, and custom async Python orchestration on tool-call determinism, failure observability, and latency/cost for a production agent.",
+        "search_queries": [
+          "Gemini ADK tool call determinism reliability",
+          "LangGraph agent failure observability monitoring",
+          "custom async Python agent latency cost comparison",
+          "Gemini ADK latency benchmarks",
+          "LangGraph tool call determinism",
+          "agent orchestration failure handling observability"
+        ],
+        "source_priorities": [
+          "official",
+          "paper"
+        ],
+        "must_answer": [
+          "How deterministic are tool calls in each architecture?",
+          "What failure observability mechanisms exist?",
+          "What are the relative latency and cost profiles?",
+          "Where is each likely to fail?",
+          "Which architecture offers best determinism and observability?"
+        ],
+        "avoid": [],
+        "evidence_requirements": {
+          "min_sources": 5,
+          "require_quotes": true,
+          "allow_snippet_only": false
+        }
+      },
+      {
+        "job_id": "job_b",
+        "job_name": "Evaluation of citation integrity, multimodal extensibility, deployment, and demo impact",
+        "objective": "Gather evidence on how each architecture supports grounded citation integrity, quote anchoring, multimodal extensibility, reproducible evaluation, deployment burden, and hackathon demo impact.",
+        "search_queries": [
+          "Gemini ADK citation grounding quote anchoring",
+          "LangGraph citation integrity evidence",
+          "custom Python agent citation tracking",
+          "multimodal extensibility Gemini ADK",
+          "LangGraph multimodal support",
+          "deployment burden Gemini ADK vs LangGraph vs custom",
+          "hackathon demo impact agent architecture"
+        ],
+        "source_priorities": [
+          "official",
+          "paper"
+        ],
+        "must_answer": [
+          "How does each architecture ensure citation integrity and quote anchoring?",
+          "How easily can multimodal inputs be integrated?",
+          "What is the deployment overhead for each?",
+          "How suitable is each for a hackathon demo?",
+          "Where are the critical failure points for citation and multimodal support?"
+        ],
+        "avoid": [],
+        "evidence_requirements": {
+          "min_sources": 5,
+          "require_quotes": true,
+          "allow_snippet_only": false
+        }
+      }
+    ],
+    "coverage_checklist": [
+      "Grounded citation integrity",
+      "Quote anchoring",
+      "Tool-call determinism",
+      "Multimodal extensibility",
+      "Failure observability",
+      "Latency/cost",
+      "Reproducible evaluation",
+      "Deployment burden",
+      "Hackathon demo impact",
+      "Failure modes for each architecture"
+    ],
+    "planner_confidence": 0.3
+  },
+  "search_headers": [
+    {
+      "result_id": "res_job_a_004",
+      "job_id": "job_a",
+      "query": "Gemini ADK tool call determinism reliability",
+      "title": "Agent Development Kit | Gemini Enterprise Agent Platform | Google Cloud ...",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "snippet": "Agent Development Kit ( ADK ) is an open-source agent development framework that lets you build, debug, and deploy reliable AI agents at enterprise scale. Start with agents and tools and grow into sophisticated multi-agent systems, ADK allows developers to build everything from personal AI assistants to mission-critical business workflows.",
+      "rank": 4,
+      "provider": "duckduckgo",
+      "source_type_guess": "official",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_a_005",
+      "job_id": "job_a",
+      "query": "Gemini ADK tool call determinism reliability",
+      "title": "Google ADK Tutorial: Build AI Agents with Gemini (Code Examples)",
+      "url": "https://www.aimakers.co/blog/gemini-adk-agents/",
+      "snippet": "Google's Agent Development Kit ( ADK ) is a flexible, modular framework for building production-ready AI agents. While optimized for Gemini models, ADK is model-agnostic and supports multi-agent architectures, rich tool ecosystems, and enterprise deployment. Here's how to build agents that actually work. What Makes ADK Different Unlike simple chatbot frameworks, ADK is designed for autonomous ...",
+      "rank": 5,
+      "provider": "duckduckgo",
+      "source_type_guess": "blog",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_a_012",
+      "job_id": "job_a",
+      "query": "custom async Python agent latency cost comparison",
+      "title": "Python Async vs Sync: 6 Benchmarks That Will Change How You Think About Concurrency | Henry Hoang",
+      "url": "https://henryonai.github.io/blog/python-async-vs-sync-benchmark",
+      "snippet": "25 March 2026 - asyncpg + SQLAlchemy ORM overhead ... database access shines with remote databases where network latency is significant (5-50ms per query )....",
+      "rank": 3,
+      "provider": "duckduckgo",
+      "source_type_guess": "benchmark",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_a_017",
+      "job_id": "job_a",
+      "query": "Gemini ADK latency benchmarks",
+      "title": "Gemini Ultra 2.0 response latency benchmarks revealed - ShareBlog",
+      "url": "https://shareblog.org/en/tech/software/gemini-ultra-2-0-response-latency-benchmarks-optimization.html",
+      "snippet": "How can I optimize Gemini Ultra 2.0 response latency ? Gemini Ultra 2.0 latency is primarily managed by optimizing session state and choosing the correct model tier for your task.",
+      "rank": 3,
+      "provider": "duckduckgo",
+      "source_type_guess": "benchmark",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_b_016",
+      "job_id": "job_b",
+      "query": "multimodal extensibility Gemini ADK",
+      "title": "Topics tagged adk",
+      "url": "https://discuss.google.dev/tag/adk",
+      "snippet": "ADK Bidi-Streaming: A Visual Guide to Real-Time Multimodal AI ... NEW official docs: Register and manage ADK and A2A agents in Gemini Enterprise",
+      "rank": 1,
+      "provider": "duckduckgo",
+      "source_type_guess": "official",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    },
+    {
+      "result_id": "res_job_b_028",
+      "job_id": "job_b",
+      "query": "deployment burden Gemini ADK vs LangGraph vs custom",
+      "title": "Google ADK vs LangGraph : Which One Develops and Deploys AI...",
+      "url": "https://www.zenml.io/blog/google-adk-vs-langgraph",
+      "snippet": "Google ADK vs LangGraph : Key Takeaways. Google ADK : An open-source, code-first Python toolkit from Google designed to build agentic AI workflows. It provides higher-level abstractions and pre-built workflow patterns that promote a modular, testable a...",
+      "rank": 3,
+      "provider": "duckduckgo",
+      "source_type_guess": "blog",
+      "metadata": {
+        "region": "wt-wt",
+        "safesearch": "moderate"
+      },
+      "arxiv_id": null,
+      "pdf_url": null,
+      "published_date": null
+    }
+  ],
+  "fetched_sources": [
+    {
+      "source_id": "src_res_job_b_016",
+      "result_id": "res_job_b_016",
+      "url": "https://discuss.google.dev/tag/adk",
+      "canonical_url": "https://discuss.google.dev/tag/adk/188",
+      "title": "Topics tagged adk",
+      "domain": "discuss.google.dev",
+      "text": "Topics tagged adk Google Developer forums adk Topic Replies Views Activity NEW official docs: Register and manage ADK and A2A agents in Gemini Enterprise Agents vertex-ai-agent-engine , adk , vertex-ai-agent-builder , a2a 2 487 May 5, 2026 Using A2A Extensions for Injecting Session State into ADK Agents exposed as A2A servers Agents gemini , vertex-ai-agent-engine , adk , a2a 0 77 April 28, 2026 Reasoning Engine / ADK stream path fails when structured output is enforced (response_mime_type unexpected in Runner.run_async) Agents vertex-ai-agent-engine , adk , vertex-ai-agent-builder 1 36 April 23, 2026 Vertex AI Agent Engine unable to reach internal Cloud Run MCP server via Apigee Agents vertex-ai-agent-engine , adk 0 59 April 13, 2026 I want to generate charts through ADK agents located in Agent engine and show them to the users as agent responses Agents adk 7 781 April 2, 2026 Taming the Rogue Agent: From Vibe Coded to Production with the AgentOps Cockpit Agents mcp , adk , a2a 0 61 April 1, 2026 Beyond Semantic Search: Building Agentic Knowledge Graphs for Complex Enterprise RAG Agents gemini , rag , adk , development , vertex-ai-vector-search 0 79 March 27, 2026 ADK State asking for async Agents adk 0 33 March 27, 2026 Unable to access project resource via GCP MCP server Agents mcp , vertex-ai-agent-engine , adk 0 17 March 26, 2026 Agent does not reply and is blank Agents adk , vertex-ai-agent-builder , development 0 64 March 26, 2026 ADK deployed to Agent Engine concurrency issue - RuntimeError: Task ... Runner.run.<locals>._invoke_run_async() ... attached to a different loop Agents vertex-ai-agent-engine , adk 0 56 March 25, 2026 ADK + Vertex AI Agent Engine + CopilotKit - AG-UI Protocol Translation Issue Agents vertex-ai-agent-engine , adk 2 254 March 24, 2026 Sharing what I learned building with ADK LiveRequestQueue + Gemini Live API Agents gemini , tools , mcp , adk , live-stream-api 1 47 March 23, 2026 Stuck while building the agents Agents adk , vertex-ai-agent-builder , vertex-ai-generative-ai-evaluation-service , a2a 0 30 March 17, 2026 Gemini Live API - APIError 1008 (Policy Violation) during Function Calling Agents gemini , adk 2 144 March 14, 2026 Vertex AI Agent Engine Networking Overview Agents vertex-ai-agent-engine , googler-article , adk , vertex-ai-agent-builder 12 4406 March 13, 2026 AI SalesGrid: Transforming Enterprise Sales with Google Cloud Multi-Agent Intelligence Agents gemini , rag , adk , vertex-ai-agent-builder , vertex-ai-vector-search 0 73 March 8, 2026 Terraform and VertexAI memory bank customization Agents vertex-ai-agent-engine , adk 0 34 March 6, 2026 Beyond the Chatbot: Designing Effective Agentic AI Experiences Agents gemini , vertex-ai-agent-engine , googler-article , adk 1 598 February 24, 2026 Running and Debugging A2A Agents in Gemini Enterprise Agents vertex-ai-agent-engine , adk , a2a , gemini-enterprise 3 649 February 22, 2026 Recursive Language Models in ADK Community Articles googler-article , adk , ai-ml , developer-tools 8 14839 February 19, 2026 Gemini Live — Part 1: Building a low-latency, telephone Voice Agent with FreeSWITCH and ADK agents powered by Gemini Live Agents gemini , adk , vertex-ai-agent-builder , live-stream-api 0 339 February 19, 2026 ADK Agents + Cloud Run deployment + Session on VertexAI Agent Engine issue Agents vertex-ai-agent-engine , adk , development 2 109 February 18, 2026 Deploying ADK agents with MCP on Vertex AI Agent Engine using custom installation scripts Agents tools , mcp , vertex-ai-agent-engine , googler-article , adk 12 2907 February 17, 2026 Deploying Agents with Inline Source on Vertex AI Agent Engine Agents vertex-ai-agent-engine , googler-article , adk , vertex-ai-agent-builder 9 1783 February 2, 2026 Register ADK Agent from GCP Proj A in a Gemini Enterprise from a GCP Proj B Agents vertex-ai-agent-engine , adk , gemini-enterprise 5 135 February 5, 2026 Headless Agents: Architecting Decoupled AI Systems Agents gemini , vertex-ai-agent-engine , adk , development 1 369 January 26, 2026 10-Minute Agentic RAG with the New Vector Search 2.0 and ADK Agents rag , adk , vertex-ai-vector-search 0 330 January 18, 2026 How to force an Agent Loop to wait for User Input (Human-in-the-Loop) Agents gemini , adk 0 173 January 15, 2026 Is Agent Engine sanitizing/stripping markup/html tags from the generated text parts? Agents vertex-ai-agent-engine , adk 3 200 January 15, 2026 next page → Home Categories Guidelines Terms of Service Privacy Policy Powered by Discourse , best viewed with JavaScript enabled",
+      "markdown": null,
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T13:29:24.153969Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 4561,
+        "clean_text_chars": 4561,
+        "removed_noise_markers": [],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_a_004",
+      "result_id": "res_job_a_004",
+      "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "canonical_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "title": "Agent Development Kit | Gemini Enterprise Agent Platform | Google Cloud ...",
+      "domain": "docs.cloud.google.com",
+      "text": "Agent Development Kit (ADK) is an open-source agent development framework that lets you build, debug, and deploy reliable AI agents at enterprise scale. Start with agents and tools and grow into sophisticated multi-agent systems, ADK allows developers to build everything from personal AI assistants to mission-critical business workflows. ADK provides developers with a comprehensive suite of tools to build, run, evaluate, and scale AI architectures. Users can leverage flexible orchestration to define predictable pipelines using workflow agents or rely on agent-coordinated dynamic routing for more adaptive behavior. It natively supports multi-agent architectures, allowing developers to compose specialized teams of agents that can collaborate and delegate tasks. ADK features a rich tool ecosystem for integrating third-party applications and your own custom code. Apply built-in and partner evaluation tools to test execution trajectories. Run agents locally or scale them globally using Runtime, Cloud Run, or Google Kubernetes Engine. ADK is available in Python, TypeScript, Go, and Java. Start building Get started Set up your environment and get an agent running in a few minutes. Tools and integrations Check out the list of pre-built tools and integrations that you can use with ADK agents. Technical overview Learn about the core concepts and key capabilities offered by ADK. For details, see the Google Developers Site Policies . Java is a registered trademark of Oracle and/or its affiliates. Last updated 2026-05-08 UTC. Products and pricing See all products Google Cloud pricing Google Cloud Marketplace Contact sales Support Community forums Support Release Notes System status Resources GitHub Getting Started with Google Cloud Code samples Cloud Architecture Center Training and Certification Engage Blog Events X (Twitter) Google Cloud on YouTube Google Cloud Tech on YouTube About Google Privacy Site terms Google Cloud terms Manage cookies Our third decade of climate action: join us Sign up for the Google Cloud newsletter Subscribe English Deutsch Español – América Latina Français Indonesia Italiano Português – Brasil 中文 – 简体 中文 – 繁體 日本語 한국어",
+      "markdown": null,
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T13:29:22.528888Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 8312,
+        "clean_text_chars": 2170,
+        "removed_noise_markers": [
+          "boilerplate_or_code"
+        ],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_a_012",
+      "result_id": "res_job_a_012",
+      "url": "https://henryonai.github.io/blog/python-async-vs-sync-benchmark",
+      "canonical_url": "https://henryonai.github.io/blog/python-async-vs-sync-benchmark",
+      "title": "Python Async vs Sync: 6 Benchmarks That Will Change How You Think About Concurrency | Henry Hoang",
+      "domain": "henryonai.github.io",
+      "text": "But is it true? I ran 6 real benchmarks to find out, and the results challenged some of my own assumptions. Why This Matters ​ Python's asyncio has become the default recommendation for \"high-performance\" applications. FastAPI, aiohttp, asyncpg — the async ecosystem is thriving. But blindly adopting async without understanding when it actually helps can lead to: More complex code with no performance gain Worse tail latency (p99) under load MissingGreenletError nightmares in SQLAlchemy I built 6 runnable benchmarks to prove each point with real numbers. All code is open source on GitHub . Benchmark 1: I/O-Bound — Async Wins Big ​ Scenario: 50 HTTP requests, each taking 100ms (simulated with a local mock server). Approach Time Speedup Sync (sequential) 5.18s 1x Threading (10 workers) 0.53s 9.8x Async (aiohttp) 0.12s 43x Why? When a sync function waits for I/O, the entire thread blocks. Async suspends the coroutine and lets the event loop handle other tasks while waiting. With 50 concurrent requests, async fires them all simultaneously — total time equals the slowest single request. Key takeaway: For high-concurrency I/O workloads (web scraping, API calls, WebSocket), async is the clear winner. Benchmark 2: CPU-Bound — Async Has No Advantage ​ Scenario: Calculate sum of primes up to 500,000, repeated 8 times. Approach Time Speedup Sync 6.2s 1x Async (gather) 6.2s 1x (same!) Threading 7.1s 0.87x (slower!) Multiprocessing 1.8s 3.4x Why? Async runs on a single thread. CPU-bound work never yields to the event loop — there's no I/O to wait for. Threading is even worse due to the GIL (Global Interpreter Lock) adding overhead. Only multiprocessing achieves true parallelism by using separate processes with separate GILs. Key takeaway: For CPU-heavy tasks (ML inference, image processing, data crunching), use multiprocessing or concurrent.futures.ProcessPoolExecutor . Async is pointless here. Benchmark 3: SQLAlchemy — Sync Beats Async on Localhost ​ Scenario: Concurrent database queries via SQLAlchemy ORM — sync (psycopg2 + ThreadPoolExecutor) vs async (asyncpg). Concurrency Sync (q/s) Async (q/s) Winner Low (10) 1,892 704 Sync 2.7x High (100) 6,287 791 Sync 7.9x Surprise! Sync is significantly faster for localhost PostgreSQL. Why? Localhost queries are sub-millisecond — there's almost no I/O wait time for async to exploit asyncpg + SQLAlchemy ORM overhead — the async driver adds event loop scheduling cost on top of ORM overhead ThreadPoolExecutor is well-optimized — OS thread scheduling is very efficient for short-lived tasks Key takeaway: Async database access shines with remote databases where network latency is significant (5-50ms per query). For localhost or same-datacenter connections, sync is often faster and simpler. Benchmark 4: Memory — Coroutines Use 107x Less ​ Scenario: Create 1,000 concurrent tasks — threads vs coroutines. Approach Peak RSS Delta 1,000 Threads 35.2 MB 1,000 Coroutines 0.33 MB Ratio 107x Each OS thread requires a stack (typically 1-8 MB). A coroutine is just a Python object — roughly 1 KB. At scale (10,000+ concurrent connections), this difference becomes critical, especially in containerized environments with memory limits. Key takeaway: If you need thousands of concurrent connections (WebSocket servers, chat systems, IoT gateways), async is the only viable option from a memory perspective. Benchmark 5: MissingGreenletError — The #1 Async SQLAlchemy Trap ​ This isn't a performance benchmark — it's a correctness demonstration. The most common error when migrating from sync to async SQLAlchemy. # SYNC — works fine author = session . get ( Author , 1 ) author . books # Lazy loading: implicit SQL query runs automatically # ASYNC — CRASHES! author = await session . get ( Author , 1 ) author . books # MissingGreenletError: implicit I/O forbidden in async Why? Lazy loading performs an implicit database query when you access a relationship attribute. In async context, all I/O must be explicitly await ed. Python's attribute access ( author.books ) cannot be awaited. Three fixes: Fix Code Best For selectinload() .options(selectinload(Author.books)) Collections (recommended) joinedload() .options(joinedload(Author.books)) One-to-one relationships AsyncAttrs mixin await author.awaitable_attrs.books Occasional access Key takeaway: Before migrating to async SQLAlchemy, audit every relationship access in your codebase. Set lazy=\"raise\" during development to catch missing eager loads early. Benchmark 6: Latency Variance — Async p99 Is 29x Higher ​ Scenario: 100 concurrent queries, measure per-query latency at p50, p95, p99. Percentile Sync Async Ratio p50 (median) 4.6ms 1,165ms 253x p95 38.4ms 1,185ms 31x p99 41.2ms 1,192ms 29x Why? This is Cal Paterson's finding proven in practice: Sync (threads): OS preemptive scheduler distributes CPU time fairly across threads. No single request starves. Async (event loop): Cooperative scheduling — if one coroutine takes longer than expected, all other waiting coroutines are delayed. The event loop is single-threaded. Key takeaway: If your SLA requires low p99 latency (real-time trading, gaming, health monitoring), sync with thread pools may be more predictable than async. The Decision Framework ​ Here's my practical guide after running these benchmarks: Scenario Use Why High-concurrency I/O (100+ connections) Async 40x faster, 107x less memory CPU-heavy computation Multiprocessing 3.4x faster, true parallelism Localhost database Sync 8x faster, simpler code Remote database (5ms+ latency) Async Overlaps I/O waits Strict p99 requirements Sync 29x lower tail latency Simple scripts / CLIs Sync KISS — no async complexity WebSocket / real-time Async Memory-efficient at scale Run It Yourself ​ All benchmarks are open source and reproducible: # Clone and setup git clone https://github.com/henryonai/blog-code.henryonai.com cd blog-code.henryonai.com make setup # Run non-DB demos cd packages/260325-benchmark-async-vs-sync make run-all # Run with PostgreSQL make docker-up make test-db # Generate charts make charts Final Thoughts ​ Async Python is a powerful tool — but it's not a silver bullet. The most important lesson from these benchmarks: Async excels at waiting efficiently. It doesn't make your code run faster — it makes your code wait smarter. Before reaching for async/await , ask yourself: \"Is my bottleneck I/O wait time, or actual computation?\" If it's I/O with high concurrency, async is your friend. For everything else, sync is simpler, more predictable, and often faster. The Python 3.13 free-threaded mode (no GIL) may change this calculus in the future — but that's a topic for another benchmark. Tags: Python Performance Backend Older post Preparing for the AWS Certified AI Practitioner (AIF-C01) Exam Why This Matters Benchmark 1: I/O-Bound — Async Wins Big Benchmark 2: CPU-Bound — Async Has No Advantage Benchmark 3: SQLAlchemy — Sync Beats Async on Localhost Benchmark 4: Memory — Coroutines Use 107x Less Benchmark 5: MissingGreenletError — The #1 Async SQLAlchemy Trap Benchmark 6: Latency Variance — Async p99 Is 29x Higher The Decision Framework Run It Yourself Final Thoughts Henry Hoang Copyright © 2026 Henry Hoang.",
+      "markdown": null,
+      "source_type": "benchmark",
+      "source_quality_score": 0.85,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T13:29:22.188688Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 7830,
+        "clean_text_chars": 7191,
+        "removed_noise_markers": [
+          "boilerplate_or_code"
+        ],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_a_005",
+      "result_id": "res_job_a_005",
+      "url": "https://www.aimakers.co/blog/gemini-adk-agents/",
+      "canonical_url": "https://www.aimakers.co/blog/gemini-adk-agents",
+      "title": "Google ADK Tutorial: Build AI Agents with Gemini (Code Examples)",
+      "domain": "www.aimakers.co",
+      "text": "Google ADK Tutorial: Build AI Agents with Gemini (Code Examples) | AI Makers Blog Home Products Custom ClawdBot AI Pen Testing Expertise AI Agents AI Training Company Work Blog Contact Talk to Mark WhatsApp mark@aimakers.co @AustenMakers +5999 697 5324 Mon–Sat 08:00–17:00 Privacy · Terms AI Development Google ADK Tutorial: Build AI Agents with Gemini (Code Examples) February 4, 2026 • 18 min read Google's Agent Development Kit (ADK) is a flexible, modular framework for building production-ready AI agents. While optimized for Gemini models, ADK is model-agnostic and supports multi-agent architectures, rich tool ecosystems, and enterprise deployment. Here's how to build agents that actually work. What Makes ADK Different Unlike simple chatbot frameworks, ADK is designed for autonomous agents that can plan, reason, use tools, and coordinate with other agents. The framework provides: Multi-Agent Architecture: Build hierarchical systems where specialized agents coordinate complex tasks Flexible Orchestration: Use SequentialAgent, ParallelAgent, and LoopAgent for deterministic workflows, or LLM-driven dynamic routing Rich Tool Ecosystem: Pre-built tools (Search, Code Exec), custom functions, and other agents as tools Session & Memory Management: Short-term state within sessions and long-term memory across sessions Built-in Evaluation: Test agents against predefined scenarios before deployment ADK vs Other Agent Frameworks The AI agent framework landscape has expanded rapidly. Google ADK is one of several production-grade options, each with different strengths. Here is how they compare across the dimensions that matter most when choosing a framework for your project. Framework Language Support Orchestration Model Deployment Best For Google ADK Python, TypeScript, Go, Java Sequential / Parallel / Loop + LLM routing Vertex AI, Cloud Run, Local Enterprise multi-agent systems OpenAI Agents SDK Python, Node.js Handoffs + Guardrails Self-hosted, Background mode OpenAI-native tool pipelines LangGraph Python, JavaScript Graph-based state machines LangSmith, Self-hosted Complex stateful workflows CrewAI Python Role-based crew orchestration Self-hosted Rapid prototyping multi-agent teams Google ADK stands out for its breadth of language support and first-party Google Cloud integration . If your team already uses Vertex AI or Google Cloud, ADK removes significant deployment friction. The framework also supports mixing deterministic and LLM-driven orchestration within the same system, which is rare among alternatives. OpenAI's Agents SDK is the natural choice if you are already invested in the OpenAI ecosystem, but it locks you into OpenAI models. LangGraph offers the most fine-grained control over agent state transitions, making it ideal for workflows that require explicit state management. CrewAI is the quickest path to a working multi-agent prototype, though it currently lacks the production tooling of ADK or LangGraph. For enterprise teams that need multi-language support, managed deployment, and the flexibility to combine deterministic pipelines with LLM-driven decision-making, Google ADK is arguably the most complete package available today. Core ADK Concepts 1. Agents The fundamental worker unit. ADK supports two types: LlmAgent: Uses language models for complex reasoning and natural language understanding Workflow Agents: Deterministic controllers (Sequential, Parallel, Loop) for predictable execution 2. Tools Tools give agents abilities beyond conversation: FunctionTool: Wrap any Python/JS function as a tool AgentTool: Use other agents as callable tools Built-in: Google Search, Code Execution, Database connectors 3. Callbacks Custom code that runs at specific points—before/after tool calls, on errors, for logging or guardrails. 4. Sessions & State Each conversation has a Session with Events (message history) and State (working memory). The framework handles this automatically. Building Your First ADK Agent Here's a simple agent that can search the web and analyze results: from google.adk import Agent, FunctionTool from google.adk.tools import google_search # Define a custom analysis tool def analyze_results(results: str) -> str: \"\"\"Analyze search results and extract key insights.\"\"\" # Your analysis logic here return f\"Analysis of: {results}\" # Create the agent research_agent = Agent( name=\"research_agent\", model=\"gemini-2.0-flash\", instructions=\"\"\"You are a research assistant. Search for information, analyze results, and provide concise summaries.\"\"\", tools=[ google_search, FunctionTool(analyze_results) ] ) # Run the agent response = research_agent.run( \"What are the latest developments in AI agents?\" ) Multi-Agent Orchestration The real power of ADK comes from combining multiple specialized agents: from google.adk import Agent, SequentialAgent, ParallelAgent # Specialist agents researcher = Agent( name=\"researcher\", model=\"gemini-2.0-flash\", instructions=\"Research and gather information\", tools=[google_search] ) analyst = Agent( name=\"analyst\", model=\"gemini-2.0-flash\", instructions=\"Analyze data and identify patterns\" ) writer = Agent( name=\"writer\", model=\"gemini-2.0-flash\", instructions=\"Write clear, engaging reports\" ) # Orchestrate: research -> analyze -> write pipeline = SequentialAgent( name=\"report_pipeline\", agents=[researcher, analyst, writer] ) # Or run research tasks in parallel parallel_research = ParallelAgent( name=\"multi_topic_research\", agents=[researcher, researcher, researcher] # Different topics ) Dynamic vs Deterministic Orchestration One of ADK's most powerful design decisions is that it supports both deterministic and dynamic orchestration in the same system. Understanding when to use each pattern is critical for building reliable agent networks. Deterministic Orchestration Use SequentialAgent , ParallelAgent , and LoopAgent when you know the execution path in advance. These workflow agents follow a fixed pattern every time, making them predictable, testable, and easy to debug. They are ideal for: ETL pipelines where data flows through fixed stages Approval workflows with defined steps Batch processing where multiple items need identical treatment Quality assurance checks that must run in a specific order LLM-Driven Dynamic Routing When the execution path depends on the content of a user request or on intermediate results, use an LLM-powered router agent. The router reads the input, decides which specialist agent should handle it, and delegates accordingly. This pattern uses transfer_to_agent for permanent handoffs and escalate_to_agent when you want the original agent to receive the result back. from google.adk import Agent # Specialist agents billing_agent = Agent( name=\"billing_agent\", model=\"gemini-2.0-flash\", instructions=\"\"\"You handle billing questions. You can look up invoices, process refunds, and explain charges.\"\"\", tools=[lookup_invoice, process_refund] ) technical_agent = Agent( name=\"technical_agent\", model=\"gemini-2.0-flash\", instructions=\"\"\"You handle technical support. You can diagnose issues, check system status, and guide users through troubleshooting.\"\"\", tools=[check_system_status, run_diagnostics] ) sales_agent = Agent( name=\"sales_agent\", model=\"gemini-2.0-flash\", instructions=\"\"\"You handle sales inquiries. You can provide pricing, schedule demos, and answer product questions.\"\"\", tools=[get_pricing, schedule_demo] ) # Router agent — LLM decides which specialist to use router = Agent( name=\"customer_router\", model=\"gemini-2.0-flash\", instructions=\"\"\"You are a customer service router. Analyze the customer's request and transfer to the appropriate specialist: - billing_agent: for invoices, payments, refunds - technical_agent: for bugs, outages, how-to - sales_agent: for pricing, demos, new features Use transfer_to_agent to hand off the conversation.\"\"\", sub_agents=[billing_agent, technical_agent, sales_agent] ) The key difference between transfer_to_agent and escalate_to_agent matters for your architecture. A transfer is a permanent handoff — the router steps aside and the specialist takes over the conversation. An escalation is temporary — the specialist processes the request and returns the result to the calling agent, which can then continue its own logic. Use transfers for conversational agents and escalations for tool-like sub-tasks. Combining Both Patterns In practice, the best ADK systems combine both approaches. A dynamic router might delegate to a specialist agent that internally uses a SequentialAgent pipeline. For example, the billing agent above could run a deterministic sequence: validate the customer identity, look up the invoice, calculate the refund, then process it. The outer routing is dynamic; the inner execution is deterministic. Real-World Use Cases 1. Customer Service Agent Network A router agent that triages requests and delegates to specialized agents (billing, technical support, sales). Each specialist has domain-specific tools and knowledge. 2. Research & Analysis Pipeline Sequential agents that search → extract → analyze → summarize. Perfect for competitive analysis, market research, or due diligence workflows. 3. Automated Testing Agents Agents that can navigate applications, execute test scenarios, and report issues. Use the code execution tool for automated QA pipelines. 4. Document Processing Workflows Parallel agents that process multiple documents simultaneously, extract structured data, and aggregate results into reports. Deployment Options ADK agents can be deployed in multiple ways: Local Development: CLI and Developer UI for testing and debugging Vertex AI Agent Engine: Managed, scalable deployment on Google Cloud Custom Infrastructure: Integrate into your existing systems via the Runner API Production Considerations Moving ADK agents from a prototype to production requires attention to several infrastructure concerns that are easy to overlook during development. Session Persistence During development, ADK defaults to InMemorySessionService , which stores all session state in the application process. This works for testing but loses everything on restart. For production, switch to DatabaseSessionService backed by Firestore, Cloud SQL, or another persistent store. This ensures that long-running conversations survive deployments and that session data is available across multiple instances of your agent service. Monitoring and Tracing ADK includes built-in event logging that captures every step of an agent's execution: tool calls, LLM invocations, agent transfers, and state changes. In production, export these events to Cloud Logging or a tracing system like OpenTelemetry. This gives you full visibility into why an agent made a particular decision, which is essential for debugging issues that only appear at scale. Cost Management Not every agent needs your most capable model. A common pattern is to use a powerful model like gemini-2.5-pro for complex reasoning agents (analysts, planners) and a faster, cheaper model like gemini-2.0-flash for simple routing, formatting, or extraction tasks. ADK makes this straightforward — each agent specifies its own model independently. In a five-agent system, this strategy can reduce LLM costs by 60-70% with no measurable quality loss on the simpler tasks. Error Handling and Human Escalation Production agents must handle failures gracefully. Use ADK callbacks to catch tool errors, LLM refusals, and unexpected outputs. Define explicit escalation paths so that when an agent cannot resolve a request after a set number of attempts, it escalates to a human operator with full context. This prevents agents from looping indefinitely or providing incorrect answers when they are unsure. Rate Limiting and Retry Strategies When your agents call external APIs — whether Google Search, database queries, or third-party services — implement rate limiting and exponential backoff. ADK's callback system lets you wrap tool calls with retry logic. For high-traffic deployments, add a queue b",
+      "markdown": null,
+      "source_type": "blog",
+      "source_quality_score": 0.45,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T13:29:23.656671Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 18408,
+        "clean_text_chars": 18408,
+        "removed_noise_markers": [],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_a_017",
+      "result_id": "res_job_a_017",
+      "url": "https://shareblog.org/en/tech/software/gemini-ultra-2-0-response-latency-benchmarks-optimization.html",
+      "canonical_url": "https://korea-travel-busan-03a2.shareblog.org/",
+      "title": "Gemini Ultra 2.0 response latency benchmarks revealed - ShareBlog",
+      "domain": "shareblog.org",
+      "text": "부산 여행 전문 정보 속보 🔥 부산 짐보관 서비스, 뚜벅이 여행자의 동선 효율을 높이는 비밀 🔥 달맞이길 스파 추천, 부산 여행의 피로를 씻어줄 숨은 힐링 스폿 🔥 부산 돼지국밥 맛집, 현지인이 숨겨둔 실패 없는 선택지 🔥 동해선 전철 노선도, 부산에서 울산까지 가장 빠르게 이동하는 비결 📈 KOSPI 7822.24 ▲4.32% S&P500 7398.93 ▲0.84% NASDAQ 26247 ▲1.71% USD/KRW 1472.98 ▲0.79% Bitcoin 81213 ▼1.16% Ethereum 2330.46 ▼1.64% 금 4704.30 ▼0.56% 은 84.2700 ▲4.21% WTI 98.2900 ▲3.01% 부산 여행 전문 정보 A a ‹ 홈 busan › busan 2026.05.11 부산 짐보관 서비스, 뚜벅이 여행자의 동선 효율을 높이는 비밀 busan 달맞이길 스파 추천, 부산 여행의 피로를 씻어줄 숨은 힐링 스폿 2026.05.08 busan 부산 돼지국밥 맛집, 현지인이 숨겨둔 실패 없는 선택지 2026.05.08 busan 동해선 전철 노선도, 부산에서 울산까지 가장 빠르게 이동하는 비결 2026.05.08 홈 소개 필진 소개 개인정보처리방침 면책조항 문의 Copyright © 2026 부산 여행 전문 정보. All rights reserved.",
+      "markdown": null,
+      "source_type": "benchmark",
+      "source_quality_score": 0.85,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T13:29:23.226122Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 661,
+        "clean_text_chars": 661,
+        "removed_noise_markers": [],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    },
+    {
+      "source_id": "src_res_job_b_028",
+      "result_id": "res_job_b_028",
+      "url": "https://www.zenml.io/blog/google-adk-vs-langgraph",
+      "canonical_url": "https://www.zenml.io/blog/google-adk-vs-langgraph",
+      "title": "Google ADK vs LangGraph : Which One Develops and Deploys AI...",
+      "domain": "www.zenml.io",
+      "text": "Google ADK vs LangGraph: Which One Develops and Deploys AI Agents Better - ZenML Blog Product Data Science Iterate at warp speed Accelerate your ML workflow seamlessly Auto-track everything Automatic logging and versioning Shared ML building blocks Boost team productivity with reusable components Infrastructure Backend flexibility, zero lock-in One framework for all your MLOps and LLMOps needs Limitless scaling Effortlessly deploy across clouds Streamline cloud expenses Gain clarity on resource usage and costs Organization ZenML Pro Our managed control plane for MLOps Open Source vs Pro Pick what works for your needs ZenML vs Other Tools Compare ZenML to other ML tools Solutions GenAI & LLMs Finetuning LLMs Customize large language models for specific tasks Productionalizing a RAG application Deploy and scale RAG systems LLMOps Database A curated knowledge base of real-world implementations MLOps Building Enterprise MLOps Platform architecture and best practices Abstract cloud compute Simplify management of cloud-based ML resources Track metrics and metadata Monitor and analyze ML model performance and data Success Stories View All Case Studies JetBrains Software Adeo Leroy Merlin Retail Cross Screen Media Media Developers Documentation Docs Comprehensive guides to use ZenML Deploying ZenML Understanding ZenML system architecture Tutorials Examples showing ZenML in action Guides Quickstart Quickly get your hands dirty Showcase Projects of ML use cases built with ZenML Starter Guide Get started with the basics Community Slack Join our Slack Community Changelog Discover what's new on ZenML Roadmap Join us on our MLOps journey Pricing Blog Case Studies Star · 6,200 Get Started Start Free Trial Product Data Science Iterate at warp speed Auto-track everything Shared ML building blocks Infrastructure Backend flexibility, zero lock-in Limitless scaling Streamline cloud expenses Organization ZenML Pro Open Source vs Pro ZenML vs Other Tools Solutions GenAI & LLMs Finetuning LLMs Productionalizing a RAG application LLMOps Database MLOps Building Enterprise MLOps Abstract cloud compute Track metrics and metadata Developers Documentation Docs Deploying ZenML Tutorials Guides Quickstart Showcase Starter Guide Slack Changelog Roadmap Pricing Blog Case Studies Get Started Start Free Trial Blog / Google ADK vs LangGraph: Which One Develops and Deploys AI Agents Better LLMOps · September 19, 2025 · 14 mins Google ADK vs LangGraph: Which One Develops and Deploys AI Agents Better In this Google ADK vs LangGraph, we explain the difference between the two and conclude which one is the best to develop and deploy AI agents. Hamza Tahir On this page Google ADK vs LangGraph: Key Takeaways Google ADK vs LangGraph: Framework Maturity and Lineage Google ADK vs LangGraph: Features Comparison Google ADK vs LangGraph: Integration Capabilities Google ADK vs LangGraph: Pricing How Does ZenML Help You Use Both These Platforms with Ease Which Framework of the Two Is Best for Building Agentic AI Workflows? If you’re looking to build agentic AI systems, choosing the right framework makes all the difference in shaping their entire development lifecycle. Both Google ADK and Langgraph assist well in building complex AI agents, but their core philosophies, architectures, and feature sets are fundamentally different. In this article, we compare Google ADK vs LangGraph across their core features, integration capabilities, and pricing models to help you find the optimal tool for your next agentic workflow. We’ll also discuss how you can use both together (with a tool like ZenML ) to get the best of both worlds in production. Google ADK vs LangGraph: Key Takeaways 🧑💻 Google ADK : An open-source, code-first Python toolkit from Google designed to build agentic AI workflows. It provides higher-level abstractions and pre-built workflow patterns that promote a modular, testable architecture. It’s optimized for Gemini/Vertex AI yet model-agnostic with strong logging, tracing, and built-in eval. 🧑💻 LangGraph : A library from LangChain for building stateful, multi-agent applications as an explicit graph of nodes/edges. It offers tight control over agent workflows and integrates with the LangChain ecosystem for LLMs, tools, memory, plus LangSmith/Langfuse for tracing and eval. Google ADK vs LangGraph: Framework Maturity and Lineage The table below compares the framework maturity of Google ADK and LangGraph: Metric Google ADK LangGraph First Public Release v0.0.3 – April 2025 v0.0.63 – Jan 2024 GitHub Stars 13,100 18,800 Forks 1,900 3,300 Commits 1,195 6,279 PyPI downloads (last 30 days) 1,195,270+ 10,614,220+ Of the two, Google ADK is the newer framework, and so its stars and commits trail behind LangGraph’s mammoth numbers. By contrast, LangGraph leads in community signals with ~ 5.7k more stars and ~5084 commit count . For downloads, LangGraph shows higher recent PyPI pulls, suggesting broader day-to-day use across projects. ADK’s downloads are growing quickly as teams trial it alongside Gemini and Vertex AI. Google ADK vs LangGraph: Features Comparison Let’s see how ADK and LangGraph stack up against each other. Here’s a quick peek: Feature LangGraph Google ADK Orchestration Model - Explicit state machine (nodes + edges) - Precise, map-like control - Code-driven workflows (Sequential, Parallel, Loop) - Dynamic LLM-based routing Agent Primitives & Patterns - Nodes for LLMs, tools, and memory - Common patterns: ReAct, Supervisor - BaseAgent + LlmAgent classes - Delegation + explicit tool invocation Observability & Tracing - LangSmith for tracing and debugging - Replay runs + evaluate - OpenTelemetry integrations (Cloud Trace, Phoenix, Weave) - Native eval framework Structured Output - with_structured_output() binding - JSON/Pydantic parsing automation - output_schema with Pydantic - Supports model-native function calling Now, let’s dive deep with one-on-one feature comparison: Feature 1. Orchestration Model Orchestration is how you define an agent’s overall workflow: the sequence of steps, logic branches, and concurrency that transform a basic LLM prompt into a multi-step agent. LangGraph and Google ADK take fundamentally different approaches here: explicit graphs vs event-driven workflows. LangGraph LangGraph agent architecture LangGraph uses explicit graph orchestration. Rather than one monolithic agent deciding everything on the fly, you lay out a state machine workflow with a graph of nodes and edges that the agent follows. Every agent workflow is enclosed as a StateGraph with three core components: State : A central, shared object (often a Python TypedDict ) that holds all the data and context for a given workflow. This state is passed to every node and is persisted between steps, providing a robust mechanism for memory. Nodes : Individual computational units, represented as Python functions. A node can be an LLM call, tool use, human approval, or any custom logic. Each node receives the current state and can return updates to it. Edges : Directed connections between nodes that define the flow of execution. LangGraph supports both standard edges and conditional_edges , which act as routers to dynamically determine the next step based on the current state. Unlike traditional Directed Acyclic Graphs (DAGs), LangGraph manages a s hared state like TypedDict that travels with the run in real-time so other nodes can read prior outputs, preserve memory, and support checkpoints for pause, debug, and replay. The benefit is full control and predictability. You can implement complex flows like: ‘Node A splits into Node B and Node C in parallel, and once both complete, merge into Node D.’ Google ADK Google ADK approaches orchestration with a more code-driven workflow engine . Instead of drawing out nodes and edges, you write Python classes/functions to define how the agent proceeds. Essentially, ADK’s orchestration model is two-fold: You can compose agents via pre-built Workflow agents like Sequential, Parallel, and Loop classes to enforce a defined, static structure. For instance, a SequentialAgent(sub_agents=[A, B, C]) will call Agent A, then B, then C in order. A ParallelAgent(sub_agents=[X, Y]) would run X and Y concurrently. Next, you also have LLM-driven dynamic routing via the LlmAgent and agent transfer mechanism. An LlmAgent acts like an intelligent router that automatically transfers controls from one agent to another based on the user’s request or the current context. Let’s see a conceptual example that uses both orchestration models for getting a task done. Suppose you created a CoordinatorAgent for a travel planning task that has three sub-agents, say, a FlightAgent, HotelAgent, and SightseeingAgent. (see the code below): from google . adk . agents import LlmAgent , SequentialAgent # Define specialist sub-agents (LLM-powered in this example) flight_agent = LlmAgent( name = \"FlightAgent\" , model = \"gemini-2.0\" , description = \"Handles flight bookings\" ) hotel_agent = LlmAgent( name = \"HotelAgent\" , model = \"gemini-2.0\" , description = \"Handles hotel bookings\" ) # Option 1: Use a SequentialAgent to run sub-agents in order itinerary_planner = SequentialAgent( name = \"TripPlannerSeq\" , sub_agents = [flight_agent , hotel_agent]) # Option 2: Use an LLM Agent as a dynamic router (parent with sub_agents) trip_planner = LlmAgent( name = \"TripPlanner\" , model = \"gemini-2.0\" , instruction = \"Plan a trip by delegating to specialized agents as needed.\" , sub_agents = [flight_agent , hotel_agent] # LLM will decide which to call ) In the first approach above, itinerary_planner will always call the FlightAgent, then the HotelAgent in sequence. In the second, the TripPlanner LLM agent is free to decide whether a given user query requires the flight agent, the hotel agent, or both (and in what order). ADK’s flexibility lies in this ability to mix fixed workflows with dynamic decision-making. Bottom line: While both can achieve similar outcomes, the developer experience differs: drawing a map vs. writing a script. ADK workflows might be less visual than LangGraph’s, but more familiar to Python developers who prefer writing code over configuring graphs. LangGraph gives you an explicit graph (state machine) to control agent flows with precision, ideal for complex or highly-regulated workflows. Google ADK provides a flexible programming model with both structured and dynamic orchestration. Feature 2. Agent Primitives and Patterns Agent primitives and patterns define the fundamental building blocks and architectural patterns Google ADK and LangGraph use for constructing agents. LangGraph How AI agents are connected in LangGraph LangGraph builds on LangChain’s rich collection of primitives like LLM wrappers, tools, memory modules, etc., but repackages them into a graph paradigm. It’s up to you to wire them into patterns. Each node in a LangGraph workflow can be considered an agent step with a specific primitive. For example, you could have: an LLM Call node , a Tool node to trigger web search or code execution, a Human node to insert human review and checkpoints, or even a Chain node (embedding a LangChain chain as a single node). Though the most popular patterns are the classic ReAct (Reason+Act) loop, where an LLM reasons and decides on a tool, then acts, then repeats until a ‘done’ condition. For more complex multi-agent systems, the ‘supervisor’ pattern is a common and powerful architecture. A ‘supervisor’ node acts as a high-level router extending specialized ‘worker’ nodes, each skilled for a specific task (e.g., searching the web, writing code). Google ADK Google ADK base agent In ADK, the fundamental primitives are the BaseAgent and LlmAgent classes. You can create specialized agents by either extending BaseAgent for custom logic or configuring an LlmAgent with specific instructions, tools, and data schemas. On top of primitives, ADK’s multi-agent patterns are influenced by its design. Essentially, a parent-client hierarchy with a",
+      "markdown": null,
+      "source_type": "blog",
+      "source_quality_score": 0.45,
+      "provider": "http",
+      "fetch_status": "fetched_http",
+      "fetched_at": "2026-05-11T13:29:22.256427Z",
+      "success": true,
+      "error_message": null,
+      "metadata": {
+        "status_code": 200,
+        "raw_text_chars": 27019,
+        "clean_text_chars": 27019,
+        "removed_noise_markers": [],
+        "failed_quality_filter": false,
+        "cleaning_method": "synapse_cleaner"
+      }
+    }
+  ],
+  "fetched_source_summary": {
+    "fetched_http_count": 7,
+    "fetched_camofox_count": 0,
+    "arxiv_metadata_count": 0,
+    "failed_count": 13
+  },
+  "evidence_items": [
+    {
+      "evidence_id": "ev_job_a_001",
+      "job_id": "job_a",
+      "result_id": "res_job_a_004",
+      "claim": "Gemini ADK-native supports deterministic tool calls via workflow agents that define predictable pipelines.",
+      "source_title": "Agent Development Kit | Gemini Enterprise Agent Platform | Google Cloud ...",
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "source_quote": "Users can leverage flexible orchestration to define predictable pipelines using workflow agents or rely on agent-coordinated dynamic routing for more adaptive behavior.",
+      "fetched_source_id": "src_res_job_a_004",
+      "quote_location": "page",
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.8,
+      "limitations": [
+        "Source does not compare with LangGraph or custom async Python; 'predictable' may not guarantee full determinism in tool calls.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_a_002",
+      "job_id": "job_a",
+      "result_id": "res_job_a_004",
+      "claim": "Gemini ADK-native provides failure observability through built-in evaluation tools for testing execution trajectories.",
+      "source_title": "Agent Development Kit | Gemini Enterprise Agent Platform | Google Cloud ...",
+      "source_url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "source_quote": "Apply built-in and partner evaluation tools to test execution trajectories.",
+      "fetched_source_id": "src_res_job_a_004",
+      "quote_location": "page",
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.7,
+      "limitations": [
+        "Source does not specify real-time failure monitoring or error handling mechanisms; context is limited to evaluation, not operational observability.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_a_003",
+      "job_id": "job_a",
+      "result_id": "res_job_a_012",
+      "claim": "Async Python exhibits significantly higher latency variance (p99) compared to sync with thread pools, making it less predictable for low-latency requirements.",
+      "source_title": "Python Async vs Sync: 6 Benchmarks That Will Change How You Think About Concurrency | Henry Hoang",
+      "source_url": "https://henryonai.github.io/blog/python-async-vs-sync-benchmark",
+      "source_quote": "Percentile Sync Async Ratio p50 (median) 4.6ms 1,165ms 253x p95 38.4ms 1,185ms 31x p99 41.2ms 1,192ms 29x Why? This is Cal Paterson's finding proven in practice: Sync (threads): OS preemptive scheduler distributes CPU time fairly across threads. No single request starves. Async (event loop): Cooperative scheduling — if one coroutine takes longer than expected, all other waiting coroutines are delayed. The event loop is single-threaded. Key takeaway: If your SLA requires low p99 latency (real-time trading, gaming, health monitoring), sync with thread pools may be more predictable than async.",
+      "fetched_source_id": "src_res_job_a_012",
+      "quote_location": "page",
+      "source_type": "benchmark",
+      "source_quality_score": 0.85,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.6,
+      "limitations": [
+        "The benchmark compares general Python async/sync, not specifically Gemini ADK, LangGraph, or custom orchestration architectures.",
+        "The latency variance is measured for database queries, not tool calls.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_a_004",
+      "job_id": "job_a",
+      "result_id": "res_job_a_005",
+      "claim": "Google ADK supports deterministic orchestration via SequentialAgent, ParallelAgent, and LoopAgent agents that follow fixed patterns, making them predictable and testable.",
+      "source_title": "Google ADK Tutorial: Build AI Agents with Gemini (Code Examples)",
+      "source_url": "https://www.aimakers.co/blog/gemini-adk-agents/",
+      "source_quote": "Use SequentialAgent , ParallelAgent , and LoopAgent when you know the execution path in advance. These workflow agents follow a fixed pattern every time, making them predictable, testable, and easy to debug.",
+      "fetched_source_id": "src_res_job_a_005",
+      "quote_location": "page",
+      "source_type": "blog",
+      "source_quality_score": 0.45,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.9,
+      "limitations": [
+        "Single source (blog post), not empirical data; may not reflect real-world performance across all scenarios.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_a_005",
+      "job_id": "job_a",
+      "result_id": "res_job_a_005",
+      "claim": "Google ADK provides built-in event logging for monitoring and tracing of agent executions, capturing every step including tool calls, LLM invocations, agent transfers, and state changes.",
+      "source_title": "Google ADK Tutorial: Build AI Agents with Gemini (Code Examples)",
+      "source_url": "https://www.aimakers.co/blog/gemini-adk-agents/",
+      "source_quote": "ADK includes built-in event logging that captures every step of an agent's execution: tool calls, LLM invocations, agent transfers, and state changes. In production, export these events to Cloud Logging or a tracing system like OpenTelemetry. This gives you full visibility into why an agent made a particular decision, which is essential for debugging issues that only appear at scale.",
+      "fetched_source_id": "src_res_job_a_005",
+      "quote_location": "page",
+      "source_type": "blog",
+      "source_quality_score": 0.45,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.9,
+      "limitations": [
+        "Single source (blog post); observability mechanisms described may vary with deployment and configuration.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_001",
+      "job_id": "job_b",
+      "result_id": "res_job_b_016",
+      "claim": "ADK stream path fails when structured output is enforced, indicating a potential failure point for citation and multimodal support.",
+      "source_title": "Topics tagged adk",
+      "source_url": "https://discuss.google.dev/tag/adk",
+      "source_quote": "Reasoning Engine / ADK stream path fails when structured output is enforced (response_mime_type unexpected in Runner.run_async)",
+      "fetched_source_id": "src_res_job_b_016",
+      "quote_location": "page",
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.3,
+      "limitations": [
+        "Forum topic title only; no detailed discussion provided.",
+        "Does not explicitly address citation integrity or multimodal extensibility.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_002",
+      "job_id": "job_b",
+      "result_id": "res_job_b_016",
+      "claim": "Deploying ADK agents with MCP on Vertex AI Agent Engine requires custom installation scripts, suggesting moderate deployment overhead.",
+      "source_title": "Topics tagged adk",
+      "source_url": "https://discuss.google.dev/tag/adk",
+      "source_quote": "Deploying ADK agents with MCP on Vertex AI Agent Engine using custom installation scripts",
+      "fetched_source_id": "src_res_job_b_016",
+      "quote_location": "page",
+      "source_type": "official",
+      "source_quality_score": 0.95,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.4,
+      "limitations": [
+        "Forum topic title only; no details on the actual overhead.",
+        "Does not directly address hackathon demo suitability or citation integrity.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_003",
+      "job_id": "job_b",
+      "result_id": "res_job_b_028",
+      "claim": "Google ADK's modular, testable architecture and pre-built workflow patterns reduce deployment overhead and are well-suited for hackathon demos.",
+      "source_title": "Google ADK vs LangGraph : Which One Develops and Deploys AI...",
+      "source_url": "https://www.zenml.io/blog/google-adk-vs-langgraph",
+      "source_quote": "It provides higher-level abstractions and pre-built workflow patterns that promote a modular, testable architecture.",
+      "fetched_source_id": "src_res_job_b_028",
+      "quote_location": "page",
+      "source_type": "blog",
+      "source_quality_score": 0.45,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.6,
+      "limitations": [
+        "Does not directly address citation integrity, quote anchoring, or multimodal extensibility.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    },
+    {
+      "evidence_id": "ev_job_b_004",
+      "job_id": "job_b",
+      "result_id": "res_job_b_028",
+      "claim": "LangGraph's integration with LangSmith/Langfuse enables reproducible evaluation through tracing and debugging capabilities.",
+      "source_title": "Google ADK vs LangGraph : Which One Develops and Deploys AI...",
+      "source_url": "https://www.zenml.io/blog/google-adk-vs-langgraph",
+      "source_quote": "It offers tight control over agent workflows and integrates with the LangChain ecosystem for LLMs, tools, memory, plus LangSmith/Langfuse for tracing and eval.",
+      "fetched_source_id": "src_res_job_b_028",
+      "quote_location": "page",
+      "source_type": "blog",
+      "source_quality_score": 0.45,
+      "extraction_method": "llm_batch",
+      "fallback_reason": null,
+      "date": "unknown",
+      "relevance_to_query": 0.5,
+      "limitations": [
+        "Does not directly address citation integrity, quote anchoring, or multimodal extensibility.",
+        "anchor_method:exact",
+        "anchor_confidence:1.00"
+      ]
+    }
+  ],
+  "fact_ledger": {
+    "verified_facts": [],
+    "partial_facts": [
+      {
+        "fact_id": "fact_ev_job_a_001",
+        "claim": "Gemini ADK-native supports deterministic tool calls via workflow agents that define predictable pipelines.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_a_001"
+        ],
+        "source_urls": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_a_002",
+        "claim": "Gemini ADK-native provides failure observability through built-in evaluation tools for testing execution trajectories.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_a_002"
+        ],
+        "source_urls": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_a_003",
+        "claim": "Async Python exhibits significantly higher latency variance (p99) compared to sync with thread pools, making it less predictable for low-latency requirements.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_a_003"
+        ],
+        "source_urls": [
+          "https://henryonai.github.io/blog/python-async-vs-sync-benchmark"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_a_004",
+        "claim": "Google ADK supports deterministic orchestration via SequentialAgent, ParallelAgent, and LoopAgent agents that follow fixed patterns, making them predictable and testable.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_a_004"
+        ],
+        "source_urls": [
+          "https://www.aimakers.co/blog/gemini-adk-agents/"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_a_005",
+        "claim": "Google ADK provides built-in event logging for monitoring and tracing of agent executions, capturing every step including tool calls, LLM invocations, agent transfers, and state changes.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_a_005"
+        ],
+        "source_urls": [
+          "https://www.aimakers.co/blog/gemini-adk-agents/"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      },
+      {
+        "fact_id": "fact_ev_job_b_001",
+        "claim": "ADK stream path fails when structured output is enforced, indicating a potential failure point for citation and multimodal support.",
+        "status": "PARTIAL",
+        "confidence": 0.55,
+        "supporting_evidence_ids": [
+          "ev_job_b_001"
+        ],
+        "source_urls": [
+          "https://discuss.google.dev/tag/adk"
+        ],
+        "notes": "Partial support; caveat required",
+        "verification_method": "heuristic_fallback"
+      }
+    ],
+    "contradictions": [],
+    "unsupported_claims": [
+      {
+        "claim": "Deploying ADK agents with MCP on Vertex AI Agent Engine requires custom installation scripts, suggesting moderate deployment overhead.",
+        "evidence_id": "ev_job_b_002",
+        "reason": "evidence failed quality gate"
+      },
+      {
+        "claim": "Google ADK's modular, testable architecture and pre-built workflow patterns reduce deployment overhead and are well-suited for hackathon demos.",
+        "evidence_id": "ev_job_b_003",
+        "reason": "evidence failed quality gate"
+      },
+      {
+        "claim": "LangGraph's integration with LangSmith/Langfuse enables reproducible evaluation through tracing and debugging capabilities.",
+        "evidence_id": "ev_job_b_004",
+        "reason": "evidence failed quality gate"
+      }
+    ],
+    "dropped_evidence": [],
+    "source_quality": {
+      "official": 4,
+      "academic": 3,
+      "news": 2,
+      "blog": 1,
+      "unknown": 0
+    },
+    "source_quality_summary": {
+      "official": 4,
+      "benchmark": 1,
+      "blog": 4
+    },
+    "summary": "0 verified, 6 partial, 3 unsupported, 0 contradictions"
+  },
+  "report": {
+    "report_id": "report_v2",
+    "title": "Evidence-Based Architecture Recommendation for SYNAPSE 2026",
+    "answer_summary": "Gemini ADK-native is the strongest option supported by evidence, offering deterministic orchestration [fact_ev_job_a_001, fact_ev_job_a_004] and built-in failure observability [fact_ev_job_a_002, fact_ev_job_a_005]. However, its stream path fails under structured output enforcement [fact_ev_job_b_001], a risk for citation integrity. LangGraph lacks any evidence; async Python only shows latency variance [fact_ev_job_a_003]. Recommend ADK with the structured output caveat.",
+    "sections": [
+      {
+        "section_id": "sec_llm_01",
+        "heading": "Tool-Call Determinism and Reproducible Evaluation",
+        "content": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004]. Additionally, official ADK documentation describes workflow agents that define predictable pipelines, further supporting determinism [fact_ev_job_a_001]. Fact_ev_job_a_001 confirms that ADK workflow agents define predictable pipelines, which directly supports reproducible evaluation. Async Python introduces higher latency variance (p99) compared to sync approaches, threatening reproducibility of timing behavior [fact_ev_job_a_003]. No facts address LangGraph for determinism or reproducibility.",
+        "used_fact_ids": [
+          "fact_ev_job_a_004",
+          "fact_ev_job_a_003",
+          "fact_ev_job_a_001"
+        ],
+        "citations": [
+          "https://henryonai.github.io/blog/python-async-vs-sync-benchmark",
+          "https://www.aimakers.co/blog/gemini-adk-agents/",
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ]
+      },
+      {
+        "section_id": "sec_llm_02",
+        "heading": "Failure Observability",
+        "content": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. Fact_ev_job_a_005 adds that ADK includes event logging that captures every step including tool calls, LLM invocations, agent transfers, and state changes. These features support the failure observability criterion. No facts cover LangGraph or async Python on observability.\n\nADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. Moreover, ADK includes built-in event logging that captures every step including tool calls, LLM invocations, agent transfers, and state changes, providing full visibility for debugging [fact_ev_job_a_005]. No facts cover LangGraph or async Python on observability.",
+        "used_fact_ids": [
+          "fact_ev_job_a_002",
+          "fact_ev_job_a_005"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+          "https://www.aimakers.co/blog/gemini-adk-agents/"
+        ]
+      },
+      {
+        "section_id": "sec_llm_03",
+        "heading": "Multimodal Extensibility and Citation Integrity",
+        "content": "ADK’s stream path fails when structured output is enforced [fact_ev_job_b_001]. If citation anchoring or multimodal extensibility depend on structured output, this is a direct failure point. No facts address LangGraph or async Python for citation integrity, quote anchoring, or multimodal support, so the evidence set is incomplete for those options.",
+        "used_fact_ids": [
+          "fact_ev_job_b_001"
+        ],
+        "citations": [
+          "https://discuss.google.dev/tag/adk"
+        ]
+      },
+      {
+        "section_id": "sec_llm_04",
+        "heading": "Latency and Cost",
+        "content": "Async Python exhibits significantly higher latency variance (p99) relative to synchronous thread pools [fact_ev_job_a_003], making it less predictable for low-latency requirements and potentially increasing cost from tail latency. No facts address ADK or LangGraph latency or cost, so ADK’s latency profile is not established from this evidence.",
+        "used_fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://henryonai.github.io/blog/python-async-vs-sync-benchmark"
+        ]
+      },
+      {
+        "section_id": "sec_llm_05",
+        "heading": "Deployment Burden and Hackathon Impact",
+        "content": "ADK’s built-in observability [fact_ev_job_a_002, fact_ev_job_a_005] and deterministic orchestration [fact_ev_job_a_001, fact_ev_job_a_004] could reduce debugging time during deployment and strengthen demo reliability, but no direct facts measure deployment burden. LangGraph and async Python have no facts for these criteria. ADK’s structured output limitation [fact_ev_job_b_001] may complicate demos that require strict formatting.",
+        "used_fact_ids": [
+          "fact_ev_job_b_001"
+        ],
+        "citations": [
+          "https://discuss.google.dev/tag/adk"
+        ]
+      }
+    ],
+    "key_findings": [
+      {
+        "finding": "Gemini ADK-native supports deterministic tool calls via workflow agents that define predictable pipelines.",
+        "fact_ids": [
+          "fact_ev_job_a_001"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Gemini ADK-native provides failure observability through built-in evaluation tools for testing execution trajectories.",
+        "fact_ids": [
+          "fact_ev_job_a_002"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Async Python exhibits significantly higher latency variance (p99) compared to sync with thread pools, making it less predictable for low-latency requirements.",
+        "fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://henryonai.github.io/blog/python-async-vs-sync-benchmark"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Google ADK supports deterministic orchestration via SequentialAgent, ParallelAgent, and LoopAgent agents that follow fixed patterns, making them predictable and testable.",
+        "fact_ids": [
+          "fact_ev_job_a_004"
+        ],
+        "citations": [
+          "https://www.aimakers.co/blog/gemini-adk-agents/"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Google ADK provides built-in event logging for monitoring and tracing of agent executions, capturing every step including tool calls, LLM invocations, agent transfers, and state changes.",
+        "fact_ids": [
+          "fact_ev_job_a_005"
+        ],
+        "citations": [
+          "https://www.aimakers.co/blog/gemini-adk-agents/"
+        ],
+        "confidence": 0.55
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "unsupported_not_included": [
+      {
+        "claim": "Deploying ADK agents with MCP on Vertex AI Agent Engine requires custom installation scripts, suggesting moderate deployment overhead.",
+        "evidence_id": "ev_job_b_002",
+        "reason": "evidence failed quality gate"
+      },
+      {
+        "claim": "Google ADK's modular, testable architecture and pre-built workflow patterns reduce deployment overhead and are well-suited for hackathon demos.",
+        "evidence_id": "ev_job_b_003",
+        "reason": "evidence failed quality gate"
+      },
+      {
+        "claim": "LangGraph's integration with LangSmith/Langfuse enables reproducible evaluation through tracing and debugging capabilities.",
+        "evidence_id": "ev_job_b_004",
+        "reason": "evidence failed quality gate"
+      }
+    ],
+    "confidence_score": 0.52,
+    "confidence_breakdown": {
+      "verified_ratio": 0.0,
+      "source_quality": 0.56,
+      "agreement": 1.0,
+      "recency": 0.5,
+      "coverage": 0.8
+    },
+    "used_fact_ids": [
+      "fact_ev_job_a_004",
+      "fact_ev_job_a_003",
+      "fact_ev_job_a_001",
+      "fact_ev_job_a_002",
+      "fact_ev_job_a_005",
+      "fact_ev_job_b_001"
+    ],
+    "unused_fact_ids": [
+      "fact_ev_job_a_001",
+      "fact_ev_job_a_005"
+    ],
+    "sources": [
+      "https://discuss.google.dev/tag/adk",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "https://henryonai.github.io/blog/python-async-vs-sync-benchmark",
+      "https://www.aimakers.co/blog/gemini-adk-agents/"
+    ],
+    "iterations": 1,
+    "patch_applied": true,
+    "degraded_synthesis": false
+  },
+  "report_v1": {
+    "report_id": "report_v1",
+    "title": "Evidence-Based Architecture Recommendation for SYNAPSE 2026",
+    "answer_summary": "Gemini ADK-native is the strongest option supported by evidence, offering deterministic orchestration [fact_ev_job_a_001, fact_ev_job_a_004] and built-in failure observability [fact_ev_job_a_002, fact_ev_job_a_005]. However, its stream path fails under structured output enforcement [fact_ev_job_b_001], a risk for citation integrity. LangGraph lacks any evidence; async Python only shows latency variance [fact_ev_job_a_003]. Recommend ADK with the structured output caveat.",
+    "sections": [
+      {
+        "section_id": "sec_llm_01",
+        "heading": "Tool-Call Determinism and Reproducible Evaluation",
+        "content": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004]. Fact_ev_job_a_001 confirms that ADK workflow agents define predictable pipelines, which directly supports reproducible evaluation. Async Python introduces higher latency variance (p99) compared to sync approaches, threatening reproducibility of timing behavior [fact_ev_job_a_003]. No facts address LangGraph for determinism or reproducibility.",
+        "used_fact_ids": [
+          "fact_ev_job_a_004",
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://henryonai.github.io/blog/python-async-vs-sync-benchmark",
+          "https://www.aimakers.co/blog/gemini-adk-agents/"
+        ]
+      },
+      {
+        "section_id": "sec_llm_02",
+        "heading": "Failure Observability",
+        "content": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. Fact_ev_job_a_005 adds that ADK includes event logging that captures every step including tool calls, LLM invocations, agent transfers, and state changes. These features support the failure observability criterion. No facts cover LangGraph or async Python on observability.",
+        "used_fact_ids": [
+          "fact_ev_job_a_002"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ]
+      },
+      {
+        "section_id": "sec_llm_03",
+        "heading": "Multimodal Extensibility and Citation Integrity",
+        "content": "ADK’s stream path fails when structured output is enforced [fact_ev_job_b_001]. If citation anchoring or multimodal extensibility depend on structured output, this is a direct failure point. No facts address LangGraph or async Python for citation integrity, quote anchoring, or multimodal support, so the evidence set is incomplete for those options.",
+        "used_fact_ids": [
+          "fact_ev_job_b_001"
+        ],
+        "citations": [
+          "https://discuss.google.dev/tag/adk"
+        ]
+      },
+      {
+        "section_id": "sec_llm_04",
+        "heading": "Latency and Cost",
+        "content": "Async Python exhibits significantly higher latency variance (p99) relative to synchronous thread pools [fact_ev_job_a_003], making it less predictable for low-latency requirements and potentially increasing cost from tail latency. No facts address ADK or LangGraph latency or cost, so ADK’s latency profile is not established from this evidence.",
+        "used_fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://henryonai.github.io/blog/python-async-vs-sync-benchmark"
+        ]
+      },
+      {
+        "section_id": "sec_llm_05",
+        "heading": "Deployment Burden and Hackathon Impact",
+        "content": "ADK’s built-in observability [fact_ev_job_a_002, fact_ev_job_a_005] and deterministic orchestration [fact_ev_job_a_001, fact_ev_job_a_004] could reduce debugging time during deployment and strengthen demo reliability, but no direct facts measure deployment burden. LangGraph and async Python have no facts for these criteria. ADK’s structured output limitation [fact_ev_job_b_001] may complicate demos that require strict formatting.",
+        "used_fact_ids": [
+          "fact_ev_job_b_001"
+        ],
+        "citations": [
+          "https://discuss.google.dev/tag/adk"
+        ]
+      }
+    ],
+    "key_findings": [
+      {
+        "finding": "Gemini ADK-native supports deterministic tool calls via workflow agents that define predictable pipelines.",
+        "fact_ids": [
+          "fact_ev_job_a_001"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Gemini ADK-native provides failure observability through built-in evaluation tools for testing execution trajectories.",
+        "fact_ids": [
+          "fact_ev_job_a_002"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Async Python exhibits significantly higher latency variance (p99) compared to sync with thread pools, making it less predictable for low-latency requirements.",
+        "fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://henryonai.github.io/blog/python-async-vs-sync-benchmark"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Google ADK supports deterministic orchestration via SequentialAgent, ParallelAgent, and LoopAgent agents that follow fixed patterns, making them predictable and testable.",
+        "fact_ids": [
+          "fact_ev_job_a_004"
+        ],
+        "citations": [
+          "https://www.aimakers.co/blog/gemini-adk-agents/"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Google ADK provides built-in event logging for monitoring and tracing of agent executions, capturing every step including tool calls, LLM invocations, agent transfers, and state changes.",
+        "fact_ids": [
+          "fact_ev_job_a_005"
+        ],
+        "citations": [
+          "https://www.aimakers.co/blog/gemini-adk-agents/"
+        ],
+        "confidence": 0.55
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "unsupported_not_included": [
+      {
+        "claim": "Deploying ADK agents with MCP on Vertex AI Agent Engine requires custom installation scripts, suggesting moderate deployment overhead.",
+        "evidence_id": "ev_job_b_002",
+        "reason": "evidence failed quality gate"
+      },
+      {
+        "claim": "Google ADK's modular, testable architecture and pre-built workflow patterns reduce deployment overhead and are well-suited for hackathon demos.",
+        "evidence_id": "ev_job_b_003",
+        "reason": "evidence failed quality gate"
+      },
+      {
+        "claim": "LangGraph's integration with LangSmith/Langfuse enables reproducible evaluation through tracing and debugging capabilities.",
+        "evidence_id": "ev_job_b_004",
+        "reason": "evidence failed quality gate"
+      }
+    ],
+    "confidence_score": 0.42,
+    "confidence_breakdown": {
+      "verified_ratio": 0.0,
+      "source_quality": 0.56,
+      "agreement": 1.0,
+      "recency": 0.5,
+      "coverage": 0.6
+    },
+    "used_fact_ids": [
+      "fact_ev_job_a_004",
+      "fact_ev_job_a_003",
+      "fact_ev_job_a_002",
+      "fact_ev_job_b_001",
+      "fact_ev_job_a_003",
+      "fact_ev_job_b_001"
+    ],
+    "unused_fact_ids": [
+      "fact_ev_job_a_001",
+      "fact_ev_job_a_005"
+    ],
+    "sources": [
+      "https://discuss.google.dev/tag/adk",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "https://henryonai.github.io/blog/python-async-vs-sync-benchmark",
+      "https://www.aimakers.co/blog/gemini-adk-agents/"
+    ],
+    "iterations": 1,
+    "patch_applied": false,
+    "degraded_synthesis": false
+  },
+  "report_v2": {
+    "report_id": "report_v2",
+    "title": "Evidence-Based Architecture Recommendation for SYNAPSE 2026",
+    "answer_summary": "Gemini ADK-native is the strongest option supported by evidence, offering deterministic orchestration [fact_ev_job_a_001, fact_ev_job_a_004] and built-in failure observability [fact_ev_job_a_002, fact_ev_job_a_005]. However, its stream path fails under structured output enforcement [fact_ev_job_b_001], a risk for citation integrity. LangGraph lacks any evidence; async Python only shows latency variance [fact_ev_job_a_003]. Recommend ADK with the structured output caveat.",
+    "sections": [
+      {
+        "section_id": "sec_llm_01",
+        "heading": "Tool-Call Determinism and Reproducible Evaluation",
+        "content": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004]. Additionally, official ADK documentation describes workflow agents that define predictable pipelines, further supporting determinism [fact_ev_job_a_001]. Fact_ev_job_a_001 confirms that ADK workflow agents define predictable pipelines, which directly supports reproducible evaluation. Async Python introduces higher latency variance (p99) compared to sync approaches, threatening reproducibility of timing behavior [fact_ev_job_a_003]. No facts address LangGraph for determinism or reproducibility.",
+        "used_fact_ids": [
+          "fact_ev_job_a_004",
+          "fact_ev_job_a_003",
+          "fact_ev_job_a_001"
+        ],
+        "citations": [
+          "https://henryonai.github.io/blog/python-async-vs-sync-benchmark",
+          "https://www.aimakers.co/blog/gemini-adk-agents/",
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ]
+      },
+      {
+        "section_id": "sec_llm_02",
+        "heading": "Failure Observability",
+        "content": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. Fact_ev_job_a_005 adds that ADK includes event logging that captures every step including tool calls, LLM invocations, agent transfers, and state changes. These features support the failure observability criterion. No facts cover LangGraph or async Python on observability.\n\nADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. Moreover, ADK includes built-in event logging that captures every step including tool calls, LLM invocations, agent transfers, and state changes, providing full visibility for debugging [fact_ev_job_a_005]. No facts cover LangGraph or async Python on observability.",
+        "used_fact_ids": [
+          "fact_ev_job_a_002",
+          "fact_ev_job_a_005"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+          "https://www.aimakers.co/blog/gemini-adk-agents/"
+        ]
+      },
+      {
+        "section_id": "sec_llm_03",
+        "heading": "Multimodal Extensibility and Citation Integrity",
+        "content": "ADK’s stream path fails when structured output is enforced [fact_ev_job_b_001]. If citation anchoring or multimodal extensibility depend on structured output, this is a direct failure point. No facts address LangGraph or async Python for citation integrity, quote anchoring, or multimodal support, so the evidence set is incomplete for those options.",
+        "used_fact_ids": [
+          "fact_ev_job_b_001"
+        ],
+        "citations": [
+          "https://discuss.google.dev/tag/adk"
+        ]
+      },
+      {
+        "section_id": "sec_llm_04",
+        "heading": "Latency and Cost",
+        "content": "Async Python exhibits significantly higher latency variance (p99) relative to synchronous thread pools [fact_ev_job_a_003], making it less predictable for low-latency requirements and potentially increasing cost from tail latency. No facts address ADK or LangGraph latency or cost, so ADK’s latency profile is not established from this evidence.",
+        "used_fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://henryonai.github.io/blog/python-async-vs-sync-benchmark"
+        ]
+      },
+      {
+        "section_id": "sec_llm_05",
+        "heading": "Deployment Burden and Hackathon Impact",
+        "content": "ADK’s built-in observability [fact_ev_job_a_002, fact_ev_job_a_005] and deterministic orchestration [fact_ev_job_a_001, fact_ev_job_a_004] could reduce debugging time during deployment and strengthen demo reliability, but no direct facts measure deployment burden. LangGraph and async Python have no facts for these criteria. ADK’s structured output limitation [fact_ev_job_b_001] may complicate demos that require strict formatting.",
+        "used_fact_ids": [
+          "fact_ev_job_b_001"
+        ],
+        "citations": [
+          "https://discuss.google.dev/tag/adk"
+        ]
+      }
+    ],
+    "key_findings": [
+      {
+        "finding": "Gemini ADK-native supports deterministic tool calls via workflow agents that define predictable pipelines.",
+        "fact_ids": [
+          "fact_ev_job_a_001"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Gemini ADK-native provides failure observability through built-in evaluation tools for testing execution trajectories.",
+        "fact_ids": [
+          "fact_ev_job_a_002"
+        ],
+        "citations": [
+          "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Async Python exhibits significantly higher latency variance (p99) compared to sync with thread pools, making it less predictable for low-latency requirements.",
+        "fact_ids": [
+          "fact_ev_job_a_003"
+        ],
+        "citations": [
+          "https://henryonai.github.io/blog/python-async-vs-sync-benchmark"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Google ADK supports deterministic orchestration via SequentialAgent, ParallelAgent, and LoopAgent agents that follow fixed patterns, making them predictable and testable.",
+        "fact_ids": [
+          "fact_ev_job_a_004"
+        ],
+        "citations": [
+          "https://www.aimakers.co/blog/gemini-adk-agents/"
+        ],
+        "confidence": 0.55
+      },
+      {
+        "finding": "Google ADK provides built-in event logging for monitoring and tracing of agent executions, capturing every step including tool calls, LLM invocations, agent transfers, and state changes.",
+        "fact_ids": [
+          "fact_ev_job_a_005"
+        ],
+        "citations": [
+          "https://www.aimakers.co/blog/gemini-adk-agents/"
+        ],
+        "confidence": 0.55
+      }
+    ],
+    "contradictions_or_uncertainties": [],
+    "unsupported_not_included": [
+      {
+        "claim": "Deploying ADK agents with MCP on Vertex AI Agent Engine requires custom installation scripts, suggesting moderate deployment overhead.",
+        "evidence_id": "ev_job_b_002",
+        "reason": "evidence failed quality gate"
+      },
+      {
+        "claim": "Google ADK's modular, testable architecture and pre-built workflow patterns reduce deployment overhead and are well-suited for hackathon demos.",
+        "evidence_id": "ev_job_b_003",
+        "reason": "evidence failed quality gate"
+      },
+      {
+        "claim": "LangGraph's integration with LangSmith/Langfuse enables reproducible evaluation through tracing and debugging capabilities.",
+        "evidence_id": "ev_job_b_004",
+        "reason": "evidence failed quality gate"
+      }
+    ],
+    "confidence_score": 0.52,
+    "confidence_breakdown": {
+      "verified_ratio": 0.0,
+      "source_quality": 0.56,
+      "agreement": 1.0,
+      "recency": 0.5,
+      "coverage": 0.8
+    },
+    "used_fact_ids": [
+      "fact_ev_job_a_004",
+      "fact_ev_job_a_003",
+      "fact_ev_job_a_001",
+      "fact_ev_job_a_002",
+      "fact_ev_job_a_005",
+      "fact_ev_job_b_001"
+    ],
+    "unused_fact_ids": [
+      "fact_ev_job_a_001",
+      "fact_ev_job_a_005"
+    ],
+    "sources": [
+      "https://discuss.google.dev/tag/adk",
+      "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+      "https://henryonai.github.io/blog/python-async-vs-sync-benchmark",
+      "https://www.aimakers.co/blog/gemini-adk-agents/"
+    ],
+    "iterations": 1,
+    "patch_applied": true,
+    "degraded_synthesis": false
+  },
+  "coverage_patch": {
+    "coverage_score": 0.8,
+    "coverage_diff": {
+      "missed_verified_details": [],
+      "missed_caveats": [],
+      "missed_contradictions": [],
+      "search_result_unused_but_relevant": [],
+      "missing_user_intent": [
+        {
+          "intent": "Grounded citation integrity",
+          "reason": "coverage checklist item not addressed"
+        },
+        {
+          "intent": "Tool-call determinism",
+          "reason": "coverage checklist item not addressed"
+        },
+        {
+          "intent": "Latency/cost",
+          "reason": "coverage checklist item not addressed"
+        },
+        {
+          "intent": "Hackathon demo impact",
+          "reason": "coverage checklist item not addressed"
+        },
+        {
+          "intent": "Failure modes for each architecture",
+          "reason": "coverage checklist item not addressed"
+        }
+      ],
+      "revision_brief": {
+        "missing_intent": [
+          "Quote anchoring: no evidence or mention in the report.",
+          "Multimodal extensibility: only a failure point mentioned, no positive evaluation.",
+          "Deployment burden: no direct evidence, only a mention that no facts exist.",
+          "Hackathon demo impact: no direct evidence, only a mention that no facts exist.",
+          "Failure modes for each architecture: only ADK failure mode (stream path) discussed; LangGraph and async Python failure modes missing."
+        ],
+        "unused_supported_facts": [
+          "fact_ev_job_a_001: official ADK docs support deterministic tool calls via workflow agents; relevant to sec_llm_01.",
+          "fact_ev_job_a_005: blog describes built-in event logging for full visibility; relevant to sec_llm_02."
+        ],
+        "option_balance_gaps": [
+          "LangGraph has no supporting evidence for any criterion; the report notes this but cannot compare.",
+          "Async Python has evidence only for latency/cost; evaluation is incomplete for other criteria.",
+          "ADK has evidence for determinism and observability but all facts are partial/low confidence."
+        ],
+        "missed_contradictions_or_caveats": [
+          "Report does not caveat the low confidence and partial status of all facts.",
+          "Key fact fact_ev_job_b_001 is from a forum topic title, a weak source; no source quality caveat added.",
+          "Claim that ADK is 'strongest option supported by evidence' overstates the evidence (confidence 0.42)."
+        ],
+        "unsupported_slips": [
+          "Answer_summary overstates support: 'Gemini ADK-native is the strongest option supported by evidence' should be weakened to reflect partial, low-confidence evidence."
+        ],
+        "suggested_revision_focus": [
+          "Integrate unused facts fact_ev_job_a_001 and fact_ev_job_a_005 into sec_llm_01 and sec_llm_02 respectively.",
+          "Add explicit caveats about low confidence, partial status, and weak sources for all key claims.",
+          "For missing criteria, add statements acknowledging no evidence found rather than leaving unaddressed."
+        ],
+        "patch_operations": [
+          {
+            "edit_id": "edit_001",
+            "op": "add",
+            "target_section_id": "sec_llm_01",
+            "target_path": "sections[section_id=sec_llm_01].content",
+            "edit_label": "Add deterministic pipeline evidence",
+            "original_text": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004].",
+            "replacement_text": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004]. Additionally, official ADK documentation describes workflow agents that define predictable pipelines, further supporting determinism [fact_ev_job_a_001].",
+            "text": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004]. Additionally, official ADK documentation describes workflow agents that define predictable pipelines, further supporting determinism [fact_ev_job_a_001].",
+            "fact_ids": [
+              "fact_ev_job_a_001"
+            ],
+            "contradiction_ids": [],
+            "result_ids": [],
+            "reason": "Integrate unused supported fact fact_ev_job_a_001 into the tool-call determinism section."
+          },
+          {
+            "edit_id": "edit_002",
+            "op": "add",
+            "target_section_id": "sec_llm_02",
+            "target_path": "sections[section_id=sec_llm_02].content",
+            "edit_label": "Add event logging evidence",
+            "original_text": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. No facts cover LangGraph or async Python on observability.",
+            "replacement_text": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. Moreover, ADK includes built-in event logging that captures every step including tool calls, LLM invocations, agent transfers, and state changes, providing full visibility for debugging [fact_ev_job_a_005]. No facts cover LangGraph or async Python on observability.",
+            "text": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. Moreover, ADK includes built-in event logging that captures every step including tool calls, LLM invocations, agent transfers, and state changes, providing full visibility for debugging [fact_ev_job_a_005]. No facts cover LangGraph or async Python on observability.",
+            "fact_ids": [
+              "fact_ev_job_a_005"
+            ],
+            "contradiction_ids": [],
+            "result_ids": [],
+            "reason": "Integrate unused supported fact fact_ev_job_a_005 into the failure observability section."
+          },
+          {
+            "edit_id": "edit_003",
+            "op": "add_caveat",
+            "target_section_id": "answer_summary",
+            "target_path": "answer_summary",
+            "edit_label": "Add confidence caveat",
+            "original_text": "Gemini ADK-native is the strongest option supported by evidence, offering deterministic orchestration [fact_ev_job_a_001, fact_ev_job_a_004] and built-in failure observability [fact_ev_job_a_002, fact_ev_job_a_005].",
+            "replacement_text": "Gemini ADK-native appears to be the strongest option based on available evidence, but note that all supporting facts are partial and low confidence (overall confidence 0.42). The evidence does not fully cover all evaluation criteria.",
+            "text": "Gemini ADK-native appears to be the strongest option based on available evidence, but note that all supporting facts are partial and low confidence (overall confidence 0.42). The evidence does not fully cover all evaluation criteria.",
+            "fact_ids": [],
+            "contradiction_ids": [],
+            "result_ids": [],
+            "reason": "Weaken overstatement of evidential support given low confidence and partial facts."
+          }
+        ]
+      }
+    },
+    "missed_verified_details": [],
+    "missed_caveats": [],
+    "missed_contradictions": [],
+    "search_results_unused_but_relevant": [],
+    "missing_user_intent": [
+      {
+        "intent": "Grounded citation integrity",
+        "reason": "coverage checklist item not addressed"
+      },
+      {
+        "intent": "Tool-call determinism",
+        "reason": "coverage checklist item not addressed"
+      },
+      {
+        "intent": "Latency/cost",
+        "reason": "coverage checklist item not addressed"
+      },
+      {
+        "intent": "Hackathon demo impact",
+        "reason": "coverage checklist item not addressed"
+      },
+      {
+        "intent": "Failure modes for each architecture",
+        "reason": "coverage checklist item not addressed"
+      }
+    ],
+    "revision_brief": {
+      "missing_intent": [
+        "Quote anchoring: no evidence or mention in the report.",
+        "Multimodal extensibility: only a failure point mentioned, no positive evaluation.",
+        "Deployment burden: no direct evidence, only a mention that no facts exist.",
+        "Hackathon demo impact: no direct evidence, only a mention that no facts exist.",
+        "Failure modes for each architecture: only ADK failure mode (stream path) discussed; LangGraph and async Python failure modes missing."
+      ],
+      "unused_supported_facts": [
+        "fact_ev_job_a_001: official ADK docs support deterministic tool calls via workflow agents; relevant to sec_llm_01.",
+        "fact_ev_job_a_005: blog describes built-in event logging for full visibility; relevant to sec_llm_02."
+      ],
+      "option_balance_gaps": [
+        "LangGraph has no supporting evidence for any criterion; the report notes this but cannot compare.",
+        "Async Python has evidence only for latency/cost; evaluation is incomplete for other criteria.",
+        "ADK has evidence for determinism and observability but all facts are partial/low confidence."
+      ],
+      "missed_contradictions_or_caveats": [
+        "Report does not caveat the low confidence and partial status of all facts.",
+        "Key fact fact_ev_job_b_001 is from a forum topic title, a weak source; no source quality caveat added.",
+        "Claim that ADK is 'strongest option supported by evidence' overstates the evidence (confidence 0.42)."
+      ],
+      "unsupported_slips": [
+        "Answer_summary overstates support: 'Gemini ADK-native is the strongest option supported by evidence' should be weakened to reflect partial, low-confidence evidence."
+      ],
+      "suggested_revision_focus": [
+        "Integrate unused facts fact_ev_job_a_001 and fact_ev_job_a_005 into sec_llm_01 and sec_llm_02 respectively.",
+        "Add explicit caveats about low confidence, partial status, and weak sources for all key claims.",
+        "For missing criteria, add statements acknowledging no evidence found rather than leaving unaddressed."
+      ],
+      "patch_operations": [
+        {
+          "edit_id": "edit_001",
+          "op": "add",
+          "target_section_id": "sec_llm_01",
+          "target_path": "sections[section_id=sec_llm_01].content",
+          "edit_label": "Add deterministic pipeline evidence",
+          "original_text": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004].",
+          "replacement_text": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004]. Additionally, official ADK documentation describes workflow agents that define predictable pipelines, further supporting determinism [fact_ev_job_a_001].",
+          "text": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004]. Additionally, official ADK documentation describes workflow agents that define predictable pipelines, further supporting determinism [fact_ev_job_a_001].",
+          "fact_ids": [
+            "fact_ev_job_a_001"
+          ],
+          "contradiction_ids": [],
+          "result_ids": [],
+          "reason": "Integrate unused supported fact fact_ev_job_a_001 into the tool-call determinism section."
+        },
+        {
+          "edit_id": "edit_002",
+          "op": "add",
+          "target_section_id": "sec_llm_02",
+          "target_path": "sections[section_id=sec_llm_02].content",
+          "edit_label": "Add event logging evidence",
+          "original_text": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. No facts cover LangGraph or async Python on observability.",
+          "replacement_text": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. Moreover, ADK includes built-in event logging that captures every step including tool calls, LLM invocations, agent transfers, and state changes, providing full visibility for debugging [fact_ev_job_a_005]. No facts cover LangGraph or async Python on observability.",
+          "text": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. Moreover, ADK includes built-in event logging that captures every step including tool calls, LLM invocations, agent transfers, and state changes, providing full visibility for debugging [fact_ev_job_a_005]. No facts cover LangGraph or async Python on observability.",
+          "fact_ids": [
+            "fact_ev_job_a_005"
+          ],
+          "contradiction_ids": [],
+          "result_ids": [],
+          "reason": "Integrate unused supported fact fact_ev_job_a_005 into the failure observability section."
+        },
+        {
+          "edit_id": "edit_003",
+          "op": "add_caveat",
+          "target_section_id": "answer_summary",
+          "target_path": "answer_summary",
+          "edit_label": "Add confidence caveat",
+          "original_text": "Gemini ADK-native is the strongest option supported by evidence, offering deterministic orchestration [fact_ev_job_a_001, fact_ev_job_a_004] and built-in failure observability [fact_ev_job_a_002, fact_ev_job_a_005].",
+          "replacement_text": "Gemini ADK-native appears to be the strongest option based on available evidence, but note that all supporting facts are partial and low confidence (overall confidence 0.42). The evidence does not fully cover all evaluation criteria.",
+          "text": "Gemini ADK-native appears to be the strongest option based on available evidence, but note that all supporting facts are partial and low confidence (overall confidence 0.42). The evidence does not fully cover all evaluation criteria.",
+          "fact_ids": [],
+          "contradiction_ids": [],
+          "result_ids": [],
+          "reason": "Weaken overstatement of evidential support given low confidence and partial facts."
+        }
+      ]
+    },
+    "patch_operations": [
+      {
+        "edit_id": "edit_001",
+        "op": "add",
+        "target_section_id": "sec_llm_01",
+        "target_path": "sections[section_id=sec_llm_01].content",
+        "edit_label": "Add deterministic pipeline evidence",
+        "original_text": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004].",
+        "replacement_text": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004]. Additionally, official ADK documentation describes workflow agents that define predictable pipelines, further supporting determinism [fact_ev_job_a_001].",
+        "text": "Gemini ADK supports deterministic tool-call pipelines through SequentialAgent, ParallelAgent, and LoopAgent, making execution predictable and testable [fact_ev_job_a_004]. Additionally, official ADK documentation describes workflow agents that define predictable pipelines, further supporting determinism [fact_ev_job_a_001].",
+        "fact_ids": [
+          "fact_ev_job_a_001"
+        ],
+        "contradiction_ids": [],
+        "result_ids": [],
+        "reason": "Integrate unused supported fact fact_ev_job_a_001 into the tool-call determinism section."
+      },
+      {
+        "edit_id": "edit_002",
+        "op": "add",
+        "target_section_id": "sec_llm_02",
+        "target_path": "sections[section_id=sec_llm_02].content",
+        "edit_label": "Add event logging evidence",
+        "original_text": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. No facts cover LangGraph or async Python on observability.",
+        "replacement_text": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. Moreover, ADK includes built-in event logging that captures every step including tool calls, LLM invocations, agent transfers, and state changes, providing full visibility for debugging [fact_ev_job_a_005]. No facts cover LangGraph or async Python on observability.",
+        "text": "ADK provides built-in evaluation tools for testing execution trajectories, enabling failure observation and debugging [fact_ev_job_a_002]. Moreover, ADK includes built-in event logging that captures every step including tool calls, LLM invocations, agent transfers, and state changes, providing full visibility for debugging [fact_ev_job_a_005]. No facts cover LangGraph or async Python on observability.",
+        "fact_ids": [
+          "fact_ev_job_a_005"
+        ],
+        "contradiction_ids": [],
+        "result_ids": [],
+        "reason": "Integrate unused supported fact fact_ev_job_a_005 into the failure observability section."
+      }
+    ],
+    "needs_new_search": true,
+    "followup_research_jobs": [
+      {
+        "job_id": "job_followup_001",
+        "job_name": "Follow-up Coverage Search",
+        "objective": "Find evidence for missing coverage area: Grounded citation integrity",
+        "search_queries": [
+          "What is the strongest technically defensible architecture for SYNAPSE as a production-grade, evidence-grounded autonomous research agent in 2026: Gemini ADK-native, LangGraph with Gemini models, or custom async Python orchestration? Evaluate against grounded citation integrity, quote anchoring, tool-call determinism, multimodal extensibility, failure observability, latency/cost, reproducible evaluation, deployment burden, and hackathon demo impact. Include where each option is likely to fail. Grounded citation integrity"
+        ],
+        "source_priorities": [
+          "official",
+          "paper",
+          "docs"
+        ],
+        "must_answer": [
+          "Grounded citation integrity"
+        ],
+        "avoid": [],
+        "evidence_requirements": {
+          "min_sources": 5,
+          "require_quotes": true,
+          "allow_snippet_only": false
+        }
+      }
+    ]
+  },
+  "job_summaries": [
+    {
+      "job_id": "job_a",
+      "search_coverage": {
+        "queries_run": 6,
+        "results_found": 29,
+        "official_sources_found": 3,
+        "academic_sources_found": 0
+      },
+      "search_header_count": 4,
+      "evidence_count": 5,
+      "extraction_failure_count": 3,
+      "fallback_evidence_count": 0,
+      "fallback_reasons": {}
+    },
+    {
+      "job_id": "job_b",
+      "search_coverage": {
+        "queries_run": 7,
+        "results_found": 35,
+        "official_sources_found": 4,
+        "academic_sources_found": 0
+      },
+      "search_header_count": 2,
+      "evidence_count": 4,
+      "extraction_failure_count": 0,
+      "fallback_evidence_count": 0,
+      "fallback_reasons": {}
+    }
+  ],
+  "timings": {
+    "planner": 32.718741,
+    "research_jobs": 173.093673,
+    "fact_checker": 45.347673,
+    "synthesizer": 46.515493,
+    "coverage_auditor": 89.159405,
+    "patch_applicator": 0.000306,
+    "total": 386.835537
+  },
+  "token_usage": {
+    "prompt_tokens": 67391,
+    "completion_tokens": 19188,
+    "total_tokens": 86579
+  },
+  "provider_metrics": {
+    "search_provider": "composite",
+    "search_errors": [
+      "arxiv search failed: ",
+      "arxiv search failed: "
+    ],
+    "search_events": [
+      {
+        "provider": "duckduckgo",
+        "query": "What is the strongest technically defensible architecture for SYNAPSE as a production-grade, evidence-grounded autonomous research agent in 2026: Gemini ADK-native, LangGraph with Gemini models, or custom async Python orchestration? Evaluate against grounded citation integrity, quote anchoring, tool-call determinism, multimodal extensibility, failure observability, latency/cost, reproducible evaluation, deployment burden, and hackathon demo impact. Include where each option is likely to fail.",
+        "max_results": 3,
+        "result_count": 3,
+        "seconds": 3.477994,
+        "wall_start": "2026-05-11T13:28:34.469002+00:00",
+        "wall_end": "2026-05-11T13:28:37.947014+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "What is the strongest technically defensible architecture for SYNAPSE as a production-grade, evidence-grounded autonomous research agent in 2026: Gemini ADK-native, LangGraph with Gemini models, or custom async Python orchestration? Evaluate against grounded citation integrity, quote anchoring, tool-call determinism, multimodal extensibility, failure observability, latency/cost, reproducible evaluation, deployment burden, and hackathon demo impact. Include where each option is likely to fail. official documentation",
+        "max_results": 3,
+        "result_count": 3,
+        "seconds": 3.742145,
+        "wall_start": "2026-05-11T13:28:34.473618+00:00",
+        "wall_end": "2026-05-11T13:28:38.215781+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "What is the strongest technically defensible architecture for SYNAPSE as a production-grade, evidence-grounded autonomous research agent in 2026: Gemini ADK-native, LangGraph with Gemini models, or custom async Python orchestration? Evaluate against grounded citation integrity, quote anchoring, tool-call determinism, multimodal extensibility, failure observability, latency/cost, reproducible evaluation, deployment burden, and hackathon demo impact. Include where each option is likely to fail. recent analysis",
+        "max_results": 3,
+        "result_count": 3,
+        "seconds": 4.622199,
+        "wall_start": "2026-05-11T13:28:34.477002+00:00",
+        "wall_end": "2026-05-11T13:28:39.099227+00:00",
+        "ok": true
+      },
+      {
+        "provider": "arxiv",
+        "query": "What is the strongest technically defensible architecture for SYNAPSE as a production-grade, evidence-grounded autonomous research agent in 2026: Gemini ADK-native, LangGraph with Gemini models, or custom async Python orchestration? Evaluate against grounded citation integrity, quote anchoring, tool-call determinism, multimodal extensibility, failure observability, latency/cost, reproducible evaluation, deployment burden, and hackathon demo impact. Include where each option is likely to fail.",
+        "max_results": 2,
+        "result_count": 2,
+        "seconds": 0.565798,
+        "wall_start": "2026-05-11T13:28:39.099355+00:00",
+        "wall_end": "2026-05-11T13:28:39.665168+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "Gemini ADK tool call determinism reliability",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.62586,
+        "wall_start": "2026-05-11T13:29:07.187817+00:00",
+        "wall_end": "2026-05-11T13:29:08.813692+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "custom async Python agent latency cost comparison",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.928146,
+        "wall_start": "2026-05-11T13:29:07.196280+00:00",
+        "wall_end": "2026-05-11T13:29:09.124444+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "LangGraph tool call determinism",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.923822,
+        "wall_start": "2026-05-11T13:29:07.202655+00:00",
+        "wall_end": "2026-05-11T13:29:09.126490+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "agent orchestration failure handling observability",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.920671,
+        "wall_start": "2026-05-11T13:29:07.205984+00:00",
+        "wall_end": "2026-05-11T13:29:09.126660+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "LangGraph agent failure observability monitoring",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.962838,
+        "wall_start": "2026-05-11T13:29:07.192466+00:00",
+        "wall_end": "2026-05-11T13:29:09.155320+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "hackathon demo impact agent architecture",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.839735,
+        "wall_start": "2026-05-11T13:29:07.596179+00:00",
+        "wall_end": "2026-05-11T13:29:09.435933+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "custom Python agent citation tracking",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.868942,
+        "wall_start": "2026-05-11T13:29:07.576493+00:00",
+        "wall_end": "2026-05-11T13:29:09.445450+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "LangGraph multimodal support",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.932803,
+        "wall_start": "2026-05-11T13:29:07.585442+00:00",
+        "wall_end": "2026-05-11T13:29:09.518264+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "LangGraph citation integrity evidence",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.948693,
+        "wall_start": "2026-05-11T13:29:07.572077+00:00",
+        "wall_end": "2026-05-11T13:29:09.520784+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "multimodal extensibility Gemini ADK",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 1.940284,
+        "wall_start": "2026-05-11T13:29:07.580774+00:00",
+        "wall_end": "2026-05-11T13:29:09.521065+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "Gemini ADK citation grounding quote anchoring",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 2.149904,
+        "wall_start": "2026-05-11T13:29:07.567985+00:00",
+        "wall_end": "2026-05-11T13:29:09.717907+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "Gemini ADK latency benchmarks",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 2.567377,
+        "wall_start": "2026-05-11T13:29:07.199481+00:00",
+        "wall_end": "2026-05-11T13:29:09.766875+00:00",
+        "ok": true
+      },
+      {
+        "provider": "duckduckgo",
+        "query": "deployment burden Gemini ADK vs LangGraph vs custom",
+        "max_results": 5,
+        "result_count": 5,
+        "seconds": 2.653314,
+        "wall_start": "2026-05-11T13:29:07.590299+00:00",
+        "wall_end": "2026-05-11T13:29:10.243631+00:00",
+        "ok": true
+      },
+      {
+        "provider": "arxiv",
+        "query": "Gemini ADK tool call determinism reliability",
+        "max_results": 3,
+        "result_count": 0,
+        "seconds": 8.912668,
+        "wall_start": "2026-05-11T13:29:07.209618+00:00",
+        "wall_end": "2026-05-11T13:29:16.122305+00:00",
+        "ok": false,
+        "error": "arxiv search failed: "
+      },
+      {
+        "provider": "arxiv",
+        "query": "Gemini ADK citation grounding quote anchoring",
+        "max_results": 3,
+        "result_count": 0,
+        "seconds": 8.521489,
+        "wall_start": "2026-05-11T13:29:07.600872+00:00",
+        "wall_end": "2026-05-11T13:29:16.122368+00:00",
+        "ok": false,
+        "error": "arxiv search failed: "
+      }
+    ],
+    "source_fetch": {
+      "fetched_http_count": 7,
+      "fetched_camofox_count": 0,
+      "arxiv_metadata_count": 0,
+      "failed_count": 13
+    },
+    "source_fetch_events": [
+      {
+        "result_id": "res_job_b_026",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://medium.com/@reliabledataengineering/google-adk-vs-langchain-the-2026-ai-agent-framework-showdown-cecc25efc9d4",
+        "seconds": 5.485261,
+        "wall_start": "2026-05-11T13:29:16.411098+00:00",
+        "wall_end": "2026-05-11T13:29:21.896374+00:00",
+        "text_chars": 0,
+        "error": "Client error '403 Forbidden' for url 'https://medium.com/@reliabledataengineering/google-adk-vs-langchain-the-2026-ai-agent-framework-showdown-cecc25efc9d4'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      },
+      {
+        "result_id": "res_job_a_021",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://sangeethasaravanan.medium.com/building-tool-calling-agents-with-langgraph-a-complete-guide-ebdcdea8f475",
+        "seconds": 2.10158,
+        "wall_start": "2026-05-11T13:29:19.816515+00:00",
+        "wall_end": "2026-05-11T13:29:21.918109+00:00",
+        "text_chars": 0,
+        "error": "Client error '403 Forbidden' for url 'https://sangeethasaravanan.medium.com/building-tool-calling-agents-with-langgraph-a-complete-guide-ebdcdea8f475'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403"
+      },
+      {
+        "result_id": "res_job_a_012",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://henryonai.github.io/blog/python-async-vs-sync-benchmark",
+        "seconds": 6.06354,
+        "wall_start": "2026-05-11T13:29:16.125699+00:00",
+        "wall_end": "2026-05-11T13:29:22.189250+00:00",
+        "text_chars": 7191,
+        "error": null
+      },
+      {
+        "result_id": "res_job_b_001",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://adk.dev/grounding/google_search_grounding/",
+        "seconds": 0.995384,
+        "wall_start": "2026-05-11T13:29:21.233162+00:00",
+        "wall_end": "2026-05-11T13:29:22.228560+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_b_006",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://github.com/langchain-ai/langgraph/discussions/6329",
+        "seconds": 0.711263,
+        "wall_start": "2026-05-11T13:29:21.517352+00:00",
+        "wall_end": "2026-05-11T13:29:22.228620+00:00",
+        "text_chars": 0,
+        "error": "Client error '404 Not Found' for url 'https://github.com/langchain-ai/langgraph/discussions/6329'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+      },
+      {
+        "result_id": "res_job_b_028",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://www.zenml.io/blog/google-adk-vs-langgraph",
+        "seconds": 1.589106,
+        "wall_start": "2026-05-11T13:29:20.667526+00:00",
+        "wall_end": "2026-05-11T13:29:22.256650+00:00",
+        "text_chars": 12000,
+        "error": null
+      },
+      {
+        "result_id": "res_job_a_025",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://www.braintrust.dev/articles/agent-observability-complete-guide-2026",
+        "seconds": 3.226599,
+        "wall_start": "2026-05-11T13:29:19.254512+00:00",
+        "wall_end": "2026-05-11T13:29:22.481124+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_a_018",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://cloud.google.com/blog/products/ai-machine-learning/build-a-real-time-voice-agent-with-gemini-adk",
+        "seconds": 3.526479,
+        "wall_start": "2026-05-11T13:29:18.969919+00:00",
+        "wall_end": "2026-05-11T13:29:22.496410+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_a_004",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://docs.cloud.google.com/gemini-enterprise-agent-platform/build/adk",
+        "seconds": 5.270018,
+        "wall_start": "2026-05-11T13:29:17.259131+00:00",
+        "wall_end": "2026-05-11T13:29:22.529161+00:00",
+        "text_chars": 2170,
+        "error": null
+      },
+      {
+        "result_id": "res_job_b_004",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://docs.cloud.google.com/vertex-ai/generative-ai/docs/grounding/grounding-with-google-search",
+        "seconds": 5.049894,
+        "wall_start": "2026-05-11T13:29:17.548132+00:00",
+        "wall_end": "2026-05-11T13:29:22.598039+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_b_029",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://masterprompting.net/blog/google-adk-vs-langgraph-vs-n8n-agent-frameworks-2026",
+        "seconds": 1.957249,
+        "wall_start": "2026-05-11T13:29:20.947910+00:00",
+        "wall_end": "2026-05-11T13:29:22.905174+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_a_011",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://dev.to/johalputt/how-to-implement-async-python-with-asyncio-313-and-aiohttp-310-for-41-higher-throughput-10j1",
+        "seconds": 4.304369,
+        "wall_start": "2026-05-11T13:29:18.690152+00:00",
+        "wall_end": "2026-05-11T13:29:22.994537+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_a_013",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://github.com/google/adk-python/discussions/3273",
+        "seconds": 3.523561,
+        "wall_start": "2026-05-11T13:29:19.534044+00:00",
+        "wall_end": "2026-05-11T13:29:23.057620+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_b_012",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://learn.microsoft.com/en-us/python/api/agent-framework-core/agent_framework.citationannotation?view=agent-framework-python-latest",
+        "seconds": 4.81879,
+        "wall_start": "2026-05-11T13:29:18.402361+00:00",
+        "wall_end": "2026-05-11T13:29:23.221165+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_a_017",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://shareblog.org/en/tech/software/gemini-ultra-2-0-response-latency-benchmarks-optimization.html",
+        "seconds": 3.122619,
+        "wall_start": "2026-05-11T13:29:20.103679+00:00",
+        "wall_end": "2026-05-11T13:29:23.226308+00:00",
+        "text_chars": 661,
+        "error": null
+      },
+      {
+        "result_id": "res_job_b_019",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://developers.googleblog.com/ja/gemini-20-deep-dive-code-execution/",
+        "seconds": 5.206727,
+        "wall_start": "2026-05-11T13:29:18.118583+00:00",
+        "wall_end": "2026-05-11T13:29:23.325325+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_a_005",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://www.aimakers.co/blog/gemini-adk-agents/",
+        "seconds": 6.960509,
+        "wall_start": "2026-05-11T13:29:16.696433+00:00",
+        "wall_end": "2026-05-11T13:29:23.656960+00:00",
+        "text_chars": 12000,
+        "error": null
+      },
+      {
+        "result_id": "res_job_a_022",
+        "provider": "http",
+        "fetch_status": "failed",
+        "success": false,
+        "url": "https://thundaxsoftware.blogspot.com/2025/09/react-for-real-building-deterministic.html",
+        "seconds": 3.515375,
+        "wall_start": "2026-05-11T13:29:20.385708+00:00",
+        "wall_end": "2026-05-11T13:29:23.901100+00:00",
+        "text_chars": 0,
+        "error": "empty extracted text"
+      },
+      {
+        "result_id": "res_job_b_016",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://discuss.google.dev/tag/adk",
+        "seconds": 7.175927,
+        "wall_start": "2026-05-11T13:29:16.978242+00:00",
+        "wall_end": "2026-05-11T13:29:24.154184+00:00",
+        "text_chars": 4561,
+        "error": null
+      },
+      {
+        "result_id": "res_job_a_026",
+        "provider": "http",
+        "fetch_status": "fetched_http",
+        "success": true,
+        "url": "https://techcommunity.microsoft.com/blog/azureinfrastructureblog/operating-ai-agents-on-azure-observability-with-azure-ai-foundry/4515975",
+        "seconds": 6.46327,
+        "wall_start": "2026-05-11T13:29:17.833098+00:00",
+        "wall_end": "2026-05-11T13:29:24.296380+00:00",
+        "text_chars": 91,
+        "error": null
+      }
+    ],
+    "llm_provider": "opencode_go",
+    "synthesizer_llm_provider": "opencode_go",
+    "llm_call_count": 11,
+    "llm_calls": [
+      {
+        "call_index": 1,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "LoosePlannerJSON",
+        "json_mode": true,
+        "max_tokens": 2400,
+        "temperature": 0.1,
+        "message_count": 2,
+        "skill_count": 0,
+        "wall_start": "2026-05-11T13:28:39.665955+00:00",
+        "http_status": 200,
+        "latency_ms": 27521.28,
+        "wall_end": "2026-05-11T13:29:07.187278+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 635,
+        "prompt_tokens": 45379,
+        "completion_tokens": 1514,
+        "total_tokens": 46893,
+        "response_chars": 4056,
+        "visible_chars": 4056,
+        "reasoning_content_chars": 3058,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 2,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "skill_count": 0,
+        "wall_start": "2026-05-11T13:29:24.299181+00:00",
+        "http_status": 200,
+        "latency_ms": 19243.17,
+        "wall_end": "2026-05-11T13:29:43.542385+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 780,
+        "prompt_tokens": 687,
+        "completion_tokens": 985,
+        "total_tokens": 1672,
+        "response_chars": 1002,
+        "visible_chars": 1002,
+        "reasoning_content_chars": 4038,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 3,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "skill_count": 0,
+        "wall_start": "2026-05-11T13:29:24.585094+00:00",
+        "http_status": 200,
+        "latency_ms": 56822.13,
+        "wall_end": "2026-05-11T13:30:21.407256+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 1730,
+        "prompt_tokens": 2059,
+        "completion_tokens": 2173,
+        "total_tokens": 4232,
+        "response_chars": 1939,
+        "visible_chars": 1939,
+        "reasoning_content_chars": 7924,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 4,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "skill_count": 0,
+        "wall_start": "2026-05-11T13:29:24.589095+00:00",
+        "http_status": 200,
+        "latency_ms": 79609.32,
+        "wall_end": "2026-05-11T13:30:44.198449+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 915,
+        "prompt_tokens": 1531,
+        "completion_tokens": 1142,
+        "total_tokens": 2673,
+        "response_chars": 1063,
+        "visible_chars": 1063,
+        "reasoning_content_chars": 4406,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 5,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "skill_count": 0,
+        "wall_start": "2026-05-11T13:29:24.591590+00:00",
+        "http_status": 200,
+        "latency_ms": 120349.69,
+        "wall_end": "2026-05-11T13:31:24.941311+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 2292,
+        "prompt_tokens": 2883,
+        "completion_tokens": 2510,
+        "total_tokens": 5393,
+        "response_chars": 1017,
+        "visible_chars": 1017,
+        "reasoning_content_chars": 11121,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 6,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "skill_count": 0,
+        "wall_start": "2026-05-11T13:29:43.826286+00:00",
+        "http_status": 200,
+        "latency_ms": 127751.43,
+        "wall_end": "2026-05-11T13:31:51.577753+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 1327,
+        "prompt_tokens": 2673,
+        "completion_tokens": 1614,
+        "total_tokens": 4287,
+        "response_chars": 1355,
+        "visible_chars": 1355,
+        "reasoning_content_chars": 6525,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 7,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "ExtractionPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 2,
+        "skill_count": 0,
+        "wall_start": "2026-05-11T13:30:21.695734+00:00",
+        "http_status": 200,
+        "latency_ms": 98585.11,
+        "wall_end": "2026-05-11T13:32:00.280880+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 326,
+        "prompt_tokens": 739,
+        "completion_tokens": 333,
+        "total_tokens": 1072,
+        "response_chars": 21,
+        "visible_chars": 21,
+        "reasoning_content_chars": 1532,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 8,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "EntailmentBatch",
+        "json_mode": true,
+        "max_tokens": 3000,
+        "temperature": 0,
+        "message_count": 2,
+        "skill_count": 0,
+        "wall_start": "2026-05-11T13:32:00.282465+00:00",
+        "http_status": 200,
+        "latency_ms": 25375.31,
+        "wall_end": "2026-05-11T13:32:25.657778+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 1704,
+        "prompt_tokens": 1496,
+        "completion_tokens": 1895,
+        "total_tokens": 3391,
+        "response_chars": 553,
+        "visible_chars": 553,
+        "reasoning_content_chars": 7744,
+        "truncated_by_reasoning": false,
+        "ok": false,
+        "error_type": "ValueError",
+        "error": "LLM JSON failed schema validation: 27 validation errors for EntailmentBatch\njudgments.0.confidence\n  Field required [type=missing, input_value={'evidence_id': 'ev_job_a...', 'status': 'VERIFIED'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/missing\njudgments.0.explanation\n  Field required [type=missing, input_value={'evidence_id': 'ev_job_a...', 'status': 'VERIFIED'}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.11/v/m"
+      },
+      {
+        "call_index": 9,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "EntailmentBatch",
+        "json_mode": true,
+        "max_tokens": 3000,
+        "temperature": 0,
+        "message_count": 3,
+        "skill_count": 0,
+        "wall_start": "2026-05-11T13:32:25.657795+00:00",
+        "http_status": 200,
+        "latency_ms": 19970.51,
+        "wall_end": "2026-05-11T13:32:45.628307+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 1320,
+        "prompt_tokens": 1509,
+        "completion_tokens": 1503,
+        "total_tokens": 3012,
+        "response_chars": 514,
+        "visible_chars": 514,
+        "reasoning_content_chars": 6241,
+        "truncated_by_reasoning": false,
+        "ok": false,
+        "error_type": "ValueError",
+        "error": "LLM JSON failed schema validation: 1 validation error for EntailmentBatch\n  Input should be a valid dictionary or instance of EntailmentBatch [type=model_type, input_value=[{'evidence_id': 'ev_job_..., 'status': 'VERIFIED'}], input_type=list]\n    For further information visit https://errors.pydantic.dev/2.11/v/model_type"
+      },
+      {
+        "call_index": 10,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": "RevisionBriefPayload",
+        "json_mode": true,
+        "max_tokens": 64000,
+        "temperature": 0,
+        "message_count": 3,
+        "skill_count": 1,
+        "wall_start": "2026-05-11T13:33:32.145528+00:00",
+        "http_status": 200,
+        "latency_ms": 89158.32,
+        "wall_end": "2026-05-11T13:35:01.303883+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 4104,
+        "prompt_tokens": 8435,
+        "completion_tokens": 5519,
+        "total_tokens": 13954,
+        "response_chars": 5983,
+        "visible_chars": 5983,
+        "reasoning_content_chars": 17599,
+        "truncated_by_reasoning": false,
+        "ok": true
+      },
+      {
+        "call_index": 1,
+        "provider": "opencode_go",
+        "model": "deepseek-v4-flash",
+        "schema": null,
+        "json_mode": false,
+        "max_tokens": 64000,
+        "temperature": 0.2,
+        "message_count": 3,
+        "skill_count": 1,
+        "wall_start": "2026-05-11T13:32:45.629526+00:00",
+        "http_status": 200,
+        "latency_ms": 46514.43,
+        "wall_end": "2026-05-11T13:33:32.143989+00:00",
+        "finish_reason": "stop",
+        "reasoning_tokens": 1869,
+        "prompt_tokens": 1152,
+        "completion_tokens": 2618,
+        "total_tokens": 3770,
+        "response_chars": 3380,
+        "visible_chars": 3380,
+        "reasoning_content_chars": 8661,
+        "truncated_by_reasoning": false,
+        "ok": true
+      }
+    ],
+    "truncated_by_reasoning_count": 0,
+    "profile_events": [
+      {
+        "operation": "planner",
+        "seconds": 32.718741,
+        "wall_start": "2026-05-11T13:28:34.468891+00:00",
+        "wall_end": "2026-05-11T13:29:07.187637+00:00",
+        "ok": true
+      },
+      {
+        "operation": "job_a:searcher",
+        "seconds": 8.935026,
+        "wall_start": "2026-05-11T13:29:07.187684+00:00",
+        "wall_end": "2026-05-11T13:29:16.122713+00:00",
+        "ok": true,
+        "job_id": "job_a"
+      },
+      {
+        "operation": "job_b:searcher",
+        "seconds": 8.93526,
+        "wall_start": "2026-05-11T13:29:07.187710+00:00",
+        "wall_end": "2026-05-11T13:29:16.122973+00:00",
+        "ok": true,
+        "job_id": "job_b"
+      },
+      {
+        "operation": "source_fetcher:global",
+        "seconds": 8.170785,
+        "wall_start": "2026-05-11T13:29:16.125622+00:00",
+        "wall_end": "2026-05-11T13:29:24.296408+00:00",
+        "ok": true,
+        "search_header_count": 20
+      },
+      {
+        "operation": "job_b:evidence_extractor",
+        "seconds": 120.931989,
+        "wall_start": "2026-05-11T13:29:24.297789+00:00",
+        "wall_end": "2026-05-11T13:31:25.229791+00:00",
+        "ok": true,
+        "job_id": "job_b",
+        "fetched_source_count": 2
+      },
+      {
+        "operation": "job_a:evidence_extractor",
+        "seconds": 155.983464,
+        "wall_start": "2026-05-11T13:29:24.297766+00:00",
+        "wall_end": "2026-05-11T13:32:00.281233+00:00",
+        "ok": true,
+        "job_id": "job_a",
+        "fetched_source_count": 4
+      },
+      {
+        "operation": "research_jobs",
+        "seconds": 173.093673,
+        "wall_start": "2026-05-11T13:29:07.187645+00:00",
+        "wall_end": "2026-05-11T13:32:00.281329+00:00",
+        "ok": true
+      },
+      {
+        "operation": "fact_checker",
+        "seconds": 45.347673,
+        "wall_start": "2026-05-11T13:32:00.281441+00:00",
+        "wall_end": "2026-05-11T13:32:45.629118+00:00",
+        "ok": true
+      },
+      {
+        "operation": "synthesizer",
+        "seconds": 46.515493,
+        "wall_start": "2026-05-11T13:32:45.629124+00:00",
+        "wall_end": "2026-05-11T13:33:32.144627+00:00",
+        "ok": true
+      },
+      {
+        "operation": "coverage_auditor",
+        "seconds": 89.159405,
+        "wall_start": "2026-05-11T13:33:32.144700+00:00",
+        "wall_end": "2026-05-11T13:35:01.304109+00:00",
+        "ok": true
+      },
+      {
+        "operation": "patch_applicator",
+        "seconds": 0.000306,
+        "wall_start": "2026-05-11T13:35:01.304113+00:00",
+        "wall_end": "2026-05-11T13:35:01.304422+00:00",
+        "ok": true
+      }
+    ],
+    "run_quality": {
+      "score": 0.803,
+      "grade": "good",
+      "signals": {
+        "fetched_source_count": 6,
+        "successful_fetched_source_count": 6,
+        "successful_fetch_rate": 1.0,
+        "evidence_count": 9,
+        "llm_evidence_count": 9,
+        "fallback_evidence_count": 0,
+        "fallback_rate": 0.0,
+        "snippet_evidence_count": 0,
+        "snippet_rate": 0.0,
+        "average_source_quality": 0.717,
+        "verified_fact_count": 0,
+        "partial_fact_count": 6,
+        "unsupported_claim_count": 3,
+        "contradiction_count": 0,
+        "report_confidence": 0.52,
+        "coverage_score": 0.8,
+        "degraded": false
+      },
+      "fallback_reasons": {}
+    }
+  },
+  "run_quality": {
+    "score": 0.803,
+    "grade": "good",
+    "signals": {
+      "fetched_source_count": 6,
+      "successful_fetched_source_count": 6,
+      "successful_fetch_rate": 1.0,
+      "evidence_count": 9,
+      "llm_evidence_count": 9,
+      "fallback_evidence_count": 0,
+      "fallback_rate": 0.0,
+      "snippet_evidence_count": 0,
+      "snippet_rate": 0.0,
+      "average_source_quality": 0.717,
+      "verified_fact_count": 0,
+      "partial_fact_count": 6,
+      "unsupported_claim_count": 3,
+      "contradiction_count": 0,
+      "report_confidence": 0.52,
+      "coverage_score": 0.8,
+      "degraded": false
+    },
+    "fallback_reasons": {}
+  },
+  "degraded": false,
+  "degraded_mode": false,
+  "errors": [],
+  "iterations": 1,
+  "history": [
+    {
+      "degraded": false
+    }
+  ]
+}

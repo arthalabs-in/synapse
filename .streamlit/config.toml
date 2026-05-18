@@ -1,0 +1,35 @@
+# SYNAPSE — editorial research instrument theme.
+# Aesthetic: Pentagram (Swiss grid + bold typographic discipline) +
+# Information Architects (content-first hierarchy) + cinematic editorial
+# accents (terracotta, mono labels, serif italics for quotes).
+#
+# Concrete tokens are mirrored in frontend/theme.py for custom HTML.
+
+[theme]
+# Warm terracotta accent. Used sparingly: active states, primary CTA, key
+# metrics, evidence dot. Sourced from huashu-design/demos/c6-expert-review.
+primaryColor = "#D97757"
+
+# Warm off-white. Anthropic principle: never pure white — give the page a
+# paper-like material temperature.
+backgroundColor = "#FDFBF7"
+
+# Slightly deeper paper for cards / sidebar / code blocks.
+secondaryBackgroundColor = "#F5F2EA"
+
+# Deep warm black instead of #000 — editorial ink, not screen black.
+textColor = "#1A1918"
+
+# Streamlit's font hint. Real typography is loaded via Google Fonts in
+# theme.py (Source Serif 4 + Inter + JetBrains Mono).
+font = "sans serif"
+
+[server]
+headless = true
+runOnSave = true
+
+[client]
+toolbarMode = "minimal"
+
+[browser]
+gatherUsageStats = false
