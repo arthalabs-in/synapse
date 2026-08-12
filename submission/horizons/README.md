@@ -50,10 +50,10 @@ Feb 22 cutoff, (c) attached to the project you create, and (d) approved.
 | Demo URL must be reachable | Deploy the Streamlit app (Community Cloud / HF Spaces / Render). Demo mode works offline but the URL itself must respond. |
 | No "AI slop" — projects must look polished and human-made | SYNAPSE is an AI *tool*, which is allowed; it must not look like a vibecoded wrapper. |
 | Don't write project descriptions/updates with AI | Rewrite the description you paste into the platform in your own words, even though the repo copy here was AI-assisted. |
-| No generative AI for graphics/audio | Confirm `submission/cover_image.svg` and any slides/video assets are not AI-generated. |
+| No generative AI for graphics/audio | Confirm `submission/cover_image.svg` and any other media are not AI-generated. |
 | No double-dipping with other Hack Club programs (except Sleepover) | SYNAPSE was previously submitted to UOE Summer of Code. If UOE is a Hack Club program, this blocks Horizons — verify with horizons@hackclub.com or #horizons-help before committing hours to it. |
 | Teams allowed; hours logged separately; art/music <= 1/3 | Solo submission avoids the split. |
-| No video required | Horizons reviewers check the project + live demo URL. The `demo_runbook.md` and `video_script.md` are optional extras, not requirements. |
+| No video required | Horizons reviewers check the project + live demo URL. The demo runbook and video script are optional extras, not requirements. |
 
 ## Pre-ship checklist
 

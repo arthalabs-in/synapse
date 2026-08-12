@@ -59,7 +59,7 @@ python scripts/validate_live_golden.py artifacts/live_golden_run.json
 - [ ] `python -m pytest` passes.
 - [ ] `scripts/validate_live_golden.py` passes on chosen artifact.
 - [ ] README links to architecture and verification docs.
-- [ ] Submission includes demo URL, GitHub URL, slides, and video.
+- [ ] Submission includes demo URL and GitHub URL.
 
 ## Judge Flow
 

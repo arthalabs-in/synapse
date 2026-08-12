@@ -24,7 +24,7 @@ NOISY_MARKERS = [
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("artifact")
-    parser.add_argument("--out", default="docs/LIVE_GOLDEN_CAUSAL_AUDIT.md")
+    parser.add_argument("--out", default="artifacts/live_golden_audit.md")
     args = parser.parse_args()
 
     payload = json.loads(Path(args.artifact).read_text(encoding="utf-8"))

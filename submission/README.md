@@ -15,17 +15,13 @@ Horizons-specific material (the target program for this repo) lives in
 
 | File | Purpose |
 | ---- | ------- |
+| `horizons/README.md` | How Horizons qualification works + SYNAPSE-specific rules |
+| `horizons/ship_checklist.md` | Pre-ship readiness checklist for the Ship Wizard |
 | `short_description.md` | Short submission pitch |
 | `long_description.md` | Detailed problem / solution / implementation description |
-| `submission_answers.md` | Paste-ready submission answers |
-| `demo_runbook.md` | Exact recording flow, showcase query, and screenshot list |
-| `winning_checklist.md` | Judging checklist and final launch gate |
-| `slides/slides.md` | Marp slide deck source |
-| `slides/README.md` | Export instructions |
-| `video_script.md` | Walkthrough video script |
 | `cover_image.svg` | Cover art placeholder |
+| `architecture-diagram.png` | Pipeline architecture diagram |
 | `DEPLOY.md` | Deployment checklist |
-| `build_in_public.md` | General build-in-public posts |
 
 ## Recommended Submission Framing
 
@@ -63,6 +59,6 @@ A small nonprofit education organization wants to use AI to produce trustworthy 
 
 - Add final GitHub URL.
 - Add final demo URL or reliable local demo note.
-- Record and upload the walkthrough video.
 - Capture final screenshots from the best run.
-- Paste the strongest answer from `submission_answers.md` into your program's submission form.
+- Draft the Horizons description in your own words (AI policy — see `horizons/README.md`).
+- Walkthrough video is optional for Horizons; reviewers check the live demo URL.

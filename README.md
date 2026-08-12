@@ -125,16 +125,15 @@ GOLDEN_RESULT_PATH=tests/fixtures/demo_golden.json
 - `VERIFICATION_FRAMEWORK.md`: validator, run quality, and trust guarantees.
 - `docs/ARCHITECTURE_OVERVIEW.md`: judge-friendly architecture overview.
 - `docs/PROJECT_CHARTER.md`: submission-facing project positioning.
-- `submission/`: ready-to-use descriptions, submission answers, demo runbook,
-  winning checklist, slides, video script, and deploy notes.
+- `submission/`: Horizons submission pack, deploy notes, and pitch copy.
 
 ## Submission Pack
 
 For hackathon or program judging, start here:
 
-- `submission/submission_answers.md`: paste-ready submission copy.
-- `submission/demo_runbook.md`: exact demo query, recording plan, and screenshot list.
-- `submission/winning_checklist.md`: final quality gate mapped to judging criteria.
+- `submission/horizons/README.md`: how Horizons qualification works + SYNAPSE-specific rules.
+- `submission/horizons/ship_checklist.md`: pre-ship readiness checklist.
+- `submission/DEPLOY.md`: public demo deployment notes.
 - `docs/ARCHITECTURE_OVERVIEW.md`: simple architecture diagram and stage contracts.
 
 Best one-line pitch:

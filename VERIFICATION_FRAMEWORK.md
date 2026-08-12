@@ -106,7 +106,7 @@ python scripts/validate_live_golden.py artifacts/live_golden_run.json
 Build a causal audit markdown report:
 
 ```bash
-python scripts/audit_live_artifact.py artifacts/live_golden_run.json --out docs/LIVE_GOLDEN_CAUSAL_AUDIT.md
+python scripts/audit_live_artifact.py artifacts/live_golden_run.json --out artifacts/live_golden_audit.md
 ```
 
 ## Current Proof Points
