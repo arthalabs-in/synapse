@@ -1,0 +1,28 @@
+.env
+.streamlit/secrets.toml
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+streamlit.out.log
+streamlit.err.log
+smoke.out.log
+smoke.err.log
+*.log
+
+# Large/generated local proof artifacts and demo caches.
+artifacts/*
+!artifacts/.gitkeep
+
+# Local design skill bundle used during UI iteration, not part of the app.
+huashu-design/
+
+# Local editor/system noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local agent/harness session state
+.agents/
+.omo/
