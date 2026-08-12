@@ -14,6 +14,9 @@ smoke.err.log
 artifacts/*
 !artifacts/.gitkeep
 
+# Test-generated scratch fixture (recreated by test_demo_mode_loads_fixture).
+tests/fixtures/golden_pipeline_result_test.json
+
 # Local design skill bundle used during UI iteration, not part of the app.
 huashu-design/
 
