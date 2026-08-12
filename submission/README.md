@@ -15,6 +15,8 @@ Horizons-specific material (the target program for this repo) lives in
 
 | File | Purpose |
 | ---- | ------- |
+| `horizons/README.md` | How Horizons qualification works + SYNAPSE-specific rules |
+| `horizons/ship_checklist.md` | Pre-ship readiness checklist for the Ship Wizard |
 | `short_description.md` | Short submission pitch |
 | `long_description.md` | Detailed problem / solution / implementation description |
 | `submission_answers.md` | Paste-ready submission answers |
