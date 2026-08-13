@@ -1,64 +1,33 @@
-# SYNAPSE Submission Assets
+# Submission readiness
 
-All submission-specific material for hackathon or program submissions lives here.
-Horizons-specific material (the target program for this repo) lives in
-`horizons/`; everything else is kept competition-agnostic.
+This directory contains deployment notes, public assets, and Horizons-specific
+checks. Technical documentation stays at the repository root and in `docs/`.
 
-## Horizons Pack
+## Links
 
-| File | Purpose |
-| ---- | ------- |
-| `horizons/README.md` | How Horizons qualification works + SYNAPSE-specific rules |
-| `horizons/ship_checklist.md` | Pre-ship readiness checklist for the Ship Wizard |
+- Repository: `https://github.com/arthalabs-in/synapse`
+- README: `https://github.com/arthalabs-in/synapse/blob/lean-horizons/README.md`
+- Public demo: add after deployment
 
-## Asset Index
+## Files
 
-| File | Purpose |
-| ---- | ------- |
-| `horizons/README.md` | How Horizons qualification works + SYNAPSE-specific rules |
-| `horizons/ship_checklist.md` | Pre-ship readiness checklist for the Ship Wizard |
-| `short_description.md` | Short submission pitch |
-| `long_description.md` | Detailed problem / solution / implementation description |
-| `cover_image.svg` | Cover art placeholder |
-| `architecture-diagram.png` | Pipeline architecture diagram |
-| `DEPLOY.md` | Deployment checklist |
+| Path | Use |
+| --- | --- |
+| `DEPLOY.md` | public Streamlit deployment steps |
+| `horizons/README.md` | current Horizons rules relevant to this project |
+| `horizons/ship_checklist.md` | checks to complete before shipping |
+| `short_description.md` | facts to cover in the submitter's own short description |
+| `long_description.md` | facts to cover in the submitter's own project explanation |
+| `architecture-diagram.png` | architecture asset; verify its origin before use |
+| `cover_image.svg` | cover asset; verify its origin before use |
 
-## Recommended Submission Framing
+## Reviewable evidence
 
-**Project category:** Artificial Intelligence & Machine Learning, Education
-Technology, Startup & Productivity Solutions, or Open Innovation.
+- deterministic test suite
+- public source-fetching and evidence contracts
+- demo fixture for stable UI review
+- live artifact runner and validator
+- fact ledger and patch operations in exported `PipelineResult` JSON
 
-**Core pitch:** SYNAPSE makes AI research trustworthy by grounding every final
-claim in source quotes, fact IDs, validator checks, and visible patch decisions.
-
-## Proof Points To Include
-
-- Full unit suite passes.
-- Live golden validation passes.
-- Demo mode works without live APIs.
-- Every accepted evidence item includes a source quote.
-- Unsupported claims are tracked and blocked from final reports.
-- Patch diff metadata explains what changed, where, and why.
-
-## Suggested Demo Flow
-
-1. Run or load a hard research query.
-2. Show source fetches and quote-grounded evidence.
-3. Show fact ledger statuses.
-4. Show unsupported claim handling.
-5. Show final report and patch diff.
-6. Run the validator.
-
-## Best Current Showcase Query
-
-```text
-A small nonprofit education organization wants to use AI to produce trustworthy research reports for grant writing, policy briefs, and student support programs. Compare three approaches: using a general-purpose chatbot, building a retrieval-augmented chatbot over selected documents, and building a source-audited research workflow that searches the web, extracts direct quotes, verifies claims, and blocks unsupported statements. Evaluate reliability, citation quality, implementation complexity, cost, usability for non-technical staff, data/privacy risks, and long-term maintainability. Recommend the best approach for a team with limited budget, limited engineering capacity, and high need for trust.
-```
-
-## Manual Items Still Needed
-
-- Add final GitHub URL.
-- Add final demo URL or reliable local demo note.
-- Capture final screenshots from the best run.
-- Draft the Horizons description in your own words (AI policy — see `horizons/README.md`).
-- Walkthrough video is optional for Horizons; reviewers check the live demo URL.
+Descriptions submitted to Horizons should be written by the submitter. The two
+description files list facts and constraints only; they are not copy to paste.

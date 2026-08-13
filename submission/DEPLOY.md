@@ -1,77 +1,49 @@
-# SYNAPSE Deployment Notes
+# Public demo deployment
 
-These notes are for producing a public prototype link for judging.
+Deploy the Streamlit app in demo mode so reviewers do not need provider keys.
 
-## Preferred Demo Strategy
-
-Use demo mode for the public prototype:
+## Settings
 
 ```env
 DEMO_MODE=true
 GOLDEN_RESULT_PATH=tests/fixtures/demo_golden.json
 ```
 
-Demo mode loads a validated artifact and avoids live API failures during judging.
-Live mode can still be shown locally or in the video.
-
-## Streamlit Community Cloud
-
-1. Push a clean GitHub repository.
-2. Ensure `.env` is not committed.
-3. Add secrets in Streamlit settings:
-
-```toml
-DEMO_MODE = "true"
-GOLDEN_RESULT_PATH = "tests/fixtures/demo_golden.json"
-```
-
-4. Set the app entrypoint:
+Entrypoint:
 
 ```text
 frontend/app.py
 ```
 
-5. Deploy and test the public URL.
+## Streamlit Community Cloud
 
-## Hugging Face Spaces
+1. Connect the public repository.
+2. Select `frontend/app.py` as the app file.
+3. Add the two settings above as secrets.
+4. Deploy.
+5. Open the URL in a private browser window.
+6. Load `?demo=1` and check the populated research view.
 
-1. Create a Streamlit Space.
-2. Upload the repository.
-3. Add secrets in Space settings.
-4. Confirm `requirements.txt` installs successfully.
-5. Launch `frontend/app.py`.
+Do not add `.env` or provider keys to the repository.
 
-## Local Live Run
-
-For a real live artifact:
+## Before sharing the URL
 
 ```bash
-python scripts/run_live_golden.py --query "What are the strongest evidence-backed approaches for building a trustworthy AI research assistant?" --out artifacts/live_golden_run.json --trace artifacts/live_golden_trace.md --timeout 900
+python -m pytest
+streamlit run frontend/app.py
+```
+
+For a current live artifact, run:
+
+```bash
+python scripts/run_live_golden.py \
+  --query "What are the strongest evidence-backed approaches for building a trustworthy research assistant?" \
+  --out artifacts/live_golden_run.json \
+  --trace artifacts/live_golden_trace.md \
+  --timeout 900
+
 python scripts/validate_live_golden.py artifacts/live_golden_run.json
 ```
 
-## Public Repo Checklist
-
-- [ ] `.env` removed.
-- [ ] `.gitignore` present.
-- [ ] API keys stored only in deployment secrets.
-- [ ] Demo mode works without live APIs.
-- [ ] `python -m pytest` passes.
-- [ ] `scripts/validate_live_golden.py` passes on chosen artifact.
-- [ ] README links to architecture and verification docs.
-- [ ] Submission includes demo URL and GitHub URL.
-
-## Judge Flow
-
-The deployed site should make it easy to inspect:
-
-- query
-- planner output
-- fetched sources
-- evidence quotes
-- fact ledger
-- unsupported claims
-- final answer
-- patch diff
-- run quality
-- validator result
+Check that the public app loads, the demo fixture renders, downloads work, and
+no secret or local path appears in the UI.

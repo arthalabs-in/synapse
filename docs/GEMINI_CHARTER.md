@@ -1,9 +1,7 @@
 # SYNAPSE Provider Notes
 
-**Status:** Implementation note. The public project is provider-first and
-generally positioned as a trustworthy AI research agent. Gemini is the default
-live provider, but the core idea is evidence integrity, not sponsor-specific
-branding.
+Gemini is the default live provider. Provider construction remains centralized
+so agents do not depend on Gemini-specific clients.
 
 ## Default Live Stack
 
@@ -24,7 +22,7 @@ Coverage audit       Gemini 2.5 Pro
 | Function-calling follow-up agent | `agents/live_tool_agent.py` | `LIVE_TOOL_AGENT_ENABLED` |
 | Thinking budget controls | `backend/providers/llm/gemini.py` | `GEMINI_THINKING_BUDGET` |
 
-## Why Gemini Is Useful Here
+## Current use
 
 - Strong structured-output performance for Pydantic schemas.
 - Pro / Flash split lets expensive reasoning stay in planning and synthesis,

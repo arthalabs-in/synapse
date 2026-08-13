@@ -1,125 +1,68 @@
-# SYNAPSE Verification Framework
+# Artifact verification
 
-SYNAPSE treats AI output as untrusted until it passes schema, evidence, and
-validator checks.
+Pipeline output is treated as untrusted structured data. Validation checks that
+the artifact is internally consistent and that its evidence trail can be
+inspected.
 
-## What We Verify
+## Checks
 
-### 1. Source Reality
+### Sources
 
-The live validator rejects reports when:
+- URLs must use public HTTP or HTTPS locations.
+- A live artifact must contain fetched sources and provider metrics.
+- Failed fetches remain visible in the artifact.
 
-- no real URLs exist
-- URLs are fake, local, or synthetic
-- fewer than three fetched sources exist
-- provider metrics are missing
+### Evidence
 
-### 2. Evidence Grounding
+- Each item includes a source URL, title, quote, extraction method, and quality
+  metadata.
+- The quote must be non-empty and anchored to fetched text when that text is
+  available.
+- Snippet fallbacks are labelled and limited.
 
-Evidence must include:
+### Fact ledger
 
-- source URL
-- source title
-- exact source quote
-- fetched source ID where available
-- extraction method
-- source quality score
-- limitations where applicable
+- Facts are separated into verified, partial, unsupported, and contradicted
+  groups.
+- Supporting evidence IDs must resolve.
+- Report sections and key findings may cite only known fact IDs.
 
-Search snippets alone are not treated as verified facts.
+### Patches
 
-### 3. Fact Ledger Integrity
+- Each operation identifies a target and reason.
+- At least one referenced fact, contradiction, or result must resolve.
+- Unsupported replacement text is rejected by the patch applicator.
 
-The fact checker separates:
+### Degradation
 
-- `VERIFIED` facts
-- `PARTIAL` facts
-- unsupported claims
-- contradictions
-- dropped evidence
-
-The synthesizer must cite fact IDs in report sections and key findings.
-
-### 4. Patch Safety
-
-Patch operations must include at least one valid reference:
-
-- `fact_ids`
-- `contradiction_ids`
-- `result_ids`
-
-Patch operations also carry UI-ready metadata:
-
-- `edit_id`
-- `target_path`
-- `edit_label`
-- `original_text`
-- `replacement_text`
-- `reason`
-
-This lets a UI show exactly what changed, where it changed, and why the edit is
-grounded.
-
-### 5. Silent Fallback Detection
-
-The validator checks for silent deterministic fallback after successful LLM
-calls. If a model call returns zero visible content or the synthesizer falls
-back without recording degradation, validation fails.
-
-### 6. Run Quality
-
-Each run includes a quality score and signals:
-
-- fetched source count
-- successful fetch rate
-- evidence count
-- LLM evidence count
-- fallback evidence count
-- snippet evidence count
-- average source quality
-- verified / partial / unsupported fact counts
-- contradiction count
-- report confidence
-- coverage score
-- degraded mode
+- Empty visible model output is an error.
+- Reasoning truncation and deterministic fallback are recorded.
+- A successful model request followed by an unreported fallback fails live
+  artifact validation.
 
 ## Commands
-
-Run deterministic tests:
 
 ```bash
 python -m pytest
 ```
 
-Run a live trace:
-
 ```bash
-python scripts/run_live_golden.py --query "What are the strongest evidence-backed approaches for building a trustworthy AI research assistant?" --out artifacts/live_golden_run.json --trace artifacts/live_golden_trace.md --timeout 900
+python scripts/run_live_golden.py \
+  --query "What are the strongest evidence-backed approaches for building a trustworthy research assistant?" \
+  --out artifacts/live_golden_run.json \
+  --trace artifacts/live_golden_trace.md \
+  --timeout 900
 ```
-
-Validate the live trace:
 
 ```bash
 python scripts/validate_live_golden.py artifacts/live_golden_run.json
+python scripts/audit_live_artifact.py artifacts/live_golden_run.json \
+  --out artifacts/live_golden_audit.md
 ```
 
-Build a causal audit markdown report:
+## Interpretation
 
-```bash
-python scripts/audit_live_artifact.py artifacts/live_golden_run.json --out artifacts/live_golden_audit.md
-```
-
-## Current Proof Points
-
-- Unit suite passes locally.
-- Existing live golden artifacts validate.
-- UI-ready diff artifact validates.
-- Validator catches fake URLs, missing quotes, unsupported leaks, bad patch
-  operations, and silent LLM degradation.
-
-## Trust Claim
-
-SYNAPSE does not claim every model output is true. It claims every accepted
-answer is auditable: the user can inspect the source quote, fact ID, report
-section, patch operation, validator result, and quality signals that produced
-the answer.
+A validator pass means required references exist and the recorded pipeline
+behavior satisfies the checks above. It does not establish factual truth. A
+reviewer can still reject a quote as weak support, a source as poor quality, or
+a conclusion as an overreach.

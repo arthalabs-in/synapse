@@ -1,105 +1,88 @@
-# SYNAPSE Architecture
+# Architecture
 
-SYNAPSE is an evidence-first AI research pipeline. Its purpose is not to make a
-model sound confident; its purpose is to make each answer auditable.
+SYNAPSE passes structured objects between narrow stages. Agents own research
+decisions; providers own network and model access; the engine owns sequencing,
+limits, timing, and failure reporting.
 
-## Design Principles
+## Stage contracts
 
-1. **Provider-first boundaries**: agents call provider interfaces, not concrete
-   DuckDuckGo, Gemini, arXiv, browser, or fetch implementations.
-2. **Quote before claim**: evidence extraction must preserve the source quote
-   that supports a claim.
-3. **Ledger before prose**: synthesis uses verified and partial facts from the
-   fact ledger, not raw snippets or free-form search results.
-4. **Patch instead of overwrite**: coverage auditing emits constrained patch
-   operations with IDs, reasons, locations, and references.
-5. **Live failures are honest**: degraded stages are recorded in errors,
-   provider metrics, and run quality instead of being hidden.
+| Stage | Input | Output | Constraint |
+| --- | --- | --- | --- |
+| Planner | question | `PlannerPrecontext` | emits focused jobs and coverage targets |
+| Searcher | `ResearchJob` | `SearchHeader` values | headers are candidates, not evidence |
+| Fetcher | search headers | `FetchedSource` values | records fetch status and cleaned text |
+| Extractor | fetched text | `EvidenceItem` values | every accepted item retains a source quote |
+| Fact checker | evidence | `FactLedger` | classifies support and contradictions |
+| Synthesizer | ledger | `ResearchReport` | cites ledger fact IDs |
+| Coverage auditor | report, ledger, evidence | `CoveragePatch` | identifies gaps and bounded edits |
+| Patch applicator | report and patch | final `ResearchReport` | rejects unsupported patch references |
+| Engine | all stage output | `PipelineResult` | records timings, metrics, quality, and errors |
 
-## Pipeline
+## Orchestration
+
+`backend/research_engine.py` builds provider-backed agents and runs the pipeline.
+Search and evidence work fan out asynchronously. Global caps limit candidate
+headers, fetched sources, context length, and concurrent model calls.
+
+The default run performs one research pass. `MAX_RESEARCH_ITERATIONS` can enable
+additional gap-filling passes. Failures are attached to the result rather than
+hidden behind a successful-looking report.
+
+## Provider boundary
+
+Provider implementations live under `backend/providers/`:
+
+- `search/`: DuckDuckGo, arXiv, and composite search
+- `browser/`: normal HTTP fetch and optional Camofox fallback
+- `sources/`: normalization, cleanup, quality scoring, and source fetching
+- `llm/`: Gemini and OpenAI-compatible providers
+- `rerankers/`: optional FlashRank semantic reranking
+
+Agents should receive provider objects or use the central factory. They should
+not import a concrete network client directly.
+
+## Evidence path
 
 ```text
-User query
-  -> Planner
-      -> PlannerPrecontext
-      -> 2 ResearchJob objects
-  -> Searcher
-      -> SearchHeader objects
-  -> SourceFetcher
-      -> FetchedSource objects
-  -> EvidenceExtractor
-      -> EvidenceItem objects with source_quote
-  -> FactChecker
-      -> FactLedger
-  -> Synthesizer
-      -> report_v1
-  -> CoverageAuditor
-      -> CoveragePatch and revision brief
-  -> PatchApplicator
-      -> report_v2
-  -> Validator / Run Quality
+SearchHeader
+    candidate URL and snippet
+        |
+FetchedSource
+    retrieved text, status, source quality
+        |
+EvidenceItem
+    claim, exact quote, URL, fit and limitations
+        |
+VerifiedFact
+    status, confidence, supporting evidence IDs
+        |
+ResearchReport
+    section text, fact IDs, citations
 ```
 
-## Core Data Contracts
+Snippet-only evidence is a low-confidence fallback and must carry its
+limitation. It cannot silently become a verified fact.
 
-- `SearchHeader`: a search result. It is not evidence.
-- `FetchedSource`: fetched source text plus status, quality, and metadata.
-- `EvidenceItem`: a claim anchored to a source quote and URL.
-- `VerifiedFact`: a fact ledger entry classified as verified, partial,
-  unsupported, or contradicted.
-- `ResearchReport`: cited answer sections and key findings.
-- `PatchOperation`: a constrained edit with operation, location, references,
-  reason, before text, and replacement text.
-- `PipelineResult`: full run artifact with timings, provider metrics, quality,
-  reports, facts, evidence, and errors.
+## Patch safety
 
-## Agents
+A patch operation identifies its target, reason, previous text, replacement,
+and supporting fact, contradiction, or result IDs. `backend/patch_applicator.py`
+validates those references before editing the report. Synthesis and patching do
+not introduce new evidence.
 
-- `PlannerAgent`: interprets the query and emits two research jobs.
-- `SearcherAgent`: runs provider-aware search across web and arXiv.
-- `EvidenceExtractorAgent`: extracts quote-grounded evidence from fetched
-  sources, with deterministic fallback reasons when LLM extraction fails.
-- `FactCheckerAgent`: batches entailment checks and creates the fact ledger.
-- `SynthesizerAgent`: writes a cited report using only ledger facts.
-- `CoverageAuditorAgent`: compares the report against user intent, evidence,
-  unsupported claims, contradictions, and run quality.
-- `PatchApplicator`: applies validated patch operations to produce `report_v2`.
+## Optional paths
 
-## Providers
+- Gemini Search grounding can add planning precontext.
+- Uploaded files can enter through the multimodal ingestor.
+- FlashRank can contribute a semantic score during search reranking.
+- The live tool agent can answer follow-up questions against a completed run.
 
-Provider modules live under `backend/providers/`:
-
-- `llm/`: Gemini provider and OpenAI-compatible compatibility provider.
-- `search/`: DuckDuckGo, arXiv, and composite search.
-- `browser/`: HTTP fetcher and optional Camofox browser fallback.
-- `sources/`: URL normalization, source cleaning, source quality, fetching.
-- `rerankers/`: semantic reranking support.
+All are gated by configuration and default to behavior that keeps deterministic
+tests offline.
 
 ## Observability
 
-Every run records:
-
-- stage timings
-- wall-clock start/end
-- search and fetch events
-- LLM call logs
-- visible response characters
-- token usage where available
-- reasoning-token telemetry where available
-- truncation flags
-- fallback reasons
-- run quality signals
-
-## Scalability
-
-The current architecture is intentionally simple and production-friendly:
-
-- async fan-out for search and extraction
-- source and header caps to control cost
-- per-stage model configuration
-- bounded context selection before LLM calls
-- deterministic fallbacks that preserve source quotes
-- demo mode for repeatable presentation
-
-Future scaling work can move provider calls to a queue, persist `PipelineResult`
-artifacts to object storage, and split long research runs into resumable jobs.
+`PipelineResult` stores wall-clock timing, stage timing, search/fetch events,
+model usage, visible output counts, fallback reasons, truncation flags, and a
+run-quality summary. These fields explain how a run degraded; they are not a
+truth score.

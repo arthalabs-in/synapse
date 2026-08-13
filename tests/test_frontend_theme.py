@@ -35,3 +35,4 @@ def test_result_workspace_is_report_first():
 def test_evidence_strip_has_a_display_limit():
     assert "def render_evidence_strip(result: dict[str, Any], limit: int = 6)" in APP_SOURCE
     assert "items[:limit]" in APP_SOURCE
+    assert "visible_count = 1 if limit <= 3 else 3" in APP_SOURCE

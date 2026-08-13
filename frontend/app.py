@@ -631,7 +631,7 @@ def render_evidence_strip(result: dict[str, Any], limit: int = 6) -> None:
     if not items:
         st.caption("No extracted evidence available.")
         return
-    visible_count = min(max(1, limit), 3)
+    visible_count = 1 if limit <= 3 else 3
     cols = st.columns(visible_count)
     for index, item in enumerate(items[:limit]):
         with cols[index % visible_count]:

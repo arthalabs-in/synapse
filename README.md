@@ -1,149 +1,114 @@
 # SYNAPSE
 
-SYNAPSE is an evidence-first AI research agent for trustworthy knowledge work.
-It turns a hard question into a traceable chain of searched sources, fetched
-text, quote-grounded evidence, verified facts, unsupported-claim checks, a
-cited answer, and a patch diff that explains what changed and why.
+SYNAPSE is a research pipeline that keeps the evidence trail attached to the
+answer. It searches public sources, fetches page text, extracts quoted
+passages, checks claims against those passages, and records the edits made
+during a final coverage pass.
 
-Tagline: **Answers you can audit.**
+The working rule is simple: a search result is not evidence. A claim can enter
+the report only after the corresponding source text has been fetched and the
+supporting passage has been preserved.
 
-## Why It Exists
-
-Most AI research tools produce fluent summaries with decorative links. SYNAPSE
-is built around the opposite contract: every final claim must be traceable to a
-source quote and a fact ID, and any unsupported claim must be rejected, caveated,
-or patched before the final report is accepted.
-
-This makes SYNAPSE useful for students, researchers, builders, analysts, and
-teams who need AI help without losing the ability to verify where an answer came
-from.
-
-## Architecture
+## Pipeline
 
 ```text
-query
-  -> Planner
-  -> 2 async ResearchJobs
-      -> Searcher
-      -> SourceFetcher
-      -> EvidenceExtractor
-  -> FactChecker
-  -> Synthesizer(report_v1)
-  -> CoverageAuditor
-  -> PatchApplicator(report_v2)
-  -> Validator / Run Quality
+question
+  -> planner
+  -> search jobs
+  -> source fetch and cleanup
+  -> quote extraction
+  -> fact ledger
+  -> report draft
+  -> coverage audit
+  -> constrained patch
+  -> final artifact
 ```
 
-Provider interfaces live under `backend/providers/`:
+The main contracts are Pydantic models in `backend/models.py`:
 
-- `search/`: DuckDuckGo/DDGS, arXiv, and composite search providers.
-- `browser/`: HTTP fetcher and optional Camofox REST browser fallback.
-- `sources/`: normalization, cleaning, source quality scoring, and fetching.
-- `llm/`: Gemini-first provider plus a modular OpenCode Go compatibility path.
+- `SearchHeader` describes a candidate result.
+- `FetchedSource` stores retrieved text and fetch status.
+- `EvidenceItem` binds a claim to a URL and source quote.
+- `FactLedger` separates verified, partial, unsupported, and contradicted claims.
+- `ResearchReport` stores cited sections and findings.
+- `CoveragePatch` records bounded edits and their references.
+- `PipelineResult` contains the complete run, timings, errors, and provider data.
 
-Agents depend on provider interfaces, not provider-specific implementations.
+See [ARCHITECTURE.md](ARCHITECTURE.md) for stage responsibilities and provider
+boundaries.
 
-## Core Capabilities
+## Run locally
 
-- Quote-grounded evidence extraction from fetched source text.
-- Fact ledger with `VERIFIED`, `PARTIAL`, `UNSUPPORTED`, and contradiction records.
-- Pydantic schemas between every major pipeline stage.
-- Coverage auditor that compares the final answer against the original question,
-  evidence, fact ledger, and unsupported claims.
-- UI-ready patch operations with edit ID, location, reason, before text, and
-  replacement text.
-- Live golden validator that fails on fake URLs, missing quotes, unsupported
-  claims, ungrounded patch operations, and missing provider metrics.
-- Demo mode for reliable judging when live APIs or Wi-Fi are unstable.
-
-## Setup
+Python 3.10 or newer is required.
 
 ```bash
 pip install -r requirements.txt
-cp .env.example .env
-```
-
-Run tests:
-
-```bash
 python -m pytest
-```
-
-Run the Streamlit UI:
-
-```bash
 streamlit run frontend/app.py
 ```
 
-## Live Mode
-
-Live mode needs public web access, source fetching, and an LLM provider key.
-The default provider is Gemini:
+Copy `.env.example` to `.env` for live runs. The default LLM provider is
+Gemini, but provider construction is centralized in
+`backend/providers/llm/factory.py`.
 
 ```env
 LLM_PROVIDER=gemini
 GEMINI_API_KEY=...
-GEMINI_BASE_URL=https://generativelanguage.googleapis.com/v1beta
 GEMINI_MODEL=gemini-2.5-pro
 ```
 
-SYNAPSE uses structured JSON calls for planning, extraction, fact checking, and
-coverage auditing. It records provider metrics, reasoning-token telemetry where
-available, stage timing, and run quality.
+## Demo mode
 
-## Live Golden Trace
-
-Run a real trace:
-
-```bash
-python scripts/run_live_golden.py --query "What are the strongest evidence-backed approaches for building a trustworthy AI research assistant for students and builders?" --out artifacts/live_golden_run.json --trace artifacts/live_golden_trace.md --timeout 900
-```
-
-Validate that the result is real and grounded:
-
-```bash
-python scripts/validate_live_golden.py artifacts/live_golden_run.json
-```
-
-The validator fails on fake/local URLs, missing fetched sources, missing source
-quotes, missing fact IDs, unsupported claims leaking into the report, patch ops
-without valid references, silent LLM fallback, and absent provider metrics.
-
-## Demo Mode
-
-Demo mode loads a validated fixture and requires no internet or LLM server. It
-is the safest path for UI inspection and judging:
+Demo mode loads a checked fixture and makes no network or model calls:
 
 ```env
 DEMO_MODE=true
 GOLDEN_RESULT_PATH=tests/fixtures/demo_golden.json
 ```
 
-## Documentation
+The fixture is useful for UI review and deployment smoke tests. It is not a
+substitute for a live run.
 
-- `ARCHITECTURE.md`: system architecture and stage contracts.
-- `VERIFICATION_FRAMEWORK.md`: validator, run quality, and trust guarantees.
-- `docs/ARCHITECTURE_OVERVIEW.md`: judge-friendly architecture overview.
-- `docs/PROJECT_CHARTER.md`: submission-facing project positioning.
-- `submission/`: Horizons submission pack, deploy notes, and pitch copy.
+## Live artifact check
 
-## Submission Pack
+```bash
+python scripts/run_live_golden.py \
+  --query "What are the strongest evidence-backed approaches for building a trustworthy research assistant?" \
+  --out artifacts/live_golden_run.json \
+  --trace artifacts/live_golden_trace.md \
+  --timeout 900
 
-For hackathon or program judging, start here:
+python scripts/validate_live_golden.py artifacts/live_golden_run.json
+```
 
-- `submission/horizons/README.md`: how Horizons qualification works + SYNAPSE-specific rules.
-- `submission/horizons/ship_checklist.md`: pre-ship readiness checklist.
-- `submission/DEPLOY.md`: public demo deployment notes.
-- `docs/ARCHITECTURE_OVERVIEW.md`: simple architecture diagram and stage contracts.
+The validator checks artifact consistency: real-looking public URLs, fetched
+sources, quoted evidence, fact references, patch references, provider metrics,
+and recorded fallback or truncation signals. It does not independently prove
+that a claim is true. The report remains inspectable because the source quote
+and status are retained.
 
-Best one-line pitch:
+## Repository layout
 
-> SYNAPSE is an AI research workbench that gives you answers you can audit:
-> every important claim links back to source quotes, weak claims are blocked,
-> and edits are explained.
+```text
+agents/             planner, search, extraction, checking, synthesis, audit
+backend/            contracts, orchestration, validators, provider interfaces
+backend/providers/  LLM, search, browser, source, and reranking adapters
+frontend/           Streamlit workbench and theme
+scripts/            live-run and artifact-audit utilities
+tests/              deterministic unit and integration tests
+docs/               architecture and provider notes
+submission/         deployment and Horizons readiness notes
+```
 
-## Safety
+## Current limitations
 
-Do not commit `.env` or API keys. Treat search results, fetched pages, and model
-outputs as untrusted input until they pass quote, URL, fact ID, and validator
-checks.
+- Live quality depends on public source availability and provider output.
+- A preserved quote can still be ambiguous, outdated, or misinterpreted.
+- Deterministic fallbacks are deliberately marked as degraded evidence.
+- Camofox is optional and only handles public pages where normal HTTP fetching
+  returns unusable text.
+- Semantic reranking, multimodal ingestion, grounded precontext, and the live
+  tool agent are feature-flagged.
+
+Do not commit `.env`, provider keys, private source material, or generated run
+artifacts that contain sensitive data.
