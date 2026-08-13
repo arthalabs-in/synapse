@@ -32,3 +32,6 @@ Thumbs.db
 
 # Playwright CLI artifacts
 .playwright-cli/
+
+# Local UI brainstorming sessions
+.superpowers/
