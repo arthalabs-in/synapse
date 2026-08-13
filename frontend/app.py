@@ -118,8 +118,8 @@ def main() -> None:
         render_sidebar(current_result)
 
     theme.workbench_header(
-        "Research Workbench",
-        "Ask a hard question. Get an answer you can audit.",
+        "Trace every claim to its source.",
+        "Search public sources, preserve the supporting quotes, and inspect how each claim reaches the report.",
     )
 
     with st.container(border=True):
@@ -476,16 +476,20 @@ def render_pipeline(result: dict[str, Any]) -> None:
     patch = result.get("coverage_patch") or {}
     ledger = result.get("fact_ledger") or {}
 
-    left, center, right = st.columns([0.23, 0.56, 0.31], gap="small")
-    with left:
+    workflow, workspace = st.columns([0.20, 0.80], gap="large")
+    with workflow:
         render_workflow_rail(result)
         render_jobs(result)
-    with center:
-        render_answer_workbench(result, report)
-        render_evidence_strip(result)
+
+    with workspace:
+        answer, context = st.columns([0.64, 0.36], gap="large")
+        with answer:
+            render_answer_workbench(result, report)
+        with context:
+            render_evidence_strip(result, limit=3)
+            render_validation_inspector(result, report, ledger, patch)
+
         render_source_strip(result)
-    with right:
-        render_validation_inspector(result, report, ledger, patch)
         render_provider_metrics(result)
         render_export(result)
 
@@ -617,7 +621,7 @@ def render_grounded_precontext(planner: dict[str, Any]) -> None:
             st.markdown(f"**[{title}]({uri})** - {snippet}")
 
 
-def render_evidence_strip(result: dict[str, Any]) -> None:
+def render_evidence_strip(result: dict[str, Any], limit: int = 6) -> None:
     items = sorted(
         result.get("evidence_items") or [],
         key=lambda item: item.get("relevance_to_query") or 0,
@@ -627,13 +631,14 @@ def render_evidence_strip(result: dict[str, Any]) -> None:
     if not items:
         st.caption("No extracted evidence available.")
         return
-    cols = st.columns(3)
-    for index, item in enumerate(items[:6]):
-        with cols[index % 3]:
+    visible_count = min(max(1, limit), 3)
+    cols = st.columns(visible_count)
+    for index, item in enumerate(items[:limit]):
+        with cols[index % visible_count]:
             theme.quote_card(item)
-    if len(items) > 6:
+    if len(items) > limit:
         with st.expander(f"View all evidence ({len(items)} items)"):
-            for item in items[6:]:
+            for item in items[limit:]:
                 theme.quote_card(item)
 
 
